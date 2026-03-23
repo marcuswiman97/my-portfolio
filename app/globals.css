@@ -1,26 +1,117 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0e1111;
+  --foreground: #e6e8e8;
+  --surface: #121616;
+  --surface-strong: #171c1c;
+  --border: #232b2b;
+  --muted: #b0baba;
+  --accent-green: #6faf8f;
+  --accent: #6faf8f;
+  --accent-strong: #6faf8f;
+  --ink-soft: #c3cbcb;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-surface-strong: var(--surface-strong);
+  --color-border: var(--border);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent-strong: var(--accent-strong);
+  --color-ink-soft: var(--ink-soft);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), sans-serif;
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:focus-visible,
+button:focus-visible,
+[role="button"]:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid color-mix(in srgb, var(--accent) 70%, white 30%);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+::selection {
+  background: color-mix(in srgb, var(--accent) 18%, transparent);
+}
+
+.grain-overlay {
+  background-image:
+    radial-gradient(circle at top center, rgba(255, 255, 255, 0.045), transparent 32%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0));
+}
+
+.site-logo-mark {
+  overflow: visible;
+}
+
+.site-logo-path {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+}
+
+@keyframes logo-path-draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes logo-path-pulse {
+  0%,
+  100% {
+    stroke-width: 18;
+  }
+
+  50% {
+    stroke-width: 19.5;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .site-logo-path {
+    animation:
+      logo-path-draw 2s ease forwards,
+      logo-path-pulse 3.2s ease-in-out 2s infinite;
+  }
 }
