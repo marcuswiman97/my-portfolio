@@ -89,7 +89,7 @@ export default function FlowscapePage() {
       <div className="mx-auto flex min-h-screen max-w-6xl flex-col px-4 pb-6 sm:px-6 sm:pb-8 md:px-8 md:pb-10 lg:px-10 lg:pb-14">
         <SiteHeader compact />
 
-        <section className="relative left-1/2 mb-8 w-screen -translate-x-1/2 overflow-hidden sm:mb-10 md:mb-14 lg:mb-16">
+        <section className="relative left-1/2 mb-6 w-screen -translate-x-1/2 overflow-hidden sm:mb-8 md:mb-10 lg:mb-12">
           <div className="relative h-[68vh] min-h-[460px] overflow-hidden sm:h-[70vh] sm:min-h-[500px]">
             <Image
               src="/images/flowscape-hero.jpg"
@@ -105,13 +105,13 @@ export default function FlowscapePage() {
             <div className="absolute inset-0 flex items-center">
               <div className="w-full px-6 py-16 sm:px-8 sm:py-20">
                 <div className="max-w-[600px]">
-                  <p className="mb-3 text-[12px] uppercase tracking-[0.2em] text-[rgba(167,176,176,0.6)]">
+                  <p className="mb-3 text-[14px] font-medium uppercase tracking-[0.14em] text-[rgba(167,176,176,0.82)]">
                     CASE STUDY
                   </p>
-                  <h1 className="mb-4 text-balance text-[64px] font-semibold leading-[1.08] tracking-[-0.04em] text-[#e6e8e8]">
+                  <h1 className="mb-4 text-balance text-[64px] font-semibold leading-[1.04] tracking-[-0.04em] text-[#e6e8e8]">
                     Flowscape
                   </h1>
-                  <p className="max-w-[520px] text-[17px] leading-[1.6] text-[#a7b0b0]">
+                  <p className="max-w-[520px] text-[17px] leading-[1.75] text-muted">
                     A UX case study about reworking FlowAnalytics and the shared
                     design system around it to make workplace data easier to
                     understand and act on.
@@ -134,26 +134,26 @@ export default function FlowscapePage() {
           </div>
         </section>
 
-        <section className="pt-12 pb-16 sm:pt-14 sm:pb-18 md:pt-18 md:pb-20 lg:pt-24 lg:pb-24">
-          <div className="mx-auto mt-14 max-w-[800px] sm:mt-16 md:mt-20">
-            <h2 className="text-[20px] font-semibold text-foreground sm:text-[22px] md:text-[24px]">
+        <section className="pt-16 pb-12 sm:pt-18 sm:pb-14 md:pt-20 md:pb-16 lg:pt-24 lg:pb-18">
+          <div className="mx-auto mt-10 max-w-[50rem] sm:mt-12 md:mt-14">
+            <h2 className="text-balance text-[1.35rem] font-semibold leading-[1.2] text-foreground sm:text-[1.5rem] md:text-[1.65rem]">
               Overview
             </h2>
 
-            <div className="mt-8 grid gap-x-6 gap-y-8 sm:gap-x-8 md:grid-cols-4">
+            <div className="mt-8 grid grid-cols-2 gap-x-6 gap-y-6 sm:grid-cols-2 sm:gap-x-8 sm:gap-y-6 md:grid-cols-4">
               {metadataItems.map((item) => (
                 <div key={item.label}>
-                  <p className="text-[12px] uppercase tracking-[0.12em] text-[rgba(167,176,176,0.6)]">
+                  <p className="text-[14px] font-medium uppercase tracking-[0.14em] text-[rgba(167,176,176,0.8)]">
                     {item.label}
                   </p>
-                  <p className="mt-1.5 max-w-[14rem] text-[14px] leading-6 text-foreground md:text-[15px]">
+                  <p className="mt-1.5 max-w-[14rem] text-[15px] leading-6 text-foreground md:text-[16px]">
                     {item.value}
                   </p>
                 </div>
               ))}
             </div>
 
-            <div className="mt-10 max-w-[760px] space-y-6 text-[0.97rem] leading-7 text-[#b3bbbb] sm:text-[1rem] sm:leading-8 md:mt-12 md:text-[1.0625rem]">
+            <div className="mt-8 max-w-[50rem] space-y-5 text-[0.97rem] leading-[1.8] text-ink-soft sm:text-[1rem] sm:leading-8 md:mt-10 md:text-[1.0625rem]">
               <p>
                 I reworked FlowAnalytics, the analytics product, and created a
                 shared design system for both FlowAnalytics and Workplace
@@ -168,33 +168,33 @@ export default function FlowscapePage() {
               </p>
             </div>
 
-            <div className="mt-10 h-px w-full bg-[rgba(230,232,232,0.12)]" />
+            <div className="mt-6 h-px w-full bg-[rgba(230,232,232,0.12)]" />
           </div>
         </section>
 
-        <section className="pt-24 pb-16 sm:pt-28 sm:pb-18 md:pt-32 md:pb-20 lg:pt-40 lg:pb-24">
-          <div className="max-w-[800px]">
-            <h2 className="mb-5 text-[20px] font-semibold text-foreground sm:text-[22px] md:mb-6 md:text-[24px]">
+        <section className="pt-16 pb-12 sm:pt-18 sm:pb-14 md:pt-20 md:pb-16 lg:pt-24 lg:pb-18">
+          <div className="max-w-[50rem]">
+            <h2 className="mb-4 text-balance text-[1.35rem] font-semibold leading-[1.2] text-foreground sm:text-[1.5rem] md:text-[1.65rem]">
               Problem
             </h2>
 
-            <p className="mb-6 max-w-[650px] text-[16px] leading-[1.7] text-foreground sm:text-[17px] md:text-[18px]">
+            <p className="mb-5 max-w-[50rem] text-[16px] leading-[1.8] text-foreground sm:text-[17px] md:text-[18px]">
               Users struggled to interpret key metrics in a dense and complex
               dashboard.
             </p>
 
-            <ul className="max-w-[760px] list-disc space-y-2.5 pl-5 text-[15px] leading-[1.7] text-[#b3bbbb] md:text-[16px]">
+            <ul className="max-w-[50rem] list-disc space-y-2.5 pl-5 text-[15px] leading-[1.75] text-ink-soft md:text-[16px]">
               {problemPoints.map((point) => (
                 <li key={point}>{point}</li>
               ))}
             </ul>
 
-            <div className="mt-10 max-w-[760px]">
-              <p className="text-[11px] uppercase tracking-[0.16em] text-[rgba(167,176,176,0.72)]">
-                Users
-              </p>
+            <div className="mt-8 max-w-[50rem]">
+            <p className="text-[14px] font-medium uppercase tracking-[0.14em] text-[rgba(167,176,176,0.86)]">
+              Users
+            </p>
 
-              <ul className="mt-4 list-disc space-y-2.5 pl-5 text-[15px] leading-[1.7] text-[#b3bbbb] md:text-[16px]">
+              <ul className="mt-4 list-disc space-y-2.5 pl-5 text-[15px] leading-[1.75] text-ink-soft md:text-[16px]">
                 <li>
                   Facility managers monitoring occupancy, space usage, and
                   workplace performance
@@ -210,7 +210,7 @@ export default function FlowscapePage() {
               </ul>
             </div>
 
-            <figure className="mt-14 max-w-[900px] md:mt-16">
+            <figure className="mt-10 max-w-[900px] md:mt-12">
               <div className="relative overflow-hidden rounded-[0.5rem] border border-[rgba(43,52,52,0.85)] bg-[#111616] shadow-[0_18px_40px_rgba(0,0,0,0.18)]">
                 <Image
                   src="/images/flowscape-dashboard.png"
@@ -220,7 +220,7 @@ export default function FlowscapePage() {
                   className="h-auto w-full"
                 />
               </div>
-              <figcaption className="mt-3 text-sm leading-7 text-muted">
+              <figcaption className="mt-3 text-[0.9rem] leading-6 text-muted">
                 Before the redesign, the dashboard felt dense and harder to
                 scan.
               </figcaption>
@@ -228,34 +228,34 @@ export default function FlowscapePage() {
           </div>
         </section>
 
-        <section className="pt-28 pb-16 sm:pt-32 sm:pb-18 md:pt-36 md:pb-20 lg:pt-44 lg:pb-24">
-          <div className="mx-auto max-w-[800px]">
-            <p className="text-[11px] uppercase tracking-[0.18em] text-[rgba(167,176,176,0.72)]">
-              USER INSIGHTS
-            </p>
+        <section className="pt-16 pb-12 sm:pt-18 sm:pb-14 md:pt-20 md:pb-16 lg:pt-24 lg:pb-18">
+          <div className="max-w-[50rem]">
+            <h2 className="text-[14px] font-medium uppercase tracking-[0.14em] text-[rgba(167,176,176,0.82)]">
+              User Insights
+            </h2>
 
-            <p className="mt-4 max-w-[640px] text-[14px] leading-[1.6] text-[#b3bbbb] md:text-[15px]">
+            <p className="mt-4 max-w-[640px] text-[15px] leading-[1.7] text-ink-soft md:text-[16px]">
               Based on user interviews with both facility managers and analytics specialists, key behavioral patterns and pain points emerged across how users interpret and act on data.
             </p>
 
-            <p className="mt-4 max-w-[640px] text-[13px] leading-[1.6] text-[#8f9999] md:text-[14px]">
+            <p className="mt-4 max-w-[640px] text-[14px] leading-[1.7] text-muted md:text-[15px]">
               Two primary user types emerged: a core user focused on quick decision-making, and a power user working deeply with reporting and analysis.
             </p>
 
-            <p className="mt-4 max-w-[640px] text-[13px] leading-[1.6] text-[#8f9999] md:text-[14px]">
+            <p className="mt-4 max-w-[640px] text-[14px] leading-[1.7] text-muted md:text-[15px]">
               Understanding how users behaved in the current experience revealed recurring patterns.
             </p>
 
-            <div className="mt-10 space-y-12 md:mt-12 md:space-y-14">
+            <div className="mt-8 space-y-8 md:mt-10 md:space-y-10">
               {insights.map((insight) => (
                 <div key={insight.title} className="max-w-[42rem]">
-                  <p className="text-[11px] uppercase tracking-[0.15em] text-[rgba(167,176,176,0.72)]">
+                  <p className="text-[14px] font-medium uppercase tracking-[0.14em] text-[rgba(167,176,176,0.78)]">
                     {insight.label}
                   </p>
-                  <h2 className="mt-3 text-balance text-[20px] font-semibold leading-[1.25] text-foreground sm:text-[22px] md:text-[24px]">
+                  <h3 className="mt-3 text-balance text-[1.2rem] font-semibold leading-[1.2] text-foreground sm:text-[1.35rem] md:text-[1.5rem]">
                     {insight.title}
-                  </h2>
-                  <p className="mt-4 max-w-[40rem] text-[14px] leading-[1.6] text-[#b3bbbb] md:text-[15px]">
+                  </h3>
+                  <p className="mt-4 max-w-[40rem] text-[15px] leading-[1.75] text-ink-soft md:text-[16px]">
                     {insight.text}
                   </p>
                 </div>
@@ -264,29 +264,29 @@ export default function FlowscapePage() {
           </div>
         </section>
 
-        <section className="pt-32 pb-16 sm:pt-36 sm:pb-18 md:pt-40 md:pb-20 lg:pt-48 lg:pb-24">
+        <section className="pt-16 pb-12 sm:pt-18 sm:pb-14 md:pt-20 md:pb-16 lg:pt-24 lg:pb-18">
           <div className="max-w-[50rem]">
-            <p className="text-xs font-medium uppercase tracking-[0.28em] text-muted">
+            <h2 className="text-[14px] font-medium uppercase tracking-[0.14em] text-[rgba(167,176,176,0.82)]">
               Process / Improvements
-            </p>
+            </h2>
           </div>
 
-          <div className="mt-12 space-y-24 sm:space-y-26 md:mt-14 md:space-y-30">
+          <div className="mt-8 space-y-12 sm:space-y-14 md:mt-10 md:space-y-16">
             {processSections.map((section) => (
               <div key={section.title} className="max-w-[50rem]">
-                <h2 className="max-w-[34rem] text-balance text-[1.55rem] font-semibold leading-[1.08] tracking-[-0.04em] text-foreground sm:text-[1.7rem] md:text-[1.95rem]">
+                <h3 className="max-w-[34rem] text-balance text-[1.35rem] font-semibold leading-[1.2] text-foreground sm:text-[1.5rem] md:text-[1.65rem]">
                   {section.title}
-                </h2>
+                </h3>
 
-                <p className="mt-5 max-w-[65ch] text-[0.96rem] leading-[1.65] text-[#b3bbbb] sm:text-[0.98rem] sm:leading-[1.7] md:mt-6 md:text-[1rem]">
+                <p className="mt-5 max-w-[65ch] text-[0.97rem] leading-[1.8] text-ink-soft sm:text-[1rem] sm:leading-8 md:mt-6 md:text-[1.0625rem]">
                   {section.text}
                 </p>
 
                 <figure
                   className={
                     section.title === "Restructuring the experience"
-                      ? "mt-18 md:mt-20"
-                      : "mt-14 md:mt-16"
+                      ? "mt-12 md:mt-14"
+                      : "mt-9 md:mt-10"
                   }
                 >
                   <div
@@ -333,13 +333,13 @@ export default function FlowscapePage() {
                       }
                     />
                   </div>
-                  <figcaption className="mt-6 max-w-[38rem] text-sm leading-7 text-muted">
+                  <figcaption className="mt-4 max-w-[38rem] text-[0.9rem] leading-6 text-muted">
                     {section.caption}
                   </figcaption>
                 </figure>
 
                 {section.title === "Improving data visualization" ? (
-                  <figure className="mt-6 md:mt-7">
+                  <figure className="mt-4 md:mt-5">
                     <div className="relative max-w-[860px] overflow-hidden rounded-[0.5rem] border border-[rgba(43,52,52,0.84)] shadow-[0_18px_40px_rgba(0,0,0,0.18)]">
                       <Image
                         src="/images/flowscape-detail-chart.jpg"
@@ -350,7 +350,7 @@ export default function FlowscapePage() {
                         sizes="(max-width: 640px) calc(100vw - 2rem), (max-width: 1024px) calc(100vw - 4rem), 860px"
                       />
                     </div>
-                    <figcaption className="mt-5 max-w-[48rem] text-sm leading-7 text-muted">
+                    <figcaption className="mt-3 max-w-[48rem] text-[0.9rem] leading-6 text-muted">
                       A monochrome palette, shaped by the brand values, made
                       charts feel calmer and easier to separate.
                     </figcaption>
@@ -361,19 +361,19 @@ export default function FlowscapePage() {
           </div>
         </section>
 
-        <section className="pt-24 pb-16 sm:pt-28 sm:pb-18 md:pt-32 md:pb-20 lg:pt-40 lg:pb-24">
+        <section className="pt-16 pb-12 sm:pt-18 sm:pb-14 md:pt-20 md:pb-16 lg:pt-24 lg:pb-18">
           <div className="max-w-[50rem]">
-            <p className="text-xs font-medium uppercase tracking-[0.28em] text-muted">
+            <h2 className="mb-6 text-balance text-[1.35rem] font-semibold leading-[1.2] text-foreground sm:text-[1.5rem] md:text-[1.65rem]">
               Outcome
-            </p>
+            </h2>
 
-            <p className="mt-8 max-w-[44rem] text-[0.97rem] leading-7 text-[#b3bbbb] sm:text-[1rem] sm:leading-8 md:mt-10 md:text-[1.0625rem]">
+            <p className="mt-8 max-w-[44rem] text-[0.97rem] leading-[1.8] text-ink-soft sm:text-[1rem] sm:leading-8 md:mt-10 md:text-[1.0625rem]">
               The redesign gave the dashboard a clearer structure and a more
               consistent way of showing data. Key metrics, filters, and chart
               views were reworked to be easier to follow and easier to scan.
             </p>
 
-            <ul className="mt-8 max-w-[44rem] space-y-4 text-[0.97rem] leading-7 text-[#b3bbbb] sm:mt-9 sm:text-[1rem] sm:leading-8">
+            <ul className="mt-8 max-w-[44rem] space-y-4 text-[0.97rem] leading-[1.8] text-ink-soft sm:mt-9 sm:text-[1rem] sm:leading-8">
               {outcomePoints.map((point) => (
                 <li key={point} className="flex gap-3">
                   <span className="mt-[0.65rem] h-1 w-1 rounded-full bg-[#6FAF8F]" />
