@@ -28,59 +28,59 @@ const metadataItems = [
 ];
 
 const problemPoints = [
-  "The interface felt overwhelming and difficult to scan",
-  "Important metrics were hard to locate quickly",
-  "Lack of context made decision-making slower",
-  "The experience did not adapt well to different user roles",
+  "People had to hunt across charts to find a single answer.",
+  "Navigation and categories did not match how users think about office data.",
+  "Filters felt unpredictable and easy to lose track of once applied.",
+  "Metrics lacked context, so it was unclear whether results were good or bad.",
 ];
 
 const insights = [
   {
     label: "Insight 01",
-    title: "Users needed orientation before detail",
-    text: "Users wanted to understand what they were seeing, why it mattered, and how it connected before diving into specifics.",
+    title: "Orientation came before detail",
+    text: "Users wanted a quick overview and clear categories before diving into charts. Without that, they hesitated.",
   },
   {
     label: "Insight 02",
-    title: "Filters needed clearer cause and effect",
-    text: "Filters were central to the workflow, but unclear cause and effect made users rely on guesswork or manual workarounds.",
+    title: "Filter state had to be explicit",
+    text: "People changed filters often but could not see what was active or what changed, which led to re-checking and second-guessing.",
   },
   {
     label: "Insight 03",
-    title: "High visual density reduced trust",
-    text: "When too much information appeared at once, users hesitated more and were less willing to act on what they saw.",
+    title: "Density slowed decisions",
+    text: "Crowded screens made it harder to spot what mattered and reduced confidence in the numbers.",
   },
 ];
 
 const processSections = [
   {
     title: "Restructuring the experience",
-    image: "/images/flowscape-structure.jpg",
+    image: "/images/flowscape-structure.png",
     alt: "Early layout exploration for restructuring the FlowAnalytics dashboard",
-    caption: "A first step toward a more structured and readable overview.",
-    text: "As a first step, I explored how the layout could be reorganized by bringing all key elements into a single structure. This was a way to test what a clearer and more structured overview could look like. The focus was on grouping related information and starting to introduce hierarchy, rather than solving everything at once.",
+    caption: "Layout studies focused on a clearer path from overview to detail.",
+    text: "I reorganized and built the dashboard and sidebar to match how users talk about workplace data. Many existing tabs were unused or inconsistent, so I reframed the navigation into seven question-led perspectives: Portfolio, Office, Rooms, Department, User, Climate, and Custom dashboards. This made it easier to compare scenarios without scanning a long tab list. I also introduced AI insights and the Custom dashboards concept, placing insights between filters and KPIs so actions surfaced without hiding the data.",
   },
   {
     title: "Clarifying filter interactions",
-    image: "/images/flowscape-detail-filter.jpg",
+    image: "/images/flowscape-filters.png",
     alt: "Filter refinement concept showing quick filters, advanced filters, and active filter states",
     caption:
       "Quick filters, advanced filters, and a sticky active-filter row made the state easier to follow.",
-    text: "I introduced dashboard-specific quick filters for the most common actions, with the last option leading to all filters / advanced filters. Below that, a sticky active-filter section stayed visible while scrolling so users could understand what was applied while reading the data.",
+    text: "Filters were standardized into one pattern with a clear Apply action. Active filters stayed visible while scrolling, and loading feedback showed when data was updating.",
   },
   {
     title: "Improving data visualization",
-    image: "/images/flowscape-detail-kpi.jpg",
+    image: "/images/flowscape-detail-kpi.png",
     alt: "Redesigned KPI cards with clearer hierarchy in FlowAnalytics",
-    caption: "Key metrics surfaced and easier to compare at a glance",
-    text: "The visualizations were simplified to make key metrics easier to read at a glance. Important values were brought forward, while less critical information was toned down. This made it faster to understand how spaces were used and reduced the effort needed to interpret the data.",
+    caption: "KPI cards brought the primary value forward with clearer context.",
+    text: "KPI cards were rebuilt to highlight the main value first, with tooltips and targets to clarify what good looks like. I kept stakeholder-required labels like \"Average utilization\" and \"Peak utilization,\" and added short question prompts to help core and new users understand what each KPI actually answers. I also designed the gauge: brand color in the arc, a light-blue target line with text, the metric number, and a checkmark when the target is met, plus a small trend row to show recent movement. Charts used a calmer, more consistent palette so trends read faster.",
   },
 ];
 
 const outcomePoints = [
-  "Key metrics and space usage data were surfaced more clearly.",
-  "Filter interactions were redesigned to make changes easier to follow.",
-  "Charts and KPI cards were simplified to support faster reading.",
+  "Key metrics and space usage were easier to scan at a glance.",
+  "Filter changes stayed visible, which reduced re-checking.",
+  "Charts and KPIs provided clearer context for action.",
 ];
 
 export default function FlowscapePage() {
@@ -155,16 +155,18 @@ export default function FlowscapePage() {
 
             <div className="mt-8 max-w-[50rem] space-y-5 text-[0.97rem] leading-[1.8] text-ink-soft sm:text-[1rem] sm:leading-8 md:mt-10 md:text-[1.0625rem]">
               <p>
-                I reworked FlowAnalytics, the analytics product, and created a
-                shared design system for both FlowAnalytics and Workplace
-                Manager, the admin portal it sits within. The work focused on
-                improving usability, consistency, and clarity across both
-                products.
+                Flowscape&apos;s admin portal (soon renamed Workplace Manager)
+                is where facility teams manage offices, from spaces and assets
+                to sensors, devices, files, and integrations. FlowAnalytics is
+                the analytics area inside it, with dashboards that surface
+                workplace usage, pain points, and opportunities.
               </p>
 
               <p>
-                The goal was to make office space usage easier to read, easier
-                to navigate, and easier to act on for facility managers.
+                I restructured the analytics experience and built a shared
+                design system so the portal felt consistent and easier to read.
+                The focus was helping facility and workplace managers
+                understand space usage quickly and act with more confidence.
               </p>
             </div>
 
@@ -179,8 +181,8 @@ export default function FlowscapePage() {
             </h2>
 
             <p className="mb-5 max-w-[50rem] text-[16px] leading-[1.8] text-foreground sm:text-[17px] md:text-[18px]">
-              Users struggled to interpret key metrics in a dense and complex
-              dashboard.
+              Users could see the data, but struggled to quickly understand
+              what mattered or what to do next.
             </p>
 
             <ul className="max-w-[50rem] list-disc space-y-2.5 pl-5 text-[15px] leading-[1.75] text-ink-soft md:text-[16px]">
@@ -235,15 +237,17 @@ export default function FlowscapePage() {
             </h2>
 
             <p className="mt-4 max-w-[640px] text-[15px] leading-[1.7] text-ink-soft md:text-[16px]">
-              Based on user interviews with both facility managers and analytics specialists, key behavioral patterns and pain points emerged across how users interpret and act on data.
+              Interviews and workflow reviews showed where people slowed down,
+              lost confidence, or missed important signals.
             </p>
 
             <p className="mt-4 max-w-[640px] text-[14px] leading-[1.7] text-muted md:text-[15px]">
-              Two primary user types emerged: a core user focused on quick decision-making, and a power user working deeply with reporting and analysis.
+              Two primary modes emerged: quick decisions for core users and
+              deeper analysis for power users.
             </p>
 
             <p className="mt-4 max-w-[640px] text-[14px] leading-[1.7] text-muted md:text-[15px]">
-              Understanding how users behaved in the current experience revealed recurring patterns.
+              The patterns below shaped the direction of the redesign.
             </p>
 
             <div className="mt-8 space-y-8 md:mt-10 md:space-y-10">
@@ -355,6 +359,23 @@ export default function FlowscapePage() {
                       charts feel calmer and easier to separate.
                     </figcaption>
                   </figure>
+                ) : section.title === "Clarifying filter interactions" ? (
+                  <figure className="mt-4 md:mt-5">
+                    <div className="relative max-w-[520px] overflow-hidden rounded-[0.5rem] border border-[rgba(43,52,52,0.84)] shadow-[0_18px_40px_rgba(0,0,0,0.18)]">
+                      <Image
+                        src="/images/office-floor-zone-filter.png"
+                        alt="Office, floor, and zone filter controls with active state"
+                        width={1400}
+                        height={900}
+                        className="h-auto w-full"
+                        sizes="(max-width: 640px) calc(100vw - 2rem), (max-width: 1024px) calc(100vw - 4rem), 520px"
+                      />
+                    </div>
+                    <figcaption className="mt-3 max-w-[36rem] text-[0.9rem] leading-6 text-muted">
+                      Example of the dropdown filter pattern with active
+                      selections.
+                    </figcaption>
+                  </figure>
                 ) : null}
               </div>
             ))}
@@ -368,9 +389,12 @@ export default function FlowscapePage() {
             </h2>
 
             <p className="mt-8 max-w-[44rem] text-[0.97rem] leading-[1.8] text-ink-soft sm:text-[1rem] sm:leading-8 md:mt-10 md:text-[1.0625rem]">
-              The redesign gave the dashboard a clearer structure and a more
-              consistent way of showing data. Key metrics, filters, and chart
-              views were reworked to be easier to follow and easier to scan.
+              The MVP is easier to read and act on. Users can find key metrics
+              faster, understand what a number means in context, and follow
+              filter changes without second-guessing. The dashboard now
+              supports quick decisions first, with clearer paths into detail
+              when needed. Saved views and custom dashboards are planned next,
+              but aren&apos;t part of the current release.
             </p>
 
             <ul className="mt-8 max-w-[44rem] space-y-4 text-[0.97rem] leading-[1.8] text-ink-soft sm:mt-9 sm:text-[1rem] sm:leading-8">
