@@ -78,9 +78,9 @@ const processSections = [
 ];
 
 const outcomePoints = [
-  "Key metrics and space usage were easier to scan at a glance.",
-  "Filter changes stayed visible, which reduced re-checking.",
-  "Charts and KPIs provided clearer context for action.",
+  "Key metrics and space usage became easier to scan at a glance.",
+  "Filter states remained visible, reducing re-checking and uncertainty.",
+  "KPIs provided clearer context through targets, trends, and prompts.",
 ];
 
 const showImages = false;
@@ -444,12 +444,23 @@ export default function FlowscapePage() {
             </h2>
 
             <p className="mt-8 max-w-[44rem] text-[0.97rem] leading-[1.8] text-ink-soft sm:text-[1rem] sm:leading-8 md:mt-10 md:text-[1.0625rem]">
-              The MVP is easier to read and act on. Users can find key metrics
-              faster, understand what a number means in context, and follow
-              filter changes without second-guessing. The dashboard now
-              supports quick decisions first, with clearer paths into detail
-              when needed. Saved views and custom dashboards are planned next,
-              but aren&apos;t part of the current release.
+              The MVP made the analytics experience easier to scan,
+              understand, and act on. Users could find key metrics faster,
+              understand what a number meant in context, and follow filter
+              changes without second-guessing. The restructuring of dashboards
+              and navigation supported quick decisions first, with clearer
+              paths into deeper analysis when needed.
+            </p>
+
+            <p className="mt-8 max-w-[44rem] text-[0.97rem] leading-[1.8] text-ink-soft sm:text-[1rem] sm:leading-8 md:mt-10 md:text-[1.0625rem]">
+              Initial feedback from user testing and internal validation
+              showed improved clarity and confidence when interpreting the
+              data, even with limited exposure to the full set of dashboards.
+            </p>
+
+            <p className="mt-8 max-w-[44rem] text-[0.97rem] leading-[1.8] text-ink-soft sm:text-[1rem] sm:leading-8 md:mt-10 md:text-[1.0625rem]">
+              Saved views and custom dashboards are planned next, but are not
+              part of the current release.
             </p>
 
             <ul className="mt-8 max-w-[44rem] space-y-4 text-[0.97rem] leading-[1.8] text-ink-soft sm:mt-9 sm:text-[1rem] sm:leading-8">
