@@ -180,37 +180,64 @@ export default function Home() {
 
         <section id="contact" className="py-20 sm:py-22 md:py-26 lg:py-34">
           <div className="mx-auto w-full max-w-[72rem]">
-            <h2 className="text-balance text-[1.95rem] font-semibold leading-[1.04] tracking-[-0.045em] text-foreground sm:text-[2.2rem] md:text-[2.65rem] lg:text-[3rem]">
-              Get in touch.
-            </h2>
+            <div className="rounded-[1.1rem] border border-[rgba(43,52,52,0.92)] bg-[linear-gradient(135deg,rgba(18,22,22,0.96)_0%,rgba(14,17,17,0.94)_100%)] px-6 py-8 shadow-[0_24px_60px_rgba(0,0,0,0.18)] sm:px-8 sm:py-10 md:px-10 md:py-12">
+              <div className="grid gap-10 md:grid-cols-[minmax(0,1.2fr)_minmax(280px,0.8fr)] md:gap-12 lg:gap-16">
+                <div>
+                  <p className="text-[14px] font-medium uppercase tracking-[0.14em] text-muted">
+                    Contact
+                  </p>
+                  <h2 className="mt-4 text-balance text-[1.95rem] font-semibold leading-[1.04] tracking-[-0.045em] text-foreground sm:text-[2.2rem] md:text-[2.65rem] lg:text-[3rem]">
+                    Get in touch.
+                  </h2>
 
-            <p className="mt-10 max-w-[40rem] text-[1rem] leading-[1.78] text-ink-soft sm:mt-12 sm:text-[1.04rem] md:text-[1.08rem]">
-              Available for freelance, in-house, and product design
-              opportunities. Reach out by email or LinkedIn.
-            </p>
+                  <p className="mt-6 max-w-[40rem] text-[1rem] leading-[1.78] text-ink-soft sm:text-[1.04rem] md:text-[1.08rem]">
+                    Available for freelance, in-house, and product design
+                    opportunities. Reach out by email or LinkedIn.
+                  </p>
+                </div>
 
-            <div className="mt-12 flex flex-col gap-6 text-[1rem] sm:mt-14 md:mt-16 md:gap-7">
-              <Link
-                href="mailto:marcus.wiman97@gmail.com"
-                className="group inline-flex w-fit items-center gap-3 font-medium text-foreground transition-colors duration-200 hover:text-[var(--accent-green)]"
-              >
-                <span>marcus.wiman97@gmail.com</span>
-                <span className="text-muted transition duration-200 group-hover:translate-x-[2px] group-hover:text-foreground">
-                  →
-                </span>
-              </Link>
+                <div className="flex flex-col justify-end">
+                  <div className="overflow-hidden rounded-[0.95rem] border border-[rgba(255,255,255,0.07)] bg-[rgba(255,255,255,0.02)]">
+                    <Link
+                      href="mailto:marcus.wiman97@gmail.com"
+                      className="group flex items-center justify-between gap-4 px-5 py-5 transition-colors duration-200 hover:bg-[rgba(255,255,255,0.03)] sm:px-6"
+                    >
+                      <div>
+                        <p className="text-[13px] font-medium uppercase tracking-[0.14em] text-muted">
+                          Email
+                        </p>
+                        <p className="mt-2 break-all text-[1rem] font-medium text-foreground sm:text-[1.02rem]">
+                          marcus.wiman97@gmail.com
+                        </p>
+                      </div>
+                      <span className="shrink-0 text-muted transition duration-200 group-hover:translate-x-[2px] group-hover:text-[var(--accent-green)]">
+                        →
+                      </span>
+                    </Link>
 
-              <Link
-                href="https://www.linkedin.com/in/marcuswiman"
-                className="group inline-flex w-fit items-center gap-3 font-medium text-foreground transition-colors duration-200 hover:text-[var(--accent-green)]"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <span>LinkedIn</span>
-                <span className="text-muted transition duration-200 group-hover:translate-x-[2px] group-hover:text-foreground">
-                  →
-                </span>
-              </Link>
+                    <div className="h-px bg-[rgba(255,255,255,0.06)]" />
+
+                    <Link
+                      href="https://www.linkedin.com/in/marcuswiman"
+                      className="group flex items-center justify-between gap-4 px-5 py-5 transition-colors duration-200 hover:bg-[rgba(255,255,255,0.03)] sm:px-6"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <div>
+                        <p className="text-[13px] font-medium uppercase tracking-[0.14em] text-muted">
+                          LinkedIn
+                        </p>
+                        <p className="mt-2 text-[1rem] font-medium text-foreground sm:text-[1.02rem]">
+                          linkedin.com/in/marcuswiman
+                        </p>
+                      </div>
+                      <span className="shrink-0 text-muted transition duration-200 group-hover:translate-x-[2px] group-hover:text-[var(--accent-green)]">
+                        →
+                      </span>
+                    </Link>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>

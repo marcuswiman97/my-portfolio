@@ -70,20 +70,20 @@ export default function SxcPage() {
               className="object-cover object-[60%_center]"
               sizes="100vw"
             />
-            <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(0,0,0,0.82)_0%,rgba(0,0,0,0.68)_28%,rgba(0,0,0,0.38)_52%,rgba(0,0,0,0.12)_75%,rgba(0,0,0,0)_100%)]" />
-            <div className="absolute inset-x-0 bottom-0 h-28 bg-[linear-gradient(to_top,rgba(0,0,0,0.55)_0%,rgba(0,0,0,0)_45%)]" />
+            <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(0,0,0,0.92)_0%,rgba(0,0,0,0.8)_30%,rgba(0,0,0,0.52)_54%,rgba(0,0,0,0.2)_76%,rgba(0,0,0,0)_100%)]" />
+            <div className="absolute inset-x-0 bottom-0 h-32 bg-[linear-gradient(to_top,rgba(0,0,0,0.68)_0%,rgba(0,0,0,0)_48%)]" />
 
             <div className="absolute inset-0 z-10 flex items-center">
               <div className="w-full px-6 py-16 sm:px-8 sm:py-20 md:px-10">
                 <div className="max-w-[72rem]">
                   <div className="max-w-[50rem]">
-                    <p className="mb-3 text-[14px] font-medium uppercase tracking-[0.14em] text-[rgba(167,176,176,0.82)]">
+                    <p className="mb-3 text-[14px] font-medium uppercase tracking-[0.14em] text-[#d4dcdc]">
                       CASE STUDY
                     </p>
                     <h1 className="mb-4 text-balance text-[2.9rem] font-semibold leading-[1.08] tracking-[-0.04em] text-[#e6e8e8] sm:text-[3.8rem] md:text-[4.75rem] lg:text-[5.4rem]">
                       Stockholm Xperience Conference
                     </h1>
-                    <p className="max-w-[37.5rem] text-[16px] leading-[1.75] text-muted sm:text-[17px] md:text-[18px]">
+                    <p className="max-w-[37.5rem] text-[16px] leading-[1.75] text-[#d9e0e0] sm:text-[17px] md:text-[18px]">
                       A mobile-first concept for a hybrid UX conference,
                       helping people find talks, workshops, and relevant
                       attendees more easily.
@@ -96,7 +96,7 @@ export default function SxcPage() {
             <div className="absolute left-8 top-8 z-20 md:left-10 md:top-10">
               <Link
                 href="/"
-                className="group inline-flex items-center gap-3 text-sm text-[rgba(230,232,232,0.78)] transition-colors duration-200 hover:text-white"
+                className="group inline-flex items-center gap-3 text-sm text-[#f1f3f3] transition-colors duration-200 hover:text-white"
               >
                 <span className="transition-transform duration-200 group-hover:-translate-x-[2px]">
                   ←
