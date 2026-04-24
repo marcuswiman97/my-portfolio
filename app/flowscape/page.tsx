@@ -21,10 +21,10 @@ export const metadata: Metadata = {
 };
 
 const metadataItems = [
-  { label: "Role", value: "UX/UI Design + Design System" },
-  { label: "Timeline", value: "Dec 2025 - May 2026" },
+  { label: "Role", value: "Sole UX Designer + Design System" },
+  { label: "Timeline", value: "Dec 2025 - May 2026 (6 months)" },
   { label: "Status", value: "Released MVP" },
-  { label: "Platform", value: "FlowAnalytics / Workplace Manager" },
+  { label: "Platform", value: "FlowAnalytics / Admin Portal" },
 ];
 
 const problemPoints = [
@@ -114,9 +114,10 @@ export default function FlowscapePage() {
                     Flowscape
                   </h1>
                   <p className="max-w-[520px] text-[17px] leading-[1.75] text-muted">
-                    A UX case study about reworking FlowAnalytics and the shared
-                    design system around it to make workplace data easier to
-                    understand and act on.
+                    A UX case study about designing a new analytics experience
+                    for workplace data in FlowAnalytics, supported by a shared
+                    design system, turning fragmented dashboards into a
+                    structured and actionable product.
                   </p>
                 </div>
               </div>
@@ -157,18 +158,40 @@ export default function FlowscapePage() {
 
             <div className="mt-8 max-w-[50rem] space-y-5 text-[0.97rem] leading-[1.8] text-ink-soft sm:text-[1rem] sm:leading-8 md:mt-10 md:text-[1.0625rem]">
               <p>
-                Flowscape&apos;s admin portal (soon renamed Workplace Manager)
-                is where facility teams manage offices, from spaces and assets
-                to sensors, devices, files, and integrations. FlowAnalytics is
-                the analytics area inside it, with dashboards that surface
-                workplace usage, pain points, and opportunities.
+                Flowscape&apos;s admin portal is where facility teams manage
+                offices, from spaces and assets to sensors, devices, files,
+                and integrations. FlowAnalytics is the analytics area inside
+                it, with dashboards that surface workplace usage, pain points,
+                and opportunities.
               </p>
 
               <p>
-                I restructured the analytics experience and built a shared
-                design system so the portal felt consistent and easier to read.
-                The focus was helping facility and workplace managers
-                understand space usage quickly and act with more confidence.
+                Previously, analytics relied on a large set of fragmented
+                dashboards, many of which were rarely used. Most users only
+                interacted with one or two dashboards and struggled to
+                understand what the data meant or what to act on. Even
+                internal team members found parts of the dashboards difficult
+                to interpret. The structure did not reflect how users think
+                about workplace data, which made navigation, discovery, and
+                interpretation difficult.
+              </p>
+
+              <p>
+                As the sole UX designer, I designed a new analytics experience
+                and established a shared design system to support it. I
+                restructured the information architecture, consolidated
+                underused dashboards, and rewrote labels and descriptions to
+                make metrics easier to understand.
+              </p>
+
+              <p>
+                The work shifted the product from a fragmented and low-trust
+                dashboard experience to a structured, user-centered system
+                aligned with how users think about workplace data. The focus
+                was helping facility and workplace managers quickly understand
+                space usage, interpret metrics with confidence, and make
+                informed decisions without needing to dig through multiple
+                dashboards.
               </p>
             </div>
 
