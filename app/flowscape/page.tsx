@@ -206,8 +206,14 @@ export default function FlowscapePage() {
             </h2>
 
             <p className="mb-5 max-w-[50rem] text-[16px] leading-[1.8] text-foreground sm:text-[17px] md:text-[18px]">
-              Users could see the data, but struggled to quickly understand
-              what mattered or what to do next.
+              Users could access a large amount of workplace data, but
+              struggled to quickly understand what mattered or what to do
+              next.
+            </p>
+
+            <p className="mb-5 max-w-[50rem] text-[16px] leading-[1.8] text-foreground sm:text-[17px] md:text-[18px]">
+              As a result, decisions were often delayed or based on incomplete
+              understanding.
             </p>
 
             <ul className="max-w-[50rem] list-disc space-y-2.5 pl-5 text-[15px] leading-[1.75] text-ink-soft md:text-[16px]">
@@ -217,22 +223,40 @@ export default function FlowscapePage() {
             </ul>
 
             <div className="mt-8 max-w-[50rem]">
-            <p className="text-[14px] font-medium uppercase tracking-[0.14em] text-[rgba(167,176,176,0.86)]">
-              Users
-            </p>
+              <p className="text-[14px] font-medium uppercase tracking-[0.14em] text-[rgba(167,176,176,0.86)]">
+                Users
+              </p>
+
+              <p className="mt-4 text-[15px] leading-[1.75] text-ink-soft md:text-[16px]">
+                The primary users were facility and workplace managers
+                responsible for monitoring office performance and making
+                day-to-day decisions.
+              </p>
+
+              <p className="mt-4 text-[15px] leading-[1.75] text-ink-soft md:text-[16px]">
+                While roles varied, their needs were similar:
+              </p>
 
               <ul className="mt-4 list-disc space-y-2.5 pl-5 text-[15px] leading-[1.75] text-ink-soft md:text-[16px]">
                 <li>
-                  Facility managers monitoring occupancy, space usage, and
-                  workplace performance
+                  Quickly understanding space usage and key metrics
                 </li>
                 <li>
-                  Workplace managers using data to plan resources and support
-                  day-to-day decisions
+                  Navigating dashboards efficiently
                 </li>
                 <li>
-                  Office administrators needing quick access to clear metrics,
-                  filters, and saved views
+                  Trusting the data to support decisions
+                </li>
+              </ul>
+
+              <p className="mt-4 text-[15px] leading-[1.75] text-ink-soft md:text-[16px]">
+                Two usage patterns emerged:
+              </p>
+
+              <ul className="mt-4 list-disc space-y-2.5 pl-5 text-[15px] leading-[1.75] text-ink-soft md:text-[16px]">
+                <li>Some users focused on a single dashboard for quick answers</li>
+                <li>
+                  Others explored multiple dashboards for deeper analysis
                 </li>
               </ul>
             </div>
