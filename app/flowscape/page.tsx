@@ -58,7 +58,7 @@ const processSections = [
     image: "/images/flowscape-structure.png",
     alt: "Early layout exploration for restructuring the FlowAnalytics dashboard",
     caption: "Layout studies focused on a clearer path from overview to detail.",
-    text: "I reorganized and built the dashboard and sidebar to match how users talk about workplace data. Many existing tabs were unused or inconsistent, so I reframed the navigation into seven question-led perspectives: Portfolio, Office, Rooms, Department, User, Climate, and Custom dashboards. This made it easier to compare scenarios without scanning a long tab list. I also introduced AI insights and the Custom dashboards concept, placing insights between filters and KPIs so actions surfaced without hiding the data.",
+    text: "I reorganized and designed 6 dashboards for the MVP in a fast-paced product environment, aligning the experience with how users think about workplace data. Most users relied on just 1-2 dashboards, while many others were unused, unclear, or not trusted, so I restructured the navigation into seven question-led perspectives: Portfolio, Office, Rooms, Department, User, Climate, and Custom dashboards. This made it easier to orient quickly and compare scenarios without scanning a long tab list. I also introduced AI insights and the Custom dashboards concept, placing insights between filters and KPIs so actions surfaced without hiding the data.",
   },
   {
     title: "Clarifying filter interactions",
@@ -66,14 +66,14 @@ const processSections = [
     alt: "Filter refinement concept showing quick filters, advanced filters, and active filter states",
     caption:
       "Quick filters, advanced filters, and a sticky active-filter row made the state easier to follow.",
-    text: "Filters were standardized into one pattern with a clear Apply action. Active filters stayed visible while scrolling, and loading feedback showed when data was updating.",
+    text: "Filters were standardized into one consistent pattern with a clear Apply action. Active filters stayed visible while scrolling, making it easier to understand what data was being shown. Loading feedback used skeleton states to make updates feel faster and more predictable when data changed.",
   },
   {
     title: "Improving data visualization",
     image: "/images/flowscape-detail-kpi.png",
     alt: "Redesigned KPI cards with clearer hierarchy in FlowAnalytics",
     caption: "KPI cards brought the primary value forward with clearer context.",
-    text: "KPI cards were rebuilt to highlight the main value first, with tooltips and targets to clarify what good looks like. I kept stakeholder-required labels like \"Average utilization\" and \"Peak utilization,\" and added short question prompts to help core and new users understand what each KPI actually answers. I also designed the gauge: brand color in the arc, a light-blue target line with text, the metric number, and a checkmark when the target is met, plus a small trend row to show recent movement. Charts used a calmer, more consistent palette so trends read faster.",
+    text: "KPI cards were rebuilt to highlight the main value first, with tooltips, targets, trend indicators, and short question prompts to clarify what each metric represents and what \"good\" looks like. Targets were configurable per dashboard through a settings page, based on input from ongoing meetings with customers. For cases where data was missing, I introduced inactive KPI states with a clear call-to-action, guiding users to the settings page to configure the required data. Charts were also simplified with a calmer, more consistent visual style so trends were easier to scan and compare without adding extra cognitive load.",
   },
 ];
 
@@ -297,7 +297,8 @@ export default function FlowscapePage() {
             </p>
 
             <p className="mt-4 max-w-[640px] text-[14px] leading-[1.7] text-muted md:text-[15px]">
-              The patterns below shaped the direction of the redesign.
+              The patterns below shaped the direction of the new analytics
+              experience.
             </p>
 
             <div className="mt-8 space-y-8 md:mt-10 md:space-y-10">
