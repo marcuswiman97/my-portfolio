@@ -159,6 +159,16 @@ export default function Home() {
               I focus on structure, interaction logic, and making it clear what
               the user should do next. Not by guessing, but by looking at how
               people actually use the product and where they get stuck.
+            </p>
+
+            <p className="mt-10 max-w-[52rem] text-[1.03rem] leading-[1.82] text-ink-soft sm:mt-12 sm:text-[1.08rem] md:text-[1.12rem] lg:text-[1.18rem]">
+              If there isn&apos;t enough user input, I&apos;d rather slow things
+              down than push a change based on assumptions. I try to make
+              decisions that improve the experience for users while also making
+              sense for the business.
+            </p>
+
+            <p className="mt-10 max-w-[52rem] text-[1.03rem] leading-[1.82] text-ink-soft sm:mt-12 sm:text-[1.08rem] md:text-[1.12rem] lg:text-[1.18rem]">
               It&apos;s not about removing features, it&apos;s about making
               better decisions easier and reducing friction along the way. I
               work across UX research, interface design, prototyping, and
@@ -166,14 +176,20 @@ export default function Home() {
             </p>
 
             <p className="mt-10 max-w-[52rem] text-[1.03rem] leading-[1.82] text-ink-soft sm:mt-12 sm:text-[1.08rem] md:text-[1.12rem] lg:text-[1.18rem]">
+              I enjoy challenges and figuring things out over time. The best
+              solutions rarely come straight away, it usually takes a few turns
+              before things really click.
+            </p>
+
+            <p className="mt-10 max-w-[52rem] text-[1.03rem] leading-[1.82] text-ink-soft sm:mt-12 sm:text-[1.08rem] md:text-[1.12rem] lg:text-[1.18rem]">
+              Outside of work, I spend a lot of time training, being with my
+              family, and making music.
+            </p>
+
+            <p className="mt-10 max-w-[52rem] text-[1.03rem] leading-[1.82] text-ink-soft sm:mt-12 sm:text-[1.08rem] md:text-[1.12rem] lg:text-[1.18rem]">
               I care about visual systems too, but only when they help with
               clarity. If you&apos;re building something that needs clearer
               flows or a stronger structure, feel free to reach out.
-            </p>
-
-            <p className="mt-8 max-w-[36rem] text-[0.93rem] leading-7 text-muted sm:text-[0.96rem] md:mt-10">
-              This portfolio was designed and built with AI as a tool, but the
-              design decisions are my own.
             </p>
           </div>
         </section>
