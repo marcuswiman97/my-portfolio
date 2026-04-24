@@ -172,18 +172,9 @@ export default function Home() {
               It&apos;s not about removing features, it&apos;s about making
               better decisions easier and reducing friction along the way. I
               work across UX research, interface design, prototyping, and
-              design systems, with accessibility in mind.
-            </p>
-
-            <p className="mt-10 max-w-[52rem] text-[1.03rem] leading-[1.82] text-ink-soft sm:mt-12 sm:text-[1.08rem] md:text-[1.12rem] lg:text-[1.18rem]">
-              I enjoy challenges and figuring things out over time. The best
-              solutions rarely come straight away, it usually takes a few turns
-              before things really click.
-            </p>
-
-            <p className="mt-10 max-w-[52rem] text-[1.03rem] leading-[1.82] text-ink-soft sm:mt-12 sm:text-[1.08rem] md:text-[1.12rem] lg:text-[1.18rem]">
-              Outside of work, I spend a lot of time training, being with my
-              family, and making music.
+              design systems, with accessibility in mind. Outside of work, I
+              spend a lot of time training, being with my family, and making
+              music.
             </p>
 
             <p className="mt-10 max-w-[52rem] text-[1.03rem] leading-[1.82] text-ink-soft sm:mt-12 sm:text-[1.08rem] md:text-[1.12rem] lg:text-[1.18rem]">
