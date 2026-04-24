@@ -37,8 +37,8 @@ const problemPoints = [
 const insights = [
   {
     label: "Insight 01",
-    title: "Orientation came before detail",
-    text: "Users wanted a quick overview and clear categories before diving into charts. Without that, they hesitated.",
+    title: "Overview came before detail",
+    text: "Users wanted a quick overview and clear categories before diving into charts. Without that, they hesitated or defaulted to familiar dashboards.",
   },
   {
     label: "Insight 02",
@@ -47,8 +47,8 @@ const insights = [
   },
   {
     label: "Insight 03",
-    title: "Density slowed decisions",
-    text: "Crowded screens made it harder to spot what mattered and reduced confidence in the numbers.",
+    title: "High density reduced confidence",
+    text: "Crowded screens made it harder to spot what mattered and lowered confidence in the numbers.",
   },
 ];
 
@@ -286,13 +286,14 @@ export default function FlowscapePage() {
             </h2>
 
             <p className="mt-4 max-w-[640px] text-[15px] leading-[1.7] text-ink-soft md:text-[16px]">
-              Interviews and workflow reviews showed where people slowed down,
-              lost confidence, or missed important signals.
+              Interviews and workflow reviews of the previous Power BI setup
+              showed where people slowed down, lost confidence, or missed
+              important signals.
             </p>
 
             <p className="mt-4 max-w-[640px] text-[14px] leading-[1.7] text-muted md:text-[15px]">
-              Two primary modes emerged: quick decisions for core users and
-              deeper analysis for power users.
+              Most users relied on just 1-2 dashboards, while others explored
+              multiple views, revealing two distinct usage patterns.
             </p>
 
             <p className="mt-4 max-w-[640px] text-[14px] leading-[1.7] text-muted md:text-[15px]">
