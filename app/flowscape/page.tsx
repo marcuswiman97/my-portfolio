@@ -346,7 +346,8 @@ export default function FlowscapePage() {
                   </figure>
                 )}
 
-                {section.title === "Improving data visualization" ? (
+                {showImages &&
+                section.title === "Improving data visualization" ? (
                   <figure className="mt-4 md:mt-5">
                     <div className="relative max-w-[860px] overflow-hidden rounded-[0.5rem] border border-[rgba(43,52,52,0.84)] shadow-[0_18px_40px_rgba(0,0,0,0.18)]">
                       <Image
