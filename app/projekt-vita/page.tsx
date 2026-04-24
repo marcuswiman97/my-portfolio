@@ -75,10 +75,10 @@ export default function ProjektVitaPage() {
               className="object-cover object-center"
               sizes="100vw"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-[rgba(0,0,0,0.84)] via-[rgba(0,0,0,0.5)] to-[rgba(0,0,0,0.12)]" />
-            <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-b from-transparent to-[#0e1111]" />
+            <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(0,0,0,0.82)_0%,rgba(0,0,0,0.68)_28%,rgba(0,0,0,0.38)_52%,rgba(0,0,0,0.12)_75%,rgba(0,0,0,0)_100%)]" />
+            <div className="absolute inset-x-0 bottom-0 h-28 bg-[linear-gradient(to_top,rgba(0,0,0,0.55)_0%,rgba(0,0,0,0)_45%)]" />
 
-            <div className="absolute inset-0 flex items-end">
+            <div className="absolute inset-0 z-10 flex items-end">
               <div className="w-full px-6 pb-12 pt-16 sm:px-8 sm:pb-14 sm:pt-20 md:px-10 md:pb-18">
                 <div className="max-w-[44rem]">
                   <p className="mb-3 text-[14px] font-medium uppercase tracking-[0.14em] text-[rgba(167,176,176,0.82)]">
@@ -95,7 +95,7 @@ export default function ProjektVitaPage() {
               </div>
             </div>
 
-            <div className="absolute left-8 top-8 z-10 md:left-10 md:top-10">
+            <div className="absolute left-8 top-8 z-20 md:left-10 md:top-10">
               <Link
                 href="/"
                 className="group inline-flex items-center gap-3 text-sm text-[rgba(230,232,232,0.78)] transition-colors duration-200 hover:text-white"
