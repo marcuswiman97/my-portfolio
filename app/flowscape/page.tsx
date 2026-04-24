@@ -83,6 +83,8 @@ const outcomePoints = [
   "Charts and KPIs provided clearer context for action.",
 ];
 
+const showImages = false;
+
 export default function FlowscapePage() {
   return (
     <main id="main-content" className="grain-overlay min-h-screen">
@@ -286,61 +288,63 @@ export default function FlowscapePage() {
                   {section.text}
                 </p>
 
-                <figure
-                  className={
-                    section.title === "Restructuring the experience"
-                      ? "mt-12 md:mt-14"
-                      : "mt-9 md:mt-10"
-                  }
-                >
-                  <div
+                {showImages && (
+                  <figure
                     className={
                       section.title === "Restructuring the experience"
-                        ? "relative max-w-[1100px] overflow-hidden rounded-[0.55rem] border border-[rgba(43,52,52,0.92)] shadow-[0_24px_54px_rgba(0,0,0,0.24)]"
-                        : section.title === "Clarifying filter interactions"
-                          ? "relative max-w-[900px] overflow-hidden rounded-[0.5rem] border border-[rgba(43,52,52,0.88)] shadow-[0_20px_44px_rgba(0,0,0,0.2)]"
-                          : section.title === "Improving data visualization"
-                            ? "relative max-w-[980px] overflow-hidden rounded-[0.52rem] border border-[rgba(43,52,52,0.86)] shadow-[0_22px_48px_rgba(0,0,0,0.2)]"
-                            : "relative overflow-hidden rounded-[0.4rem]"
+                        ? "mt-12 md:mt-14"
+                        : "mt-9 md:mt-10"
                     }
                   >
-                    <Image
-                      src={section.image}
-                      alt={section.alt}
-                      width={
+                    <div
+                      className={
                         section.title === "Restructuring the experience"
-                          ? 1600
+                          ? "relative max-w-[1100px] overflow-hidden rounded-[0.55rem] border border-[rgba(43,52,52,0.92)] shadow-[0_24px_54px_rgba(0,0,0,0.24)]"
                           : section.title === "Clarifying filter interactions"
-                            ? 1400
+                            ? "relative max-w-[900px] overflow-hidden rounded-[0.5rem] border border-[rgba(43,52,52,0.88)] shadow-[0_20px_44px_rgba(0,0,0,0.2)]"
                             : section.title === "Improving data visualization"
-                              ? 1500
-                          : 1200
+                              ? "relative max-w-[980px] overflow-hidden rounded-[0.52rem] border border-[rgba(43,52,52,0.86)] shadow-[0_22px_48px_rgba(0,0,0,0.2)]"
+                              : "relative overflow-hidden rounded-[0.4rem]"
                       }
-                      height={
-                        section.title === "Restructuring the experience"
-                          ? 980
-                          : section.title === "Clarifying filter interactions"
-                            ? 920
-                            : section.title === "Improving data visualization"
-                              ? 980
-                          : 675
-                      }
-                      className="h-auto w-full"
-                      sizes={
-                        section.title === "Restructuring the experience"
-                          ? "(max-width: 640px) calc(100vw - 2rem), (max-width: 1024px) calc(100vw - 4rem), 1100px"
-                          : section.title === "Clarifying filter interactions"
-                            ? "(max-width: 640px) calc(100vw - 2rem), (max-width: 1024px) calc(100vw - 4rem), 900px"
-                            : section.title === "Improving data visualization"
-                              ? "(max-width: 640px) calc(100vw - 2rem), (max-width: 1024px) calc(100vw - 4rem), 980px"
-                          : "(max-width: 640px) calc(100vw - 2rem), (max-width: 1024px) calc(100vw - 4rem), 50rem"
-                      }
-                    />
-                  </div>
-                  <figcaption className="mt-4 max-w-[38rem] text-[0.9rem] leading-6 text-muted">
-                    {section.caption}
-                  </figcaption>
-                </figure>
+                    >
+                      <Image
+                        src={section.image}
+                        alt={section.alt}
+                        width={
+                          section.title === "Restructuring the experience"
+                            ? 1600
+                            : section.title === "Clarifying filter interactions"
+                              ? 1400
+                              : section.title === "Improving data visualization"
+                                ? 1500
+                                : 1200
+                        }
+                        height={
+                          section.title === "Restructuring the experience"
+                            ? 980
+                            : section.title === "Clarifying filter interactions"
+                              ? 920
+                              : section.title === "Improving data visualization"
+                                ? 980
+                                : 675
+                        }
+                        className="h-auto w-full"
+                        sizes={
+                          section.title === "Restructuring the experience"
+                            ? "(max-width: 640px) calc(100vw - 2rem), (max-width: 1024px) calc(100vw - 4rem), 1100px"
+                            : section.title === "Clarifying filter interactions"
+                              ? "(max-width: 640px) calc(100vw - 2rem), (max-width: 1024px) calc(100vw - 4rem), 900px"
+                              : section.title === "Improving data visualization"
+                                ? "(max-width: 640px) calc(100vw - 2rem), (max-width: 1024px) calc(100vw - 4rem), 980px"
+                                : "(max-width: 640px) calc(100vw - 2rem), (max-width: 1024px) calc(100vw - 4rem), 50rem"
+                        }
+                      />
+                    </div>
+                    <figcaption className="mt-4 max-w-[38rem] text-[0.9rem] leading-6 text-muted">
+                      {section.caption}
+                    </figcaption>
+                  </figure>
+                )}
 
                 {section.title === "Improving data visualization" ? (
                   <figure className="mt-4 md:mt-5">
@@ -359,7 +363,8 @@ export default function FlowscapePage() {
                       charts feel calmer and easier to separate.
                     </figcaption>
                   </figure>
-                ) : section.title === "Clarifying filter interactions" ? (
+                ) : showImages &&
+                  section.title === "Clarifying filter interactions" ? (
                   <figure className="mt-4 md:mt-5">
                     <div className="relative max-w-[520px] overflow-hidden rounded-[0.5rem] border border-[rgba(43,52,52,0.84)] shadow-[0_18px_40px_rgba(0,0,0,0.18)]">
                       <Image
