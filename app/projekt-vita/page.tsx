@@ -81,10 +81,10 @@ export default function ProjektVitaPage() {
             <div className="absolute inset-0 z-10 flex items-end">
               <div className="w-full px-6 pb-12 pt-16 sm:px-8 sm:pb-14 sm:pt-20 md:px-10 md:pb-18">
                 <div className="max-w-[44rem]">
-                  <p className="mb-3 text-[14px] font-medium uppercase tracking-[0.14em] text-[#d4dcdc]">
+                  <p className="mb-3 text-[14px] font-medium uppercase tracking-[0.12em] text-[#d4dcdc]">
                     CASE STUDY
                   </p>
-                  <h1 className="mb-4 text-balance text-[2.9rem] font-semibold leading-[1.08] tracking-[-0.04em] text-[#e6e8e8] sm:text-[3.8rem] md:text-[4.75rem] lg:text-[5.4rem]">
+                  <h1 className="mb-4 text-balance text-[2.9rem] font-semibold leading-[1.1] tracking-[-0.03em] text-[#e6e8e8] sm:text-[3.8rem] md:text-[4.75rem] lg:text-[5.4rem]">
                     Projekt Vita
                   </h1>
                   <p className="max-w-[34rem] text-[16px] leading-[1.75] text-[#d9e0e0] sm:text-[17px] md:max-w-[36rem] md:text-[18px]">
@@ -111,14 +111,14 @@ export default function ProjektVitaPage() {
 
         <section className="pt-16 pb-12 sm:pt-18 sm:pb-14 md:pt-20 md:pb-16 lg:pt-24 lg:pb-18">
           <div className="mx-auto mt-10 max-w-[50rem] sm:mt-12 md:mt-14">
-            <h2 className="text-balance text-[1.35rem] font-semibold leading-[1.2] text-foreground sm:text-[1.5rem] md:text-[1.65rem]">
+            <h2 className="text-balance text-[1.45rem] font-semibold leading-[1.16] text-foreground sm:text-[1.6rem] md:text-[1.75rem]">
               Overview
             </h2>
 
             <div className="mt-8 grid grid-cols-2 gap-x-6 gap-y-6 sm:grid-cols-2 sm:gap-x-8 sm:gap-y-6 md:grid-cols-4">
               {metadataItems.map((item) => (
                 <div key={item.label}>
-                  <p className="text-[14px] font-medium uppercase tracking-[0.14em] text-[rgba(167,176,176,0.72)]">
+                  <p className="text-[0.95rem] font-medium text-muted">
                     {item.label}
                   </p>
                   <p className="mt-1.5 max-w-[14rem] text-[15px] leading-6 text-foreground md:text-[16px]">
@@ -128,7 +128,7 @@ export default function ProjektVitaPage() {
               ))}
             </div>
 
-            <div className="mt-8 max-w-[50rem] space-y-5 text-[0.97rem] leading-[1.8] text-ink-soft sm:text-[1rem] sm:leading-8 md:mt-10 md:text-[1.0625rem]">
+            <div className="mt-8 max-w-[46rem] space-y-5 text-[0.97rem] leading-[1.8] text-ink-soft sm:text-[1rem] sm:leading-8 md:mt-10 md:text-[1.0625rem]">
               <p>
                 Projekt Vita is a nonprofit organization working with
                 long-term, locally rooted development projects through
@@ -153,11 +153,11 @@ export default function ProjektVitaPage() {
 
         <section className="pt-16 pb-12 sm:pt-18 sm:pb-14 md:pt-20 md:pb-16 lg:pt-24 lg:pb-18">
           <div className="max-w-[50rem]">
-            <h2 className="mb-4 text-balance text-[1.35rem] font-semibold leading-[1.2] text-foreground sm:text-[1.5rem] md:text-[1.65rem]">
+            <h2 className="mb-4 text-balance text-[1.45rem] font-semibold leading-[1.16] text-foreground sm:text-[1.6rem] md:text-[1.75rem]">
               Problem / Context
             </h2>
 
-            <p className="mb-3 inline-flex rounded-full border border-[rgba(255,255,255,0.08)] px-3 py-1 text-[14px] font-medium uppercase tracking-[0.14em] text-[rgba(167,176,176,0.82)]">
+            <p className="mb-3 inline-flex rounded-full border border-[rgba(255,255,255,0.08)] px-3 py-1 text-[14px] font-medium uppercase tracking-[0.12em] text-[rgba(167,176,176,0.82)]">
               Context
             </p>
             <p className="mb-5 max-w-[50rem] text-[16px] leading-[1.8] text-ink-soft sm:text-[17px] md:text-[18px]">
@@ -169,7 +169,7 @@ export default function ProjektVitaPage() {
               supported, and taken seriously.
             </p>
 
-            <p className="mb-4 mt-8 inline-flex rounded-full border border-[rgba(255,255,255,0.08)] px-3 py-1 text-[14px] font-medium uppercase tracking-[0.14em] text-[rgba(167,176,176,0.82)]">
+            <p className="mb-4 mt-8 inline-flex rounded-full border border-[rgba(255,255,255,0.08)] px-3 py-1 text-[14px] font-medium uppercase tracking-[0.12em] text-[rgba(167,176,176,0.82)]">
               Problem
             </p>
             <ul className="max-w-[50rem] list-disc space-y-2.5 pl-5 text-[15px] leading-[1.75] text-ink-soft md:text-[16px]">
@@ -209,7 +209,7 @@ export default function ProjektVitaPage() {
 
         <section className="pt-16 pb-12 sm:pt-18 sm:pb-14 md:pt-20 md:pb-16 lg:pt-24 lg:pb-18">
           <div className="max-w-[50rem]">
-            <h2 className="text-[14px] font-medium uppercase tracking-[0.14em] text-muted">
+            <h2 className="text-[14px] font-medium uppercase tracking-[0.12em] text-muted">
               Approach
             </h2>
 

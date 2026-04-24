@@ -61,11 +61,11 @@ export default function Home() {
 
         <section className="mb-16 pt-0 sm:mb-18 sm:pt-1 md:mb-22 md:pt-2 lg:mb-28 lg:pt-4">
           <div className="mx-auto w-full max-w-[74rem]">
-            <p className="mb-6 text-[14px] font-medium uppercase tracking-[0.14em] text-muted sm:mb-7 md:mb-8">
+            <p className="mb-6 text-[14px] font-medium uppercase tracking-[0.12em] text-muted sm:mb-7 md:mb-8">
               UX Designer + Musician
             </p>
 
-            <h1 className="max-w-[70rem] text-balance text-[2.8rem] font-semibold leading-[0.94] tracking-[-0.065em] text-foreground sm:text-[3.4rem] md:text-[4.1rem] lg:text-[5.2rem]">
+            <h1 className="max-w-[70rem] text-balance text-[2.8rem] font-semibold leading-[0.98] tracking-[-0.05em] text-foreground sm:text-[3.4rem] md:text-[4.1rem] lg:text-[5.2rem]">
               Making complex digital
               <br />
               products easier to
@@ -73,18 +73,18 @@ export default function Home() {
               understand and use
             </h1>
 
-            <p className="mt-8 max-w-[40rem] text-[0.98rem] leading-[1.8] text-ink-soft sm:mt-9 sm:text-[1rem] sm:leading-8 md:mt-10 md:max-w-[42rem] md:text-[1.05rem] lg:mt-12 lg:text-[1.125rem]">
+            <p className="mt-8 max-w-[38rem] text-[0.98rem] leading-[1.8] text-ink-soft sm:mt-9 sm:text-[1rem] sm:leading-8 md:mt-10 md:max-w-[40rem] md:text-[1.05rem] lg:mt-12 lg:text-[1.125rem]">
               Stockholm-based. Focused on product clarity, structure, and
               creative thinking shaped by music.
             </p>
 
-            <p className="mt-4 max-w-[40rem] text-[0.98rem] leading-[1.8] text-ink-soft sm:mt-5 sm:text-[1rem] sm:leading-8 md:max-w-[42rem] md:text-[1.05rem] lg:mt-6 lg:text-[1.125rem]">
+            <p className="mt-4 max-w-[38rem] text-[0.98rem] leading-[1.8] text-ink-soft sm:mt-5 sm:text-[1rem] sm:leading-8 md:max-w-[40rem] md:text-[1.05rem] lg:mt-6 lg:text-[1.125rem]">
               My background in music sharpened how I think about rhythm,
               emotion, and flow. I bring that creative instinct into digital
               products that need to feel clear, intuitive, and memorable.
             </p>
 
-            <p className="mt-6 max-w-[46rem] text-[0.9rem] leading-7 text-muted sm:text-[0.94rem] md:mt-7">
+            <p className="mt-6 max-w-[40rem] text-[0.93rem] leading-7 text-muted sm:text-[0.96rem] md:mt-7">
               Working across UX research, interface design, prototyping,
               design systems, and accessibility-aware decisions.
             </p>
@@ -96,7 +96,7 @@ export default function Home() {
           className="pt-12 pb-18 sm:pt-14 sm:pb-20 md:pt-16 md:pb-24 lg:pt-20 lg:pb-36"
         >
           <div className="mx-auto mb-10 w-full max-w-[72rem] sm:mb-12 md:mb-14 lg:mb-16">
-            <h2 className="text-balance text-[1.9rem] font-semibold leading-[1.06] tracking-[-0.04em] text-foreground sm:text-[2.05rem] md:text-[2.35rem] lg:text-[2.9rem]">
+            <h2 className="text-balance text-[1.95rem] font-semibold leading-[1.08] tracking-[-0.035em] text-foreground sm:text-[2.1rem] md:text-[2.4rem] lg:text-[2.95rem]">
               Selected Work
             </h2>
           </div>
@@ -110,7 +110,7 @@ export default function Home() {
               >
                 <div className="flex items-center justify-between gap-6 transition-transform duration-300 ease-in-out group-hover:translate-x-[2px] group-focus-visible:translate-x-[2px]">
                   <div className="min-w-0 flex-1">
-                    <p className="mb-3 text-[14px] font-medium uppercase tracking-[0.14em] text-muted sm:mb-4">
+                    <p className="mb-3 text-[14px] font-medium tracking-[0.01em] text-muted sm:mb-4">
                       {project.category} / {project.year}
                     </p>
                     <h3 className="max-w-[18rem] text-balance text-[1.55rem] font-semibold leading-[1.08] tracking-[-0.035em] text-foreground transition-colors duration-300 ease-in-out group-hover:text-[#6FAF8F] group-focus-visible:text-[#6FAF8F] sm:max-w-[24rem] sm:text-[1.7rem] md:max-w-none md:text-[1.9rem] lg:text-[2.1rem]">
@@ -144,18 +144,18 @@ export default function Home() {
 
         <section id="about" className="py-20 sm:py-22 md:py-26 lg:py-34">
           <div className="mx-auto w-full max-w-[72rem]">
-            <h2 className="text-balance text-[1.95rem] font-semibold leading-[1.04] tracking-[-0.045em] text-foreground sm:text-[2.2rem] md:text-[2.65rem] lg:text-[3rem]">
+            <h2 className="text-balance text-[2rem] font-semibold leading-[1.08] tracking-[-0.035em] text-foreground sm:text-[2.25rem] md:text-[2.7rem] lg:text-[3rem]">
               About
             </h2>
 
-            <p className="mt-12 max-w-[60rem] text-[1.03rem] leading-[1.82] text-ink-soft sm:mt-14 sm:text-[1.08rem] md:text-[1.12rem] lg:text-[1.18rem]">
+            <p className="mt-12 max-w-[52rem] text-[1.03rem] leading-[1.82] text-ink-soft sm:mt-14 sm:text-[1.08rem] md:text-[1.12rem] lg:text-[1.18rem]">
               I&apos;m Marcus Wiman, a UX designer based in Stockholm. I like
               working on products that have a bit of complexity to them, things
               like dense information, multi-step tasks, or decisions that
               actually matter. My job is to make that feel simple and usable.
             </p>
 
-            <p className="mt-10 max-w-[60rem] text-[1.03rem] leading-[1.82] text-ink-soft sm:mt-12 sm:text-[1.08rem] md:text-[1.12rem] lg:text-[1.18rem]">
+            <p className="mt-10 max-w-[52rem] text-[1.03rem] leading-[1.82] text-ink-soft sm:mt-12 sm:text-[1.08rem] md:text-[1.12rem] lg:text-[1.18rem]">
               I focus on structure, interaction logic, and making it clear what
               the user should do next. Not by guessing, but by looking at how
               people actually use the product and where they get stuck.
@@ -165,13 +165,13 @@ export default function Home() {
               design systems, with accessibility in mind.
             </p>
 
-            <p className="mt-10 max-w-[60rem] text-[1.03rem] leading-[1.82] text-ink-soft sm:mt-12 sm:text-[1.08rem] md:text-[1.12rem] lg:text-[1.18rem]">
+            <p className="mt-10 max-w-[52rem] text-[1.03rem] leading-[1.82] text-ink-soft sm:mt-12 sm:text-[1.08rem] md:text-[1.12rem] lg:text-[1.18rem]">
               I care about visual systems too, but only when they help with
               clarity. If you&apos;re building something that needs clearer
               flows or a stronger structure, feel free to reach out.
             </p>
 
-            <p className="mt-8 max-w-[44rem] text-[0.9rem] leading-7 text-muted sm:text-[0.94rem] md:mt-10">
+            <p className="mt-8 max-w-[36rem] text-[0.93rem] leading-7 text-muted sm:text-[0.96rem] md:mt-10">
               This portfolio was designed and built with AI as a tool, but the
               design decisions are my own.
             </p>
@@ -183,10 +183,10 @@ export default function Home() {
             <div className="rounded-[1.1rem] border border-[rgba(43,52,52,0.92)] bg-[linear-gradient(135deg,rgba(18,22,22,0.96)_0%,rgba(14,17,17,0.94)_100%)] px-6 py-8 shadow-[0_24px_60px_rgba(0,0,0,0.18)] sm:px-8 sm:py-10 md:px-10 md:py-12">
               <div className="grid gap-10 md:grid-cols-[minmax(0,1.2fr)_minmax(280px,0.8fr)] md:gap-12 lg:gap-16">
                 <div>
-                  <p className="text-[14px] font-medium uppercase tracking-[0.14em] text-muted">
+                  <p className="text-[14px] font-medium tracking-[0.01em] text-muted">
                     Contact
                   </p>
-                  <h2 className="mt-4 text-balance text-[1.95rem] font-semibold leading-[1.04] tracking-[-0.045em] text-foreground sm:text-[2.2rem] md:text-[2.65rem] lg:text-[3rem]">
+                  <h2 className="mt-4 text-balance text-[2rem] font-semibold leading-[1.08] tracking-[-0.035em] text-foreground sm:text-[2.25rem] md:text-[2.7rem] lg:text-[3rem]">
                     Get in touch.
                   </h2>
 
@@ -203,7 +203,7 @@ export default function Home() {
                       className="group flex items-center justify-between gap-4 px-5 py-5 transition-colors duration-200 hover:bg-[rgba(255,255,255,0.03)] sm:px-6"
                     >
                       <div>
-                        <p className="text-[13px] font-medium uppercase tracking-[0.14em] text-muted">
+                        <p className="text-[14px] font-medium tracking-[0.01em] text-muted">
                           Email
                         </p>
                         <p className="mt-2 break-all text-[1rem] font-medium text-foreground sm:text-[1.02rem]">
@@ -218,17 +218,17 @@ export default function Home() {
                     <div className="h-px bg-[rgba(255,255,255,0.06)]" />
 
                     <Link
-                      href="https://www.linkedin.com/in/marcuswiman"
+                      href="https://www.linkedin.com/in/marcus-wiman/"
                       className="group flex items-center justify-between gap-4 px-5 py-5 transition-colors duration-200 hover:bg-[rgba(255,255,255,0.03)] sm:px-6"
                       target="_blank"
                       rel="noreferrer"
                     >
                       <div>
-                        <p className="text-[13px] font-medium uppercase tracking-[0.14em] text-muted">
+                        <p className="text-[14px] font-medium tracking-[0.01em] text-muted">
                           LinkedIn
                         </p>
                         <p className="mt-2 text-[1rem] font-medium text-foreground sm:text-[1.02rem]">
-                          linkedin.com/in/marcuswiman
+                          linkedin.com/in/marcus-wiman/
                         </p>
                       </div>
                       <span className="shrink-0 text-muted transition duration-200 group-hover:translate-x-[2px] group-hover:text-[var(--accent-green)]">

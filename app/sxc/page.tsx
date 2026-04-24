@@ -77,10 +77,10 @@ export default function SxcPage() {
               <div className="w-full px-6 py-16 sm:px-8 sm:py-20 md:px-10">
                 <div className="max-w-[72rem]">
                   <div className="max-w-[50rem]">
-                    <p className="mb-3 text-[14px] font-medium uppercase tracking-[0.14em] text-[#d4dcdc]">
+                    <p className="mb-3 text-[14px] font-medium uppercase tracking-[0.12em] text-[#d4dcdc]">
                       CASE STUDY
                     </p>
-                    <h1 className="mb-4 text-balance text-[2.9rem] font-semibold leading-[1.08] tracking-[-0.04em] text-[#e6e8e8] sm:text-[3.8rem] md:text-[4.75rem] lg:text-[5.4rem]">
+                    <h1 className="mb-4 text-balance text-[2.9rem] font-semibold leading-[1.1] tracking-[-0.03em] text-[#e6e8e8] sm:text-[3.8rem] md:text-[4.75rem] lg:text-[5.4rem]">
                       Stockholm Xperience Conference
                     </h1>
                     <p className="max-w-[37.5rem] text-[16px] leading-[1.75] text-[#d9e0e0] sm:text-[17px] md:text-[18px]">
@@ -109,14 +109,14 @@ export default function SxcPage() {
 
         <section className="pt-16 pb-12 sm:pt-18 sm:pb-14 md:pt-20 md:pb-16 lg:pt-24 lg:pb-18">
           <div className="mx-auto mt-10 max-w-[50rem] sm:mt-12 md:mt-14">
-            <h2 className="text-balance text-[1.35rem] font-semibold leading-[1.2] text-foreground sm:text-[1.5rem] md:text-[1.65rem]">
+            <h2 className="text-balance text-[1.45rem] font-semibold leading-[1.16] text-foreground sm:text-[1.6rem] md:text-[1.75rem]">
               Overview
             </h2>
 
             <div className="mt-8 grid grid-cols-2 gap-x-6 gap-y-6 sm:grid-cols-2 sm:gap-x-8 sm:gap-y-6 md:grid-cols-4">
               {metadataItems.map((item) => (
                 <div key={item.label}>
-                  <p className="text-[0.95rem] font-medium text-muted">
+                  <p className="text-[0.95rem] font-medium tracking-[0.01em] text-muted">
                     {item.label}
                   </p>
                   <p className="mt-1.5 max-w-[14rem] text-[15px] leading-6 text-foreground md:text-[16px]">
@@ -126,7 +126,7 @@ export default function SxcPage() {
               ))}
             </div>
 
-            <div className="mt-8 max-w-[50rem] space-y-5 text-[0.97rem] leading-[1.8] text-ink-soft sm:text-[1rem] sm:leading-8 md:text-[1.0625rem]">
+            <div className="mt-8 max-w-[46rem] space-y-5 text-[0.97rem] leading-[1.8] text-ink-soft sm:text-[1rem] sm:leading-8 md:text-[1.0625rem]">
               <p>
                 I reworked a mobile-first conference concept to make talks,
                 workshops, people, and key actions easier to navigate in one
@@ -148,7 +148,7 @@ export default function SxcPage() {
 
         <section className="pt-16 pb-12 sm:pt-18 sm:pb-14 md:pt-20 md:pb-16 lg:pt-24 lg:pb-18">
           <div className="max-w-[50rem]">
-            <h2 className="mb-4 text-balance text-[1.35rem] font-semibold leading-[1.2] text-foreground sm:text-[1.5rem] md:text-[1.65rem]">
+            <h2 className="mb-4 text-balance text-[1.45rem] font-semibold leading-[1.16] text-foreground sm:text-[1.6rem] md:text-[1.75rem]">
               Context
             </h2>
 
@@ -165,7 +165,7 @@ export default function SxcPage() {
 
         <section className="pt-16 pb-12 sm:pt-18 sm:pb-14 md:pt-20 md:pb-16 lg:pt-24 lg:pb-18">
           <div className="max-w-[50rem]">
-            <h2 className="mb-4 text-balance text-[1.35rem] font-semibold leading-[1.2] text-foreground sm:text-[1.5rem] md:text-[1.65rem]">
+            <h2 className="mb-4 text-balance text-[1.45rem] font-semibold leading-[1.16] text-foreground sm:text-[1.6rem] md:text-[1.75rem]">
               Problem
             </h2>
 
@@ -179,7 +179,7 @@ export default function SxcPage() {
 
         <section className="pt-16 pb-12 sm:pt-18 sm:pb-14 md:pt-20 md:pb-16 lg:pt-24 lg:pb-18">
           <div className="max-w-[50rem]">
-            <h2 className="text-[14px] font-medium uppercase tracking-[0.14em] text-[rgba(167,176,176,0.82)]">
+            <h2 className="text-[14px] font-medium uppercase tracking-[0.12em] text-[rgba(167,176,176,0.82)]">
               Process
             </h2>
 
@@ -211,7 +211,7 @@ export default function SxcPage() {
 
         <section className="pt-16 pb-12 sm:pt-18 sm:pb-14 md:pt-20 md:pb-16 lg:pt-24 lg:pb-18">
           <div className="max-w-[50rem] rounded-[0.9rem] border border-[rgba(43,52,52,0.92)] bg-[rgba(18,22,22,0.9)] px-6 py-8 sm:px-8 sm:py-10 md:px-10 md:py-12">
-            <h2 className="text-[14px] font-medium uppercase tracking-[0.14em] text-muted">
+            <h2 className="text-[14px] font-medium uppercase tracking-[0.12em] text-muted">
               Concept Exploration
             </h2>
 
