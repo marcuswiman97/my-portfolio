@@ -168,7 +168,8 @@ export default function Home() {
         <section id="about" className="py-20 sm:py-22 md:py-26 lg:py-34">
           <div className="mx-auto grid w-full max-w-[80rem] gap-12 md:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] md:items-start md:gap-[clamp(64px,8vw,120px)]">
             <h2 className="text-balance text-[2.45rem] font-semibold leading-[1.02] tracking-[-0.05em] text-foreground sm:text-[3rem] md:text-[3.55rem] lg:text-[4.4rem]">
-              A designer driven by curiosity, clarity, and people’s problems.
+              A designer driven by curiosity, clarity, and solving people’s
+              problems.
             </h2>
 
             <div className="max-w-[40rem] space-y-8 text-[1.02rem] leading-[1.82] text-ink-soft sm:text-[1.07rem] md:text-[1.1rem] lg:text-[1.14rem]">
