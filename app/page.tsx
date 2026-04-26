@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { SiteHeader } from "@/components/layout/site-header";
+import { WhatIDo } from "@/components/what-i-do";
 
 export const metadata: Metadata = {
   title: "Marcus Wiman | UX Portfolio",
@@ -56,38 +57,60 @@ const selectedWork = [
 export default function Home() {
   return (
     <main id="main-content" className="grain-overlay min-h-screen">
-      <div className="mx-auto flex min-h-screen max-w-6xl flex-col px-4 py-6 sm:px-6 sm:py-8 md:px-8 md:py-10 lg:px-10 lg:py-14">
-        <SiteHeader />
+      <div className="mx-auto flex min-h-screen max-w-6xl flex-col px-4 pt-0 pb-6 sm:px-6 sm:pt-0 sm:pb-8 md:px-8 md:pt-0 md:pb-10 lg:px-10 lg:pt-0 lg:pb-14">
+        <SiteHeader compact />
 
-        <section className="mb-16 pt-0 sm:mb-18 sm:pt-1 md:mb-22 md:pt-2 lg:mb-28 lg:pt-4">
-          <div className="mx-auto w-full max-w-[74rem]">
-            <p className="mb-6 text-[14px] font-medium uppercase tracking-[0.12em] text-muted sm:mb-7 md:mb-8">
-              UX Designer + Musician
-            </p>
+        <section className="mb-16 pt-8 sm:mb-18 sm:pt-10 md:mb-22 md:pt-12 lg:mb-28 lg:flex lg:min-h-[78svh] lg:items-center lg:pt-10">
+          <div className="w-full lg:w-[calc(100vw-5rem)] lg:max-w-[82.5rem] xl:w-[calc(100vw-((100vw-72rem)/2)-5rem)]">
+            <div className="grid gap-9 lg:grid-cols-[minmax(0,1.15fr)_minmax(360px,0.85fr)] lg:items-end lg:gap-[clamp(64px,8vw,140px)]">
+              <div>
+                <p className="mb-7 text-[14px] font-medium uppercase tracking-[0.12em] text-muted sm:mb-8 md:mb-10">
+                  Available for UX roles · Stockholm
+                </p>
 
-            <h1 className="max-w-[70rem] text-balance text-[2.8rem] font-semibold leading-[0.98] tracking-[-0.05em] text-foreground sm:text-[3.4rem] md:text-[4.1rem] lg:text-[5.2rem]">
-              Making complex digital
-              <br />
-              products easier to
-              <br />
-              understand and use
-            </h1>
+                <h1 className="max-w-none text-balance text-[3rem] font-semibold leading-[0.96] tracking-[-0.055em] text-foreground sm:text-[3.7rem] md:text-[4.6rem] lg:text-[5.3rem] xl:text-[5.95rem]">
+                  Making digital products
+                  <br />
+                  <span className="font-serif italic tracking-[-0.035em] text-[var(--accent-green)]">
+                    easier
+                  </span>{" "}
+                  to understand
+                  <br />
+                  and use
+                </h1>
+              </div>
 
-            <p className="mt-8 max-w-[38rem] text-[0.98rem] leading-[1.8] text-ink-soft sm:mt-9 sm:text-[1rem] sm:leading-8 md:mt-10 md:max-w-[40rem] md:text-[1.05rem] lg:mt-12 lg:text-[1.125rem]">
-              Stockholm-based. Focused on product clarity, structure, and
-              creative thinking shaped by music.
-            </p>
+              <div className="max-w-[38rem] lg:pb-6">
+                <p className="mb-4 text-[13px] font-medium uppercase tracking-[0.12em] text-muted sm:mb-5">
+                  UX Approach
+                </p>
 
-            <p className="mt-4 max-w-[38rem] text-[0.98rem] leading-[1.8] text-ink-soft sm:mt-5 sm:text-[1rem] sm:leading-8 md:max-w-[40rem] md:text-[1.05rem] lg:mt-6 lg:text-[1.125rem]">
-              My background in music sharpened how I think about rhythm,
-              emotion, and flow. I bring that creative instinct into digital
-              products that need to feel clear, intuitive, and memorable.
-            </p>
+                <p className="text-[1.08rem] leading-[1.75] text-ink-soft sm:text-[1.16rem] sm:leading-8 md:text-[1.24rem] lg:text-[1.32rem]">
+                  I help companies understand their users and turn insights into
+                  solutions that create real value.
+                </p>
 
-            <p className="mt-6 max-w-[40rem] text-[0.93rem] leading-7 text-muted sm:text-[0.96rem] md:mt-7">
-              Working across UX research, interface design, prototyping,
-              design systems, and accessibility-aware decisions.
-            </p>
+                <p className="mt-4 text-[0.96rem] leading-[1.78] text-muted sm:mt-5 sm:text-[0.98rem] md:text-[1rem]">
+                  UX designer based in Stockholm, with a background in music
+                  that shaped how I think about clarity, flow, and structure.
+                </p>
+
+                <div className="mt-7 h-px w-full max-w-[18rem] bg-[rgba(255,255,255,0.08)] sm:mt-8" />
+
+                <Link
+                  href="#work"
+                  className="group mt-5 inline-flex items-center gap-2 text-[1.05rem] font-medium text-foreground transition-colors duration-300 ease-in-out hover:text-[var(--accent-green)] focus-visible:text-[var(--accent-green)] sm:mt-6 sm:text-[1.12rem]"
+                >
+                  View selected work
+                  <span
+                    aria-hidden="true"
+                    className="transition-transform duration-300 ease-in-out group-hover:translate-x-1 group-focus-visible:translate-x-1"
+                  >
+                    →
+                  </span>
+                </Link>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -143,47 +166,40 @@ export default function Home() {
         </section>
 
         <section id="about" className="py-20 sm:py-22 md:py-26 lg:py-34">
-          <div className="mx-auto w-full max-w-[72rem]">
-            <h2 className="text-balance text-[2rem] font-semibold leading-[1.08] tracking-[-0.035em] text-foreground sm:text-[2.25rem] md:text-[2.7rem] lg:text-[3rem]">
-              About
+          <div className="mx-auto grid w-full max-w-[80rem] gap-12 md:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] md:items-start md:gap-[clamp(64px,8vw,120px)]">
+            <h2 className="text-balance text-[2.45rem] font-semibold leading-[1.02] tracking-[-0.05em] text-foreground sm:text-[3rem] md:text-[3.55rem] lg:text-[4.4rem]">
+              A designer driven by curiosity, clarity, and people’s problems.
             </h2>
 
-            <p className="mt-12 max-w-[52rem] text-[1.03rem] leading-[1.82] text-ink-soft sm:mt-14 sm:text-[1.08rem] md:text-[1.12rem] lg:text-[1.18rem]">
-              I&apos;m Marcus Wiman, a UX designer based in Stockholm. I like
-              working on products that have a bit of complexity to them, things
-              like dense information, multi-step tasks, or decisions that
-              actually matter. My job is to make that feel simple and usable.
-            </p>
+            <div className="max-w-[40rem] space-y-8 text-[1.02rem] leading-[1.82] text-ink-soft sm:text-[1.07rem] md:text-[1.1rem] lg:text-[1.14rem]">
+              <p>
+                I&apos;m Marcus, a UX designer based in Stockholm. I focus on
+                clarity, structure, and how people actually use the products we
+                build.
+              </p>
 
-            <p className="mt-10 max-w-[52rem] text-[1.03rem] leading-[1.82] text-ink-soft sm:mt-12 sm:text-[1.08rem] md:text-[1.12rem] lg:text-[1.18rem]">
-              I focus on structure, interaction logic, and making it clear what
-              the user should do next. Not by guessing, but by looking at how
-              people actually use the product and where they get stuck.
-            </p>
+              <p>
+                I&apos;m drawn to challenging problems and naturally curious
+                about how things work. Analytics platforms, complex tools, and
+                dense information environments. The challenge is making them
+                feel simple, intuitive, and easy to navigate.
+              </p>
 
-            <p className="mt-10 max-w-[52rem] text-[1.03rem] leading-[1.82] text-ink-soft sm:mt-12 sm:text-[1.08rem] md:text-[1.12rem] lg:text-[1.18rem]">
-              If there isn&apos;t enough user input, I&apos;d rather slow things
-              down than push a change based on assumptions. I try to make
-              decisions that improve the experience for users while also making
-              sense for the business.
-            </p>
+              <p>
+                Most of my work starts with a simple question: what is this
+                trying to say?
+              </p>
 
-            <p className="mt-10 max-w-[52rem] text-[1.03rem] leading-[1.82] text-ink-soft sm:mt-12 sm:text-[1.08rem] md:text-[1.12rem] lg:text-[1.18rem]">
-              It&apos;s not about removing features, it&apos;s about making
-              better decisions easier and reducing friction along the way. I
-              work across UX research, interface design, prototyping, and
-              design systems, with accessibility in mind. Outside of work, I
-              spend a lot of time training, being with my girlfriend, friends,
-              and family, and making music.
-            </p>
-
-            <p className="mt-10 max-w-[52rem] text-[1.03rem] leading-[1.82] text-ink-soft sm:mt-12 sm:text-[1.08rem] md:text-[1.12rem] lg:text-[1.18rem]">
-              I care about visual systems too, but only when they help with
-              clarity. If you&apos;re building something that needs clearer
-              flows or a stronger structure, feel free to reach out.
-            </p>
+              <p>
+                Before UX, I spent years in music. That still shapes how I think
+                about rhythm, flow, and composition. A good interface guides
+                attention without needing to shout.
+              </p>
+            </div>
           </div>
         </section>
+
+        <WhatIDo />
 
         <section id="contact" className="py-20 sm:py-22 md:py-26 lg:py-34">
           <div className="mx-auto w-full max-w-[72rem]">
@@ -250,10 +266,14 @@ export default function Home() {
         </section>
 
         <footer className="py-12 text-sm text-muted md:py-14 lg:py-16">
-          <div className="mx-auto flex w-full max-w-[72rem] flex-col gap-2 sm:gap-3 md:flex-row md:items-center md:justify-between">
-            <p>Marcus Wiman</p>
-            <p>Stockholm, Sweden</p>
-            <p>UX Designer</p>
+          <div className="mx-auto w-full max-w-[72rem]">
+            <div className="mb-8 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
+
+            <div className="flex flex-col gap-2 sm:gap-3 md:flex-row md:items-center md:justify-between">
+              <p>© 2026 Marcus Wiman</p>
+              <p>Stockholm, Sweden</p>
+              <p>UX Designer</p>
+            </div>
           </div>
         </footer>
       </div>
