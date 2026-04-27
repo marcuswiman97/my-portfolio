@@ -180,15 +180,9 @@ export default function Home() {
               </p>
 
               <p>
-                I&apos;m drawn to challenging problems and naturally curious
-                about how things work. Analytics platforms, complex tools, and
-                dense information environments. The challenge is making them
-                feel simple, intuitive, and easy to navigate.
-              </p>
-
-              <p>
-                Most of my work starts with a simple question: what is this
-                trying to say?
+                I&apos;m drawn to challenging problems and curious about how
+                things work, especially in analytics platforms and
+                information-dense environments.
               </p>
 
               <p>
