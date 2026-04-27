@@ -192,9 +192,16 @@ export default function Home() {
               </p>
 
               <p>
-                Before UX, I spent years in music. That still shapes how I think
-                about rhythm, flow, and composition. A good interface guides
-                attention without needing to shout.
+                Before UX, I spent years in music and running my own creative
+                business. That still shapes how I think about rhythm, flow, and
+                composition.
+              </p>
+
+              <p>
+                I&apos;ve worked with real audiences, from live performances at
+                Gröna Lund to appearances on SVT1 and Sveriges Radio (P4), and
+                learned to deliver under pressure. A good interface guides
+                attention without friction.
               </p>
             </div>
           </div>
