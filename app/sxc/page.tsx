@@ -61,7 +61,7 @@ export default function SxcPage() {
         <SiteHeader compact />
 
         <section className="relative left-1/2 mb-6 w-screen -translate-x-1/2 overflow-hidden sm:mb-8 md:mb-10 lg:mb-12">
-          <div className="relative h-[68vh] min-h-[460px] overflow-hidden sm:h-[70vh] sm:min-h-[500px]">
+          <div className="relative h-[50vh] min-h-[400px] overflow-hidden sm:h-[52vh] sm:min-h-[420px] lg:h-[65vh] lg:min-h-[400px]">
             <Image
               src="/images/sxc-hero-v2.jpg"
               alt="Stockholm Xperience Conference hero image"
@@ -70,8 +70,8 @@ export default function SxcPage() {
               className="object-cover object-[60%_center]"
               sizes="100vw"
             />
-            <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(0,0,0,0.92)_0%,rgba(0,0,0,0.8)_30%,rgba(0,0,0,0.52)_54%,rgba(0,0,0,0.2)_76%,rgba(0,0,0,0)_100%)]" />
-            <div className="absolute inset-x-0 bottom-0 h-32 bg-[linear-gradient(to_top,rgba(0,0,0,0.68)_0%,rgba(0,0,0,0)_48%)]" />
+            <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(0,0,0,0.96)_0%,rgba(0,0,0,0.9)_30%,rgba(0,0,0,0.7)_55%,rgba(0,0,0,0.3)_75%,rgba(0,0,0,0)_100%)]" />
+            <div className="absolute inset-0 bg-black/40 sm:bg-transparent" />
 
             <div className="absolute inset-0 z-10 flex items-center">
               <div className="w-full px-6 py-16 sm:px-8 sm:py-20 md:px-10">
@@ -84,9 +84,9 @@ export default function SxcPage() {
                       Stockholm Xperience Conference
                     </h1>
                     <p className="max-w-[37.5rem] text-[16px] leading-[1.75] text-[#d9e0e0] sm:text-[17px] md:text-[18px]">
-                      A mobile-first concept for a hybrid UX conference,
-                      helping people find talks, workshops, and relevant
-                      attendees more easily.
+                      A mobile-first concept for a hybrid UX conference, helping
+                      people find talks, workshops, and relevant attendees more
+                      easily.
                     </p>
                   </div>
                 </div>
@@ -107,8 +107,8 @@ export default function SxcPage() {
           </div>
         </section>
 
-        <section className="pt-16 pb-12 sm:pt-18 sm:pb-14 md:pt-20 md:pb-16 lg:pt-24 lg:pb-18">
-          <div className="mx-auto mt-10 max-w-[50rem] sm:mt-12 md:mt-14">
+        <section className="pt-6 pb-12 sm:pt-8 sm:pb-14 md:pt-10 md:pb-16 lg:pt-6 lg:pb-18">
+          <div className="mx-auto mt-2 max-w-[50rem] sm:mt-3 md:mt-4">
             <h2 className="text-balance text-[1.45rem] font-semibold leading-[1.16] text-foreground sm:text-[1.6rem] md:text-[1.75rem]">
               Overview
             </h2>
@@ -157,8 +157,8 @@ export default function SxcPage() {
               workshops, and networking across physical and digital touchpoints.
               Attendees needed to compare sessions, decide where to spend their
               time, and find relevant people to connect with, often in the
-              middle of a fast-moving event. The product needed to support
-              those decisions quickly.
+              middle of a fast-moving event. The product needed to support those
+              decisions quickly.
             </p>
           </div>
         </section>
@@ -202,8 +202,8 @@ export default function SxcPage() {
                 />
               </div>
               <figcaption className="mt-3 text-[0.9rem] leading-6 text-muted">
-                Early sketches exploring how content, people, and actions
-                could sit in one flow.
+                Early sketches exploring how content, people, and actions could
+                sit in one flow.
               </figcaption>
             </figure>
           </div>
@@ -290,8 +290,8 @@ export default function SxcPage() {
 
             <p className="mt-6 max-w-[44rem] text-[0.97rem] leading-[1.8] text-ink-soft sm:text-[1rem] sm:leading-8 md:mt-8 md:text-[1.0625rem]">
               The project gave stakeholders a clearer picture of how the
-              conference experience could be structured in a more connected
-              way. While the concept was not tested with users at scale, it was
+              conference experience could be structured in a more connected way.
+              While the concept was not tested with users at scale, it was
               presented to the organization, received positive feedback, and
               felt worth developing further.
             </p>

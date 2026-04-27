@@ -57,8 +57,9 @@ const processSections = [
     title: "Restructuring the experience",
     image: "/images/flowscape-structure.png",
     alt: "Early layout exploration for restructuring the FlowAnalytics dashboard",
-    caption: "Layout studies focused on a clearer path from overview to detail.",
-    text: "I reorganized and designed 6 dashboards for the MVP in a fast-paced product environment, aligning the experience with how users think about workplace data. Most users relied on just 1-2 dashboards, while many others were unused, unclear, or not trusted, so I restructured the navigation into seven question-led perspectives: Portfolio, Office, Rooms, Department, User, Climate, and Custom dashboards. This made it easier to orient quickly and compare scenarios without scanning a long tab list. I also introduced AI insights and the Custom dashboards concept, placing insights between filters and KPIs so actions surfaced without hiding the data.",
+    caption:
+      "Layout studies focused on a clearer path from overview to detail.",
+    text: `I reorganized and designed 6 dashboards for the MVP, representing roughly half of the product, aligning the experience with how users think about workplace data. I worked closely with stakeholders, including the company founder, a frontend developer, and a backend analytics specialist, to ensure alignment between design, data, and implementation.`,
   },
   {
     title: "Clarifying filter interactions",
@@ -72,8 +73,9 @@ const processSections = [
     title: "Improving data visualization",
     image: "/images/flowscape-detail-kpi.png",
     alt: "Redesigned KPI cards with clearer hierarchy in FlowAnalytics",
-    caption: "KPI cards brought the primary value forward with clearer context.",
-    text: "KPI cards were rebuilt to highlight the main value first, with tooltips, targets, trend indicators, and short question prompts to clarify what each metric represents and what \"good\" looks like. Targets were configurable per dashboard through a settings page, based on input from ongoing meetings with customers. For cases where data was missing, I introduced inactive KPI states with a clear call-to-action, guiding users to the settings page to configure the required data. Charts were also simplified with a calmer, more consistent visual style so trends were easier to scan and compare without adding extra cognitive load.",
+    caption:
+      "KPI cards brought the primary value forward with clearer context.",
+    text: 'KPI cards were rebuilt to highlight the main value first, with tooltips, targets, trend indicators, and short question prompts to clarify what each metric represents and what "good" looks like. Targets were configurable per dashboard through a settings page, based on input from ongoing meetings with customers. For cases where data was missing, I introduced inactive KPI states with a clear call-to-action, guiding users to the settings page to configure the required data. Charts were also simplified with a calmer, more consistent visual style so trends were easier to scan and compare without adding extra cognitive load.',
   },
 ];
 
@@ -101,8 +103,8 @@ export default function FlowscapePage() {
               className="object-cover"
               sizes="100vw"
             />
-            <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(0,0,0,0.92)_0%,rgba(0,0,0,0.8)_30%,rgba(0,0,0,0.52)_54%,rgba(0,0,0,0.2)_76%,rgba(0,0,0,0)_100%)]" />
-            <div className="absolute inset-x-0 bottom-0 h-32 bg-[linear-gradient(to_top,rgba(0,0,0,0.68)_0%,rgba(0,0,0,0)_48%)]" />
+            <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(0,0,0,0.96)_0%,rgba(0,0,0,0.9)_30%,rgba(0,0,0,0.7)_55%,rgba(0,0,0,0.3)_75%,rgba(0,0,0,0)_100%)]" />
+            <div className="absolute inset-0 bg-black/40 sm:bg-transparent" />
 
             <div className="absolute inset-0 z-10 flex items-center">
               <div className="w-full px-6 py-16 sm:px-8 sm:py-20">
@@ -160,82 +162,24 @@ export default function FlowscapePage() {
 
             <div className="mt-8 max-w-[46rem] space-y-5 text-[0.97rem] leading-[1.8] text-ink-soft sm:text-[1rem] sm:leading-8 md:mt-10 md:text-[1.0625rem] lg:mt-14">
               <p>
-                Flowscape&apos;s admin portal is where facility teams manage
-                offices, from spaces and assets to sensors, devices, files,
-                and integrations. FlowAnalytics is the analytics area inside
-                it, with dashboards that surface workplace usage, pain points,
-                and opportunities.
+                Flowscape’s admin portal is where facility teams manage offices,
+                assets, and workplace data. FlowAnalytics is the analytics area
+                within it.
               </p>
 
               <p>
-                Previously, analytics relied on a large set of fragmented
-                dashboards, many of which were rarely used. Most users only
-                interacted with one or two dashboards and struggled to
-                understand what the data meant or what to act on. Even
-                internal team members found parts of the dashboards difficult
-                to interpret. The structure did not reflect how users think
-                about workplace data, which made navigation, discovery, and
-                interpretation difficult.
+                As the sole UX designer, I redesigned the analytics experience
+                and established a shared design system to support it.
               </p>
 
               <p>
-                As the sole UX designer, I designed a new analytics experience
-                and established a shared design system to support it. I
-                restructured the information architecture, consolidated
-                underused dashboards, and rewrote labels and descriptions to
-                make metrics easier to understand.
-              </p>
-
-              <p>
-                The work shifted the product from a fragmented and low-trust
-                dashboard experience to a structured, user-centered system
-                aligned with how users think about workplace data. The focus
-                was helping facility and workplace managers quickly understand
-                space usage, interpret metrics with confidence, and make
-                informed decisions without needing to dig through multiple
-                dashboards.
+                I restructured the information architecture, simplified
+                dashboards, and made key metrics easier to understand and act
+                on.
               </p>
             </div>
 
             <div className="mt-6 h-px w-full bg-[rgba(230,232,232,0.12)]" />
-          </div>
-        </section>
-
-        <section className="pt-16 pb-12 sm:pt-18 sm:pb-14 md:pt-20 md:pb-16 lg:pt-24 lg:pb-18">
-          <div className="max-w-[50rem]">
-            <h2 className="text-balance text-[1.45rem] font-semibold leading-[1.16] text-foreground sm:text-[1.6rem] md:text-[1.75rem]">
-              Design system
-            </h2>
-
-            <div className="mt-8 max-w-[46rem] space-y-5 text-[0.97rem] leading-[1.8] text-ink-soft sm:text-[1rem] sm:leading-8 md:mt-10 md:text-[1.0625rem]">
-              <p>
-                As part of building a new admin portal from scratch, I defined
-                a lightweight design system to support long-term consistency
-                and scalability. Previously, the analytics experience was
-                built in Power BI using a more fragmented, drag-and-drop
-                approach.
-              </p>
-
-              <p>
-                The portal was developed using Next.js and TailAdmin as a
-                foundation, which I adapted and structured to fit the needs of
-                the analytics experience.
-              </p>
-
-              <p>
-                As the sole designer, I shaped the visual language and
-                component patterns across the product, working closely with the
-                frontend developer to ensure a smooth handoff.
-              </p>
-
-              <p>
-                The system focused on clarity and consistency, using a
-                structured spacing scale and an accessible color palette. The
-                color system was explored through multiple variations and
-                refined together with stakeholders to align with the
-                company&apos;s core values.
-              </p>
-            </div>
           </div>
         </section>
 
@@ -246,9 +190,8 @@ export default function FlowscapePage() {
             </h2>
 
             <p className="mb-5 max-w-[50rem] text-[16px] leading-[1.8] text-foreground sm:text-[17px] md:text-[18px]">
-              Users could access a large amount of workplace data, but
-              struggled to quickly understand what mattered or what to do
-              next.
+              Users could access a large amount of workplace data, but struggled
+              to quickly understand what mattered or what to do next.
             </p>
 
             <p className="mb-5 max-w-[50rem] text-[16px] leading-[1.8] text-foreground sm:text-[17px] md:text-[18px]">
@@ -263,9 +206,7 @@ export default function FlowscapePage() {
             </ul>
 
             <div className="mt-8 max-w-[50rem]">
-              <p className="text-[0.95rem] font-medium text-muted">
-                Users
-              </p>
+              <p className="text-[0.95rem] font-medium text-muted">Users</p>
 
               <p className="mt-4 text-[15px] leading-[1.75] text-ink-soft md:text-[16px]">
                 The primary users were facility and workplace managers
@@ -278,15 +219,9 @@ export default function FlowscapePage() {
               </p>
 
               <ul className="mt-4 list-disc space-y-2.5 pl-5 text-[15px] leading-[1.75] text-ink-soft md:text-[16px]">
-                <li>
-                  Quickly understanding space usage and key metrics
-                </li>
-                <li>
-                  Navigating dashboards efficiently
-                </li>
-                <li>
-                  Trusting the data to support decisions
-                </li>
+                <li>Quickly understanding space usage and key metrics</li>
+                <li>Navigating dashboards efficiently</li>
+                <li>Trusting the data to support decisions</li>
               </ul>
 
               <p className="mt-4 text-[15px] leading-[1.75] text-ink-soft md:text-[16px]">
@@ -294,10 +229,10 @@ export default function FlowscapePage() {
               </p>
 
               <ul className="mt-4 list-disc space-y-2.5 pl-5 text-[15px] leading-[1.75] text-ink-soft md:text-[16px]">
-                <li>Some users focused on a single dashboard for quick answers</li>
                 <li>
-                  Others explored multiple dashboards for deeper analysis
+                  Some users focused on a single dashboard for quick answers
                 </li>
+                <li>Others explored multiple dashboards for deeper analysis</li>
               </ul>
             </div>
 
@@ -317,6 +252,48 @@ export default function FlowscapePage() {
               </figcaption>
             </figure>
           </div>
+        </section>
+
+        <section className="pt-16 pb-12 sm:pt-18 sm:pb-14 md:pt-20 md:pb-16 lg:pt-24 lg:pb-18">
+          <div className="max-w-[50rem]">
+            <h2 className="text-balance text-[1.45rem] font-semibold leading-[1.16] text-foreground sm:text-[1.6rem] md:text-[1.75rem]">
+              Design system
+            </h2>
+
+            <div className="mt-8 max-w-[46rem] space-y-5 text-[0.97rem] leading-[1.8] text-ink-soft sm:text-[1rem] sm:leading-8 md:mt-10 md:text-[1.0625rem]">
+              <p>
+                As part of building a new admin portal from scratch, I defined a
+                lightweight design system to support long-term consistency and
+                scalability. Previously, the analytics experience was built in
+                Power BI using a more fragmented, drag-and-drop approach.
+              </p>
+
+              <p>
+                The portal was developed using Next.js and TailAdmin as a
+                foundation, which I adapted and structured to fit the needs of
+                the analytics experience.
+              </p>
+
+              <p>
+                As the sole designer, I shaped the visual language and component
+                patterns across the product, working closely with the frontend
+                developer to ensure a smooth handoff.
+              </p>
+
+              <p>
+                The system focused on clarity and consistency, using a
+                structured spacing scale and an accessible color palette. The
+                color system was explored through multiple variations and
+                refined together with stakeholders to align with the
+                company&apos;s core values.
+              </p>
+            </div>
+          </div>
+          <img
+            src="/images/flowscape-desingsystem.png"
+            alt="Flowscape design system overview"
+            className="mt-8 mb-12 w-full max-w-[47rem] rounded-2xl border border-white/20 object-contain"
+          />
         </section>
 
         <section className="pt-16 pb-12 sm:pt-18 sm:pb-14 md:pt-20 md:pb-16 lg:pt-24 lg:pb-18">
@@ -390,10 +367,10 @@ export default function FlowscapePage() {
                         section.title === "Restructuring the experience"
                           ? "relative max-w-[1100px] overflow-hidden rounded-[0.55rem] border border-[rgba(43,52,52,0.92)] shadow-[0_24px_54px_rgba(0,0,0,0.24)]"
                           : section.title === "Clarifying filter interactions"
-                            ? "relative max-w-[900px] overflow-hidden rounded-[0.5rem] border border-[rgba(43,52,52,0.88)] shadow-[0_20px_44px_rgba(0,0,0,0.2)]"
-                            : section.title === "Improving data visualization"
-                              ? "relative max-w-[980px] overflow-hidden rounded-[0.52rem] border border-[rgba(43,52,52,0.86)] shadow-[0_22px_48px_rgba(0,0,0,0.2)]"
-                              : "relative overflow-hidden rounded-[0.4rem]"
+                          ? "relative max-w-[900px] overflow-hidden rounded-[0.5rem] border border-[rgba(43,52,52,0.88)] shadow-[0_20px_44px_rgba(0,0,0,0.2)]"
+                          : section.title === "Improving data visualization"
+                          ? "relative max-w-[980px] overflow-hidden rounded-[0.52rem] border border-[rgba(43,52,52,0.86)] shadow-[0_22px_48px_rgba(0,0,0,0.2)]"
+                          : "relative overflow-hidden rounded-[0.4rem]"
                       }
                     >
                       <Image
@@ -403,29 +380,29 @@ export default function FlowscapePage() {
                           section.title === "Restructuring the experience"
                             ? 1600
                             : section.title === "Clarifying filter interactions"
-                              ? 1400
-                              : section.title === "Improving data visualization"
-                                ? 1500
-                                : 1200
+                            ? 1400
+                            : section.title === "Improving data visualization"
+                            ? 1500
+                            : 1200
                         }
                         height={
                           section.title === "Restructuring the experience"
                             ? 980
                             : section.title === "Clarifying filter interactions"
-                              ? 920
-                              : section.title === "Improving data visualization"
-                                ? 980
-                                : 675
+                            ? 920
+                            : section.title === "Improving data visualization"
+                            ? 980
+                            : 675
                         }
                         className="h-auto w-full"
                         sizes={
                           section.title === "Restructuring the experience"
                             ? "(max-width: 640px) calc(100vw - 2rem), (max-width: 1024px) calc(100vw - 4rem), 1100px"
                             : section.title === "Clarifying filter interactions"
-                              ? "(max-width: 640px) calc(100vw - 2rem), (max-width: 1024px) calc(100vw - 4rem), 900px"
-                              : section.title === "Improving data visualization"
-                                ? "(max-width: 640px) calc(100vw - 2rem), (max-width: 1024px) calc(100vw - 4rem), 980px"
-                                : "(max-width: 640px) calc(100vw - 2rem), (max-width: 1024px) calc(100vw - 4rem), 50rem"
+                            ? "(max-width: 640px) calc(100vw - 2rem), (max-width: 1024px) calc(100vw - 4rem), 900px"
+                            : section.title === "Improving data visualization"
+                            ? "(max-width: 640px) calc(100vw - 2rem), (max-width: 1024px) calc(100vw - 4rem), 980px"
+                            : "(max-width: 640px) calc(100vw - 2rem), (max-width: 1024px) calc(100vw - 4rem), 50rem"
                         }
                       />
                     </div>
@@ -478,14 +455,14 @@ export default function FlowscapePage() {
         </section>
 
         <figure className="pt-16 pb-12 sm:pt-18 sm:pb-14 md:pt-20 md:pb-16 lg:pt-24 lg:pb-18">
-          <div className="relative max-w-[1100px] overflow-hidden rounded-[0.55rem] border border-[rgba(43,52,52,0.92)] shadow-[0_24px_54px_rgba(0,0,0,0.24)]">
+          <div className="relative max-w-[47rem] overflow-hidden rounded-[0.55rem] border border-[rgba(43,52,52,0.92)] shadow-[0_24px_54px_rgba(0,0,0,0.24)]">
             <Image
               src="/dashboard.png?v=2"
               alt="Flowscape dashboard overview"
               width={1536}
               height={1024}
               className="h-auto w-full"
-              sizes="(max-width: 640px) calc(100vw - 2rem), (max-width: 1024px) calc(100vw - 4rem), 1100px"
+              sizes="(max-width: 640px) calc(100vw - 2rem), (max-width: 1024px) calc(100vw - 4rem), 47rem"
             />
           </div>
           <figcaption className="mt-4 max-w-[38rem] text-[0.9rem] leading-6 text-muted">
@@ -501,10 +478,9 @@ export default function FlowscapePage() {
             </h2>
 
             <p className="mt-8 max-w-[44rem] text-[0.97rem] leading-[1.8] text-ink-soft sm:text-[1rem] sm:leading-8 md:mt-10 md:text-[1.0625rem]">
-              The MVP made the analytics experience easier to scan,
-              understand, and act on. Users could find key metrics faster,
-              interpret data in context, and follow changes without
-              second-guessing.
+              The MVP transformed a fragmented and hard-to-navigate analytics
+              experience into a structured system where users could quickly
+              understand what mattered and take action with confidence.
             </p>
 
             <p className="mt-8 max-w-[44rem] text-[0.97rem] leading-[1.8] text-ink-soft sm:text-[1rem] sm:leading-8 md:mt-10 md:text-[1.0625rem]">
@@ -519,8 +495,8 @@ export default function FlowscapePage() {
             </p>
 
             <p className="mt-8 max-w-[44rem] text-[0.97rem] leading-[1.8] text-ink-soft sm:text-[1rem] sm:leading-8 md:mt-10 md:text-[1.0625rem]">
-              The project was delivered in a fast-paced environment, applying
-              an MVP mindset to prioritize and deliver value early.
+              The project was delivered in a fast-paced environment, applying an
+              MVP mindset to prioritize and deliver value early.
             </p>
 
             <ul className="mt-8 max-w-[44rem] space-y-4 text-[0.97rem] leading-[1.8] text-ink-soft sm:mt-9 sm:text-[1rem] sm:leading-8">
