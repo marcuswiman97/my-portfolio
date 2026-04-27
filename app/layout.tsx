@@ -17,6 +17,9 @@ export const metadata: Metadata = {
   description:
     "UX designer based in Stockholm focused on user research, usability testing, and interaction design. Explore selected UX projects and case studies.",
   metadataBase: new URL("https://www.marcus-wiman.com"),
+  icons: {
+    icon: "/favicon.ico?v=2",
+  },
   openGraph: {
     title: "UX Designer Marcus Wiman | UX Portfolio Stockholm",
     description:
