@@ -437,6 +437,23 @@ export default function FlowscapePage() {
           </div>
         </section>
 
+        <figure className="pt-16 pb-12 sm:pt-18 sm:pb-14 md:pt-20 md:pb-16 lg:pt-24 lg:pb-18">
+          <div className="relative max-w-[1100px] overflow-hidden rounded-[0.55rem] border border-[rgba(43,52,52,0.92)] shadow-[0_24px_54px_rgba(0,0,0,0.24)]">
+            <Image
+              src="/dashboard.png"
+              alt="Flowscape dashboard overview"
+              width={1536}
+              height={1024}
+              className="h-auto w-full"
+              sizes="(max-width: 640px) calc(100vw - 2rem), (max-width: 1024px) calc(100vw - 4rem), 1100px"
+            />
+          </div>
+          <figcaption className="mt-4 max-w-[38rem] text-[0.9rem] leading-6 text-muted">
+            Wireframe of the final MVP dashboard structure, designed to make
+            complex data easier to scan and understand.
+          </figcaption>
+        </figure>
+
         <section className="pt-16 pb-12 sm:pt-18 sm:pb-14 md:pt-20 md:pb-16 lg:pt-24 lg:pb-18">
           <div className="max-w-[50rem]">
             <h2 className="mb-6 text-balance text-[1.45rem] font-semibold leading-[1.16] text-foreground sm:text-[1.6rem] md:text-[1.75rem]">
