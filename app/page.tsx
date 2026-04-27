@@ -29,7 +29,7 @@ const selectedWork = [
     year: "2025-2026",
     description:
       "Making workplace analytics easier to navigate, interpret, and act on",
-    image: "/images/flowscape-hero.jpg",
+    image: "/flowscape-hero.jpg",
     imageAlt: "Flowscape analytics dashboard preview",
   },
   {

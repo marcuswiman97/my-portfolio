@@ -8,6 +8,18 @@ const nextConfig: NextConfig = {
   turbopack: {
     root: rootDir,
   },
+  images: {
+    localPatterns: [
+      {
+        pathname: "/**",
+        search: "",
+      },
+      {
+        pathname: "/dashboard.png",
+        search: "?v=2",
+      },
+    ],
+  },
   async headers() {
     return [
       {

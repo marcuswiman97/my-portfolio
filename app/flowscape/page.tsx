@@ -91,10 +91,10 @@ export default function FlowscapePage() {
       <div className="mx-auto flex min-h-screen max-w-6xl flex-col px-4 pb-6 sm:px-6 sm:pb-8 md:px-8 md:pb-10 lg:px-10 lg:pb-14">
         <SiteHeader compact />
 
-        <section className="relative left-1/2 mb-6 w-screen -translate-x-1/2 overflow-hidden sm:mb-8 md:mb-10 lg:mb-12">
-          <div className="relative h-[68vh] min-h-[460px] overflow-hidden sm:h-[70vh] sm:min-h-[500px]">
+        <section className="relative left-1/2 mb-0 w-screen -translate-x-1/2 overflow-hidden">
+          <div className="relative h-[68vh] min-h-[460px] overflow-hidden sm:h-[70vh] sm:min-h-[500px] lg:h-[64vh] lg:min-h-[470px]">
             <Image
-              src="/images/flowscape-hero.jpg"
+              src="/flowscape-hero.jpg"
               alt="Flowscape workplace interior hero image"
               fill
               priority
@@ -114,10 +114,12 @@ export default function FlowscapePage() {
                     Flowscape
                   </h1>
                   <p className="max-w-[520px] text-[17px] leading-[1.75] text-[#d9e0e0]">
-                    A UX case study about designing a new analytics experience
-                    for workplace data in FlowAnalytics, supported by a shared
-                    design system, turning fragmented dashboards into a
-                    structured and actionable product.
+                    Designing a new analytics experience for workplace data in
+                    FlowAnalytics, supported by a shared design system.
+                    <br />
+                    <br />
+                    Previously, users struggled to navigate fragmented
+                    dashboards and understand what to act on.
                   </p>
                 </div>
               </div>
@@ -137,13 +139,13 @@ export default function FlowscapePage() {
           </div>
         </section>
 
-        <section className="pt-16 pb-12 sm:pt-18 sm:pb-14 md:pt-20 md:pb-16 lg:pt-24 lg:pb-18">
-          <div className="mx-auto mt-10 max-w-[50rem] sm:mt-12 md:mt-14">
+        <section className="pt-8 pb-12 sm:pt-10 sm:pb-14 md:pt-12 md:pb-16 lg:pt-10 lg:pb-18">
+          <div className="mx-auto mt-6 max-w-[50rem] sm:mt-7 md:mt-8 lg:mt-6">
             <h2 className="text-balance text-[1.45rem] font-semibold leading-[1.16] text-foreground sm:text-[1.6rem] md:text-[1.75rem]">
               Overview
             </h2>
 
-            <div className="mt-8 grid grid-cols-2 gap-x-6 gap-y-6 sm:grid-cols-2 sm:gap-x-8 sm:gap-y-6 md:grid-cols-4">
+            <div className="mt-8 grid grid-cols-2 gap-x-6 gap-y-6 sm:grid-cols-2 sm:gap-x-8 sm:gap-y-6 md:grid-cols-4 lg:mt-5">
               {metadataItems.map((item) => (
                 <div key={item.label}>
                   <p className="text-[0.95rem] font-medium text-muted">
@@ -156,7 +158,7 @@ export default function FlowscapePage() {
               ))}
             </div>
 
-            <div className="mt-8 max-w-[46rem] space-y-5 text-[0.97rem] leading-[1.8] text-ink-soft sm:text-[1rem] sm:leading-8 md:mt-10 md:text-[1.0625rem]">
+            <div className="mt-8 max-w-[46rem] space-y-5 text-[0.97rem] leading-[1.8] text-ink-soft sm:text-[1rem] sm:leading-8 md:mt-10 md:text-[1.0625rem] lg:mt-14">
               <p>
                 Flowscape&apos;s admin portal is where facility teams manage
                 offices, from spaces and assets to sensors, devices, files,
@@ -196,6 +198,44 @@ export default function FlowscapePage() {
             </div>
 
             <div className="mt-6 h-px w-full bg-[rgba(230,232,232,0.12)]" />
+          </div>
+        </section>
+
+        <section className="pt-16 pb-12 sm:pt-18 sm:pb-14 md:pt-20 md:pb-16 lg:pt-24 lg:pb-18">
+          <div className="max-w-[50rem]">
+            <h2 className="text-balance text-[1.45rem] font-semibold leading-[1.16] text-foreground sm:text-[1.6rem] md:text-[1.75rem]">
+              Design system
+            </h2>
+
+            <div className="mt-8 max-w-[46rem] space-y-5 text-[0.97rem] leading-[1.8] text-ink-soft sm:text-[1rem] sm:leading-8 md:mt-10 md:text-[1.0625rem]">
+              <p>
+                As part of building a new admin portal from scratch, I defined
+                a lightweight design system to support long-term consistency
+                and scalability. Previously, the analytics experience was
+                built in Power BI using a more fragmented, drag-and-drop
+                approach.
+              </p>
+
+              <p>
+                The portal was developed using Next.js and TailAdmin as a
+                foundation, which I adapted and structured to fit the needs of
+                the analytics experience.
+              </p>
+
+              <p>
+                As the sole designer, I shaped the visual language and
+                component patterns across the product, working closely with the
+                frontend developer to ensure a smooth handoff.
+              </p>
+
+              <p>
+                The system focused on clarity and consistency, using a
+                structured spacing scale and an accessible color palette. The
+                color system was explored through multiple variations and
+                refined together with stakeholders to align with the
+                company&apos;s core values.
+              </p>
+            </div>
           </div>
         </section>
 
@@ -440,7 +480,7 @@ export default function FlowscapePage() {
         <figure className="pt-16 pb-12 sm:pt-18 sm:pb-14 md:pt-20 md:pb-16 lg:pt-24 lg:pb-18">
           <div className="relative max-w-[1100px] overflow-hidden rounded-[0.55rem] border border-[rgba(43,52,52,0.92)] shadow-[0_24px_54px_rgba(0,0,0,0.24)]">
             <Image
-              src="/dashboard.png"
+              src="/dashboard.png?v=2"
               alt="Flowscape dashboard overview"
               width={1536}
               height={1024}
