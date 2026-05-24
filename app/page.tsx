@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
+import { ArrowRight } from "lucide-react";
 import { SiteHeader } from "@/components/layout/site-header";
 import { WhatIDo } from "@/components/what-i-do";
 
@@ -57,18 +58,18 @@ const selectedWork = [
 export default function Home() {
   return (
     <main id="main-content" className="grain-overlay min-h-screen">
-      <div className="mx-auto flex min-h-screen max-w-6xl flex-col px-4 pt-0 pb-6 sm:px-6 sm:pt-0 sm:pb-8 md:px-8 md:pt-0 md:pb-10 lg:px-10 lg:pt-0 lg:pb-14">
+      <div className="mx-auto flex min-h-screen max-w-[88rem] flex-col px-4 pt-0 pb-6 sm:px-6 sm:pt-0 sm:pb-8 md:px-8 md:pt-0 md:pb-10 lg:px-10 lg:pt-0 lg:pb-14 xl:px-12">
         <SiteHeader compact />
 
-        <section className="mb-16 pt-8 sm:mb-18 sm:pt-10 md:mb-22 md:pt-12 lg:mb-28 lg:flex lg:min-h-[78svh] lg:items-center lg:pt-10">
-          <div className="w-full lg:w-[calc(100vw-5rem)] lg:max-w-[82.5rem] xl:w-[calc(100vw-((100vw-72rem)/2)-5rem)]">
-            <div className="grid gap-9 lg:grid-cols-[minmax(0,1.15fr)_minmax(360px,0.85fr)] lg:items-end lg:gap-[clamp(64px,8vw,140px)]">
+        <section className="mb-16 pt-8 sm:mb-18 sm:pt-10 md:mb-22 md:pt-12 lg:mb-28 lg:flex lg:min-h-[min(78svh,48rem)] lg:items-center lg:pt-10">
+          <div className="w-full">
+            <div className="grid gap-9 lg:grid-cols-[minmax(0,1.1fr)_minmax(22rem,0.72fr)] lg:items-end lg:gap-[clamp(3rem,7vw,7.5rem)]">
               <div>
                 <p className="mb-7 text-[14px] font-medium uppercase tracking-[0.12em] text-muted sm:mb-8 md:mb-10">
                   Available for UX roles · Stockholm
                 </p>
 
-                <h1 className="max-w-none text-balance text-[3rem] font-semibold leading-[0.96] tracking-[-0.055em] text-foreground sm:text-[3.7rem] md:text-[4.6rem] lg:text-[5.3rem] xl:text-[5.95rem]">
+                <h1 className="max-w-[13ch] text-balance text-[3rem] font-semibold leading-[0.96] tracking-[-0.055em] text-foreground sm:text-[3.7rem] md:text-[4.6rem] lg:text-[5.3rem] xl:text-[5.8rem] 2xl:text-[6.1rem]">
                   Making digital products
                   <br />
                   <span className="font-serif italic tracking-[-0.035em] text-[var(--accent-green)]">
@@ -102,12 +103,12 @@ export default function Home() {
                   className="group mt-5 inline-flex items-center gap-2 text-[1.05rem] font-medium text-foreground transition-colors duration-300 ease-in-out hover:text-[var(--accent-green)] focus-visible:text-[var(--accent-green)] sm:mt-6 sm:text-[1.12rem]"
                 >
                   View selected work
-                  <span
+                  <ArrowRight
                     aria-hidden="true"
+                    size={18}
+                    strokeWidth={1.75}
                     className="transition-transform duration-300 ease-in-out group-hover:translate-x-1 group-focus-visible:translate-x-1"
-                  >
-                    →
-                  </span>
+                  />
                 </Link>
               </div>
             </div>
@@ -156,9 +157,12 @@ export default function Home() {
                     <div className="absolute inset-0 bg-gradient-to-t from-[rgba(14,17,17,0.28)] via-[rgba(14,17,17,0.08)] to-transparent" />
                   </div>
 
-                  <span className="hidden shrink-0 text-sm text-muted opacity-0 transition-all duration-300 ease-in-out group-hover:translate-x-[2px] group-hover:opacity-100 group-hover:text-[#6FAF8F] group-focus-visible:translate-x-[2px] group-focus-visible:opacity-100 group-focus-visible:text-[#6FAF8F] md:inline-block">
-                    →
-                  </span>
+                  <ArrowRight
+                    aria-hidden="true"
+                    size={18}
+                    strokeWidth={1.75}
+                    className="hidden shrink-0 text-muted opacity-0 transition-all duration-300 ease-in-out group-hover:translate-x-[2px] group-hover:opacity-100 group-hover:text-[#6FAF8F] group-focus-visible:translate-x-[2px] group-focus-visible:opacity-100 group-focus-visible:text-[#6FAF8F] md:block"
+                  />
                 </div>
               </Link>
             ))}
@@ -167,10 +171,23 @@ export default function Home() {
 
         <section id="about" className="py-20 sm:py-22 md:py-26 lg:py-34">
           <div className="mx-auto grid w-full max-w-[80rem] gap-12 md:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] md:items-start md:gap-[clamp(64px,8vw,120px)]">
-            <h2 className="text-balance text-[2.45rem] font-semibold leading-[1.02] tracking-[-0.05em] text-foreground sm:text-[3rem] md:text-[3.55rem] lg:text-[4.4rem]">
-              A designer driven by curiosity, clarity, and solving people’s
-              problems.
-            </h2>
+            <div>
+              <h2 className="text-balance text-[2.45rem] font-semibold leading-[1.02] tracking-[-0.05em] text-foreground sm:text-[3rem] md:text-[3.55rem] lg:text-[4.4rem]">
+                A designer driven by curiosity, clarity, and solving people’s
+                problems.
+              </h2>
+
+              <div className="mt-8 h-[280px] w-full overflow-hidden rounded-[0.85rem] border border-[rgba(255,255,255,0.08)] bg-[rgba(255,255,255,0.02)] shadow-[0_18px_42px_rgba(0,0,0,0.16)] sm:mt-9 sm:h-[320px] md:mt-10 md:h-auto md:aspect-[16/9] md:max-h-[400px]">
+                <Image
+                  src="/images/about-me-outdoor.jpg"
+                  alt="Portrait of Marcus Wiman"
+                  width={4032}
+                  height={3024}
+                  className="h-full w-full object-cover object-[72%_28%]"
+                  sizes="(max-width: 768px) calc(100vw - 2rem), (max-width: 1024px) 50vw, 44rem"
+                />
+              </div>
+            </div>
 
             <div className="max-w-[40rem] space-y-8 text-[1.02rem] leading-[1.82] text-ink-soft sm:text-[1.07rem] md:text-[1.1rem] lg:text-[1.14rem]">
               <p>
@@ -235,9 +252,12 @@ export default function Home() {
                           marcus.wiman97@gmail.com
                         </p>
                       </div>
-                      <span className="shrink-0 text-muted transition duration-200 group-hover:translate-x-[2px] group-hover:text-[var(--accent-green)]">
-                        →
-                      </span>
+                      <ArrowRight
+                        aria-hidden="true"
+                        size={20}
+                        strokeWidth={1.75}
+                        className="shrink-0 text-muted transition duration-200 group-hover:translate-x-[2px] group-hover:text-[var(--accent-green)]"
+                      />
                     </Link>
 
                     <div className="h-px bg-[rgba(255,255,255,0.06)]" />
@@ -256,9 +276,12 @@ export default function Home() {
                           linkedin.com/in/marcus-wiman/
                         </p>
                       </div>
-                      <span className="shrink-0 text-muted transition duration-200 group-hover:translate-x-[2px] group-hover:text-[var(--accent-green)]">
-                        →
-                      </span>
+                      <ArrowRight
+                        aria-hidden="true"
+                        size={20}
+                        strokeWidth={1.75}
+                        className="shrink-0 text-muted transition duration-200 group-hover:translate-x-[2px] group-hover:text-[var(--accent-green)]"
+                      />
                     </Link>
                   </div>
                 </div>

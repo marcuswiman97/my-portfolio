@@ -77,7 +77,7 @@ export function SiteHeader({ compact = false }: SiteHeaderProps) {
     >
       <div
         className={[
-          "mx-auto max-w-6xl px-4 sm:px-6 md:px-8 lg:px-10",
+          "mx-auto max-w-[88rem] px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12",
           compact ? "py-4 md:py-5" : "py-5 md:py-6",
         ].join(" ")}
       >
@@ -86,15 +86,15 @@ export function SiteHeader({ compact = false }: SiteHeaderProps) {
             <Link
               href="/"
               onClick={handleLogoClick}
-              className="inline-flex h-[50px] w-[50px] shrink-0 overflow-hidden rounded-full border border-[rgba(255,255,255,0.08)] transition duration-300 ease-in-out hover:scale-[1.05] hover:brightness-110"
+              className="inline-flex h-12 w-12 shrink-0 overflow-hidden rounded-full border border-[rgba(255,255,255,0.08)] transition duration-300 ease-in-out hover:scale-[1.05] hover:brightness-110"
               aria-label="Go to homepage"
             >
               <Image
                 src="/images/next-to-logo-profile-128.png"
                 alt="Marcus Wiman profile"
-                width={50}
-                height={50}
-                className="h-[50px] w-[50px] rounded-full object-cover object-center"
+                width={48}
+                height={48}
+                className="h-12 w-12 rounded-full object-cover object-center"
               />
             </Link>
 

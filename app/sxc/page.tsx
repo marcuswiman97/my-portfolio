@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 import { SiteHeader } from "@/components/layout/site-header";
+import { ReadingProgress } from "@/components/reading-progress";
 
 export const metadata: Metadata = {
   title: "SXC | Marcus Wiman",
@@ -57,24 +59,27 @@ const learningPoints = [
 export default function SxcPage() {
   return (
     <main id="main-content" className="grain-overlay min-h-screen">
-      <div className="mx-auto flex min-h-screen max-w-6xl flex-col px-4 pb-6 sm:px-6 sm:pb-8 md:px-8 md:pb-10 lg:px-10 lg:pb-14">
+      <ReadingProgress />
+      <div className="mx-auto flex min-h-screen max-w-[88rem] flex-col px-4 pb-6 sm:px-6 sm:pb-8 md:px-8 md:pb-10 lg:px-10 lg:pb-14 xl:px-12">
         <SiteHeader compact />
 
-        <section className="relative left-1/2 mb-6 w-screen -translate-x-1/2 overflow-hidden sm:mb-8 md:mb-10 lg:mb-12">
-          <div className="relative h-[50vh] min-h-[400px] overflow-hidden sm:h-[52vh] sm:min-h-[420px] lg:h-[65vh] lg:min-h-[400px]">
+        <section className="relative left-1/2 mb-6 w-screen -translate-x-1/2 overflow-hidden bg-[#050606] sm:mb-8 md:mb-10 lg:mb-12">
+          <div className="relative mx-auto h-[clamp(25rem,50svh,36rem)] w-full max-w-[100rem] overflow-hidden sm:h-[clamp(26rem,52svh,38rem)] lg:h-[clamp(28rem,65svh,44rem)]">
             <Image
               src="/images/sxc-hero-v2.jpg"
               alt="Stockholm Xperience Conference hero image"
               fill
               priority
               className="object-cover object-[60%_center]"
-              sizes="100vw"
+              sizes="(max-width: 1600px) 100vw, 1600px"
             />
             <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(0,0,0,0.96)_0%,rgba(0,0,0,0.9)_30%,rgba(0,0,0,0.7)_55%,rgba(0,0,0,0.3)_75%,rgba(0,0,0,0)_100%)]" />
             <div className="absolute inset-0 bg-black/40 sm:bg-transparent" />
+            <div className="pointer-events-none absolute inset-y-0 left-0 z-[2] w-[clamp(5rem,12vw,16.25rem)] bg-[linear-gradient(to_right,#050606,rgba(5,6,6,0))]" />
+            <div className="pointer-events-none absolute inset-y-0 right-0 z-[2] w-[clamp(5rem,12vw,16.25rem)] bg-[linear-gradient(to_left,#050606,rgba(5,6,6,0))]" />
 
             <div className="absolute inset-0 z-10 flex items-center">
-              <div className="w-full px-6 py-16 sm:px-8 sm:py-20 md:px-10">
+              <div className="mx-auto w-full max-w-[88rem] px-6 py-16 sm:px-8 sm:py-20 md:px-10 xl:px-12">
                 <div className="max-w-[72rem]">
                   <div className="max-w-[50rem]">
                     <p className="mb-3 text-[14px] font-medium uppercase tracking-[0.12em] text-[#d4dcdc]">
@@ -93,16 +98,21 @@ export default function SxcPage() {
               </div>
             </div>
 
-            <div className="absolute left-8 top-8 z-20 md:left-10 md:top-10">
-              <Link
-                href="/"
-                className="group inline-flex items-center gap-3 text-sm text-[#f1f3f3] transition-colors duration-200 hover:text-white"
-              >
-                <span className="transition-transform duration-200 group-hover:-translate-x-[2px]">
-                  ←
-                </span>
-                <span>Back to homepage</span>
-              </Link>
+            <div className="absolute inset-x-0 top-8 z-20 md:top-10">
+              <div className="mx-auto max-w-[88rem] px-6 sm:px-8 md:px-10 xl:px-12">
+                <Link
+                  href="/"
+                  className="group inline-flex items-center gap-3 text-sm text-[#f1f3f3] transition-colors duration-200 hover:text-white"
+                >
+                  <ArrowLeft
+                    aria-hidden="true"
+                    size={16}
+                    strokeWidth={1.75}
+                    className="transition-transform duration-200 group-hover:-translate-x-[2px]"
+                  />
+                  <span>Back to homepage</span>
+                </Link>
+              </div>
             </div>
           </div>
         </section>
@@ -311,6 +321,28 @@ export default function SxcPage() {
               </ul>
             </div>
           </div>
+        </section>
+
+        <section className="pt-8 pb-20 sm:pt-10 sm:pb-24 md:pb-28 lg:pb-32">
+          <Link
+            href="/projekt-vita"
+            className="group block max-w-[50rem] border-t border-[#2b3434] pt-8 transition-colors duration-300 hover:border-[rgba(111,175,143,0.36)] focus-visible:border-[rgba(111,175,143,0.5)] focus-visible:outline-none"
+          >
+            <p className="text-[14px] font-medium uppercase tracking-[0.12em] text-muted">
+              Next case study
+            </p>
+            <div className="mt-4 flex items-center justify-between gap-6">
+              <h2 className="text-balance text-[1.55rem] font-semibold leading-[1.1] tracking-[-0.035em] text-foreground transition-colors duration-300 group-hover:text-[#6FAF8F] group-focus-visible:text-[#6FAF8F] sm:text-[1.8rem] md:text-[2.1rem]">
+                Projekt Vita
+              </h2>
+              <ArrowRight
+                aria-hidden="true"
+                size={22}
+                strokeWidth={1.75}
+                className="shrink-0 text-muted transition duration-300 group-hover:translate-x-1 group-hover:text-[#6FAF8F] group-focus-visible:translate-x-1 group-focus-visible:text-[#6FAF8F]"
+              />
+            </div>
+          </Link>
         </section>
       </div>
     </main>

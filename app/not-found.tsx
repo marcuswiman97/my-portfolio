@@ -1,9 +1,10 @@
 import Link from "next/link";
+import { ArrowLeft } from "lucide-react";
 
 export default function NotFound() {
   return (
     <main id="main-content" className="grain-overlay min-h-screen">
-      <div className="mx-auto flex min-h-screen max-w-6xl flex-col px-4 py-10 sm:px-6 sm:py-12 md:px-8 md:py-16 lg:px-10 lg:py-20">
+      <div className="mx-auto flex min-h-screen max-w-[88rem] flex-col px-4 py-10 sm:px-6 sm:py-12 md:px-8 md:py-16 lg:px-10 lg:py-20 xl:px-12">
         <div className="max-w-[40rem]">
           <p className="mb-4 text-[14px] font-medium uppercase tracking-[0.14em] text-muted">
             Not Found
@@ -18,8 +19,8 @@ export default function NotFound() {
             href="/"
             className="mt-8 inline-flex items-center gap-2 text-sm text-foreground transition-colors duration-200 hover:text-[var(--accent-green)]"
           >
+            <ArrowLeft aria-hidden="true" size={16} strokeWidth={1.75} />
             <span>Back to homepage</span>
-            <span aria-hidden="true">→</span>
           </Link>
         </div>
       </div>
