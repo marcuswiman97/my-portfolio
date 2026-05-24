@@ -177,15 +177,28 @@ export default function Home() {
                 problems.
               </h2>
 
-              <div className="mt-8 h-[280px] w-full overflow-hidden rounded-[0.85rem] border border-[rgba(255,255,255,0.08)] bg-[rgba(255,255,255,0.02)] shadow-[0_18px_42px_rgba(0,0,0,0.16)] sm:mt-9 sm:h-[320px] md:mt-10 md:h-auto md:aspect-[16/9] md:max-h-[400px]">
-                <Image
-                  src="/images/about-me-outdoor.jpg"
-                  alt="Portrait of Marcus Wiman"
-                  width={4032}
-                  height={3024}
-                  className="h-full w-full object-cover object-[72%_28%]"
-                  sizes="(max-width: 768px) calc(100vw - 2rem), (max-width: 1024px) 50vw, 44rem"
-                />
+              <div className="relative mt-8 sm:mt-9 md:mt-10">
+                <div className="h-[280px] w-full overflow-hidden rounded-[0.85rem] border border-[rgba(255,255,255,0.08)] bg-[rgba(255,255,255,0.02)] shadow-[0_18px_42px_rgba(0,0,0,0.16)] sm:h-[320px] md:h-auto md:aspect-[16/9] md:max-h-[400px]">
+                  <Image
+                    src="/images/about-me-outdoor.jpg"
+                    alt="Portrait of Marcus Wiman"
+                    width={4032}
+                    height={3024}
+                    className="h-full w-full object-cover object-[72%_28%]"
+                    sizes="(max-width: 768px) calc(100vw - 2rem), (max-width: 1024px) 50vw, 44rem"
+                  />
+                </div>
+
+                <div className="mt-4 h-[150px] w-[72%] overflow-hidden rounded-[0.75rem] border border-[rgba(255,255,255,0.1)] bg-[rgba(255,255,255,0.02)] shadow-[0_18px_42px_rgba(0,0,0,0.22)] sm:h-[170px] sm:w-[60%] md:absolute md:-bottom-12 md:-right-10 md:h-[130px] md:w-[14rem] lg:h-[140px] lg:w-[15rem]">
+                  <Image
+                    src="/images/about-music-performance.jpg"
+                    alt="Marcus performing guitar on stage"
+                    width={1200}
+                    height={800}
+                    className="h-full w-full object-cover object-center"
+                    sizes="(max-width: 768px) 72vw, 16rem"
+                  />
+                </div>
               </div>
             </div>
 
@@ -206,6 +219,12 @@ export default function Home() {
                 Before UX, I spent years in music and running my own creative
                 business. That still shapes how I think about rhythm, flow, and
                 composition.
+              </p>
+
+              <p>
+                Outside design, I&apos;m usually close to music, training, or
+                some new challenge. Recently, that included finishing Stockholm
+                Marathon.
               </p>
 
               <p>
