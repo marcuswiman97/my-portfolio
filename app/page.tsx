@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { SiteHeader } from "@/components/layout/site-header";
 import { WhatIDo } from "@/components/what-i-do";
 
@@ -232,6 +232,75 @@ export default function Home() {
                 Gröna Lund to appearances on SVT1 and Sveriges Radio (P4), and
                 learned to deliver under pressure. A good interface guides
                 attention without friction.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section
+          id="education"
+          aria-labelledby="education-heading"
+          className="py-10 sm:py-12 md:py-16 lg:py-20"
+        >
+          <div className="mx-auto w-full max-w-[72rem] border-y border-[#2b3434] py-8 sm:py-10 md:py-12">
+            <h2 id="education-heading" className="mb-6 text-[13px] font-medium uppercase tracking-[0.12em] text-muted sm:mb-8">
+              Education
+            </h2>
+
+            <div className="grid gap-6 md:grid-cols-2 md:gap-12 lg:gap-16">
+              <div>
+                <h3
+                  className="text-balance text-[1.7rem] font-semibold leading-[1.12] tracking-[-0.035em] text-foreground sm:text-[1.9rem] md:text-[2.1rem] lg:text-[2.4rem]"
+                >
+                  Fullstack JavaScript{" "}
+                  <span className="text-[var(--accent-green)]">·</span>{" "}
+                  Chas Academy
+                </h3>
+                <p className="mt-4 text-[14px] font-medium tracking-[0.01em] text-[var(--accent-green)]">
+                  2026–2028 · In progress
+                </p>
+              </div>
+
+              <p className="max-w-[36rem] text-[1rem] leading-[1.78] text-ink-soft sm:text-[1.04rem] md:text-[1.08rem]">
+                I&apos;m currently studying fullstack JavaScript development at
+                Chas Academy, learning to build both the interfaces people use
+                and the systems behind them. Building on my UX background, my
+                goal is to take ideas from understanding user needs and designing
+                interactions to developing working web applications.
+              </p>
+            </div>
+
+            <div className="mt-8 grid gap-6 border-t border-[#2b3434] pt-8 sm:mt-10 sm:pt-10 md:grid-cols-2 md:gap-12 lg:gap-16">
+              <div>
+                <h3 className="text-balance text-[1.7rem] font-semibold leading-[1.12] tracking-[-0.035em] text-foreground sm:text-[1.9rem] md:text-[2.1rem] lg:text-[2.4rem]">
+                  UX Design <span className="text-[var(--accent-green)]">·</span>{" "}
+                  Nackademin
+                </h3>
+                <p className="mt-4 text-[14px] font-medium tracking-[0.01em] text-[var(--accent-green)]">
+                  2024–2026
+                </p>
+                <a
+                  href="/documents/ux-designer-diploma.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="View UX Design diploma (PDF, opens in a new tab)"
+                  className="group mt-5 inline-flex items-center gap-2 text-[1rem] font-medium text-foreground transition-colors duration-300 ease-in-out hover:text-[var(--accent-green)] focus-visible:text-[var(--accent-green)]"
+                >
+                  View diploma
+                  <span className="text-[13px] text-muted">PDF</span>
+                  <ArrowUpRight
+                    aria-hidden="true"
+                    size={18}
+                    strokeWidth={1.75}
+                    className="transition-transform duration-300 ease-in-out group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-focus-visible:-translate-y-0.5 group-focus-visible:translate-x-0.5"
+                  />
+                </a>
+              </div>
+
+              <p className="max-w-[36rem] text-[1rem] leading-[1.78] text-ink-soft sm:text-[1.04rem] md:text-[1.08rem]">
+                A two-year education in UX design, connecting my design practice
+                with a foundation in understanding users and creating thoughtful
+                digital experiences.
               </p>
             </div>
           </div>
