@@ -1,24 +1,23 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
-import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { SiteHeader } from "@/components/layout/site-header";
 import { WhatIDo } from "@/components/what-i-do";
 
 export const metadata: Metadata = {
-  title: "Marcus Wiman | UX Portfolio",
+  title: "Marcus Wiman | Fullstack JavaScript & UX",
   description:
-    "A UX portfolio focused on digital experiences, product thinking, and clear interaction design.",
+    "Fullstack JavaScript student and UX designer based in Stockholm. Follow my JavaScript studies and explore UX case studies.",
   openGraph: {
-    title: "Marcus Wiman | UX Portfolio",
+    title: "Marcus Wiman | Fullstack JavaScript & UX",
     description:
-      "A UX portfolio focused on digital experiences, product thinking, and clear interaction design.",
+      "Fullstack JavaScript student and UX designer based in Stockholm. Follow my JavaScript studies and explore UX case studies.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Marcus Wiman | UX Portfolio",
+    title: "Marcus Wiman | Fullstack JavaScript & UX",
     description:
-      "A UX portfolio focused on digital experiences, product thinking, and clear interaction design.",
+      "Fullstack JavaScript student and UX designer based in Stockholm. Follow my JavaScript studies and explore UX case studies.",
   },
 };
 
@@ -26,89 +25,81 @@ const selectedWork = [
   {
     title: "Flowscape",
     href: "/flowscape",
-    category: "UX/UI Design with Product Thinking",
-    year: "2025-2026",
-    description:
-      "Making workplace analytics easier to navigate, interpret, and act on",
+    context: "UX internship · 6 months · 2025–2026",
+    role: "UX / Product Designer",
+    problem: "Workplace analytics that were difficult to scan and navigate.",
     image: "/flowscape-hero.jpg",
-    imageAlt: "Flowscape analytics dashboard preview",
+    imageAlt: "Flowscape workplace interior",
   },
   {
     title: "Stockholm Xperience Conference",
     href: "/sxc",
-    category: "UX/UI Design with Research",
-    year: "2025",
-    description:
-      "Restructuring navigation and flows for faster, more intuitive interactions",
+    context: "UX coursework · Team of 5 · 2025",
+    role: "UX/UI Design + Research",
+    problem:
+      "A mobile concept for conference sessions and in-person networking.",
     image: "/images/sxc-hero-v2.jpg",
-    imageAlt: "Stockholm Xperience Conference mobile concept preview",
+    imageAlt: "Stockholm Xperience Conference mobile interface concept",
   },
   {
     title: "Projekt Vita",
     href: "/projekt-vita",
-    category: "UX Research",
-    year: "2024",
-    description:
-      "Clarifying trust, structure, and communication in nonprofit partnerships",
+    context: "UX coursework · Team of 4 · 2024",
+    role: "UX Research",
+    problem:
+      "Companies and nonprofits had different expectations of a partnership.",
     image: "/images/projekt-vita-hero.jpg",
-    imageAlt: "Projekt Vita partnership research preview",
+    imageAlt: "Projekt Vita partnership research project",
   },
 ];
 
 export default function Home() {
   return (
-    <main id="main-content" className="grain-overlay min-h-screen">
-      <div className="mx-auto flex min-h-screen max-w-[88rem] flex-col px-4 pt-0 pb-6 sm:px-6 sm:pt-0 sm:pb-8 md:px-8 md:pt-0 md:pb-10 lg:px-10 lg:pt-0 lg:pb-14 xl:px-12">
+    <main id="main-content" className="min-h-screen">
+      <div className="mx-auto flex min-h-screen max-w-[88rem] flex-col px-4 pb-6 sm:px-6 sm:pb-8 md:px-8 lg:px-10 xl:px-12">
         <SiteHeader compact />
 
-        <section className="mb-16 pt-8 sm:mb-18 sm:pt-10 md:mb-22 md:pt-12 lg:mb-28 lg:flex lg:min-h-[min(78svh,48rem)] lg:items-center lg:pt-10">
-          <div className="w-full">
-            <div className="grid gap-9 lg:grid-cols-[minmax(0,1.1fr)_minmax(22rem,0.72fr)] lg:items-end lg:gap-[clamp(3rem,7vw,7.5rem)]">
-              <div>
-                <p className="mb-7 text-[14px] font-medium uppercase tracking-[0.12em] text-muted sm:mb-8 md:mb-10">
-                  Available for UX roles · Stockholm
-                </p>
-
-                <h1 className="max-w-[13ch] text-balance text-[3rem] font-semibold leading-[0.96] tracking-[-0.055em] text-foreground sm:text-[3.7rem] md:text-[4.6rem] lg:text-[5.3rem] xl:text-[5.8rem] 2xl:text-[6.1rem]">
-                  Making digital products
-                  <br />
-                  <span className="font-serif italic tracking-[-0.035em] text-[var(--accent-green)]">
-                    easier
-                  </span>{" "}
-                  to understand
-                  <br />
-                  and use
-                </h1>
-              </div>
-
-              <div className="max-w-[38rem] lg:pb-6">
-                <p className="mb-4 text-[13px] font-medium uppercase tracking-[0.12em] text-muted sm:mb-5">
-                  UX Approach
-                </p>
-
-                <p className="text-[1.08rem] leading-[1.75] text-ink-soft sm:text-[1.16rem] sm:leading-8 md:text-[1.24rem] lg:text-[1.32rem]">
-                  I help companies understand their users and turn insights into
-                  solutions that create real value.
-                </p>
-
-                <p className="mt-4 text-[0.96rem] leading-[1.78] text-muted sm:mt-5 sm:text-[0.98rem] md:text-[1rem]">
-                  UX designer based in Stockholm, with a background in music
-                  that shaped how I think about clarity, flow, and structure.
-                </p>
-
-                <div className="mt-7 h-px w-full max-w-[18rem] bg-[rgba(255,255,255,0.08)] sm:mt-8" />
-
+        <section
+          aria-labelledby="intro-title"
+          className="py-10 sm:py-14 lg:py-20"
+        >
+          <div className="grid gap-8 lg:grid-cols-[1.1fr_1fr] lg:items-center lg:gap-16">
+            <div>
+              <p className="mb-6 text-sm font-medium tracking-[0.04em] text-muted">
+                Seeking junior developer roles · Stockholm
+              </p>
+              <h1
+                id="intro-title"
+                className="max-w-[15ch] text-balance text-[2.75rem] font-semibold leading-[1.05] tracking-[-0.045em] text-foreground sm:text-[3.5rem] md:text-[4rem] lg:text-[4.5rem] xl:text-[5rem]"
+              >
+                Fullstack{" "}
+                <span className="text-[var(--accent-green)]">JavaScript</span>{" "}
+                student
+              </h1>
+            </div>
+            <div className="max-w-[38rem]">
+              <p className="text-lg leading-8 text-ink-soft sm:text-xl">
+                I&apos;m Marcus. I&apos;m moving into development with a
+                background in UX design, including freelance work and a
+                workplace internship.
+              </p>
+              <p className="mt-4 text-base leading-7 text-muted">
+                I work with vanilla JavaScript and study at Chas Academy.
+                I&apos;m looking for my first developer role, with UX experience
+                I can bring into the team from day one.
+              </p>
+              <div className="mt-7 flex flex-wrap items-center gap-x-6 gap-y-3">
                 <Link
                   href="#work"
-                  className="group mt-5 inline-flex items-center gap-2 text-[1.05rem] font-medium text-foreground transition-colors duration-300 ease-in-out hover:text-[var(--accent-green)] focus-visible:text-[var(--accent-green)] sm:mt-6 sm:text-[1.12rem]"
+                  className="inline-flex min-h-11 items-center rounded-md bg-[var(--accent-green)] px-5 py-3 text-base font-medium text-[#0e1111] transition-colors hover:bg-[#8fc6aa]"
                 >
-                  View selected work
-                  <ArrowRight
-                    aria-hidden="true"
-                    size={18}
-                    strokeWidth={1.75}
-                    className="transition-transform duration-300 ease-in-out group-hover:translate-x-1 group-focus-visible:translate-x-1"
-                  />
+                  View my work
+                </Link>
+                <Link
+                  href="#contact"
+                  className="inline-flex min-h-11 items-center py-2 text-base font-medium text-foreground underline decoration-[#596666] underline-offset-4 hover:decoration-[var(--accent-green)]"
+                >
+                  Contact &amp; CV
                 </Link>
               </div>
             </div>
@@ -117,277 +108,307 @@ export default function Home() {
 
         <section
           id="work"
-          className="pt-12 pb-18 sm:pt-14 sm:pb-20 md:pt-16 md:pb-24 lg:pt-20 lg:pb-36"
+          aria-labelledby="work-title"
+          className="scroll-mt-28 py-10 sm:py-14 lg:py-16"
         >
-          <div className="mx-auto mb-10 w-full max-w-[72rem] sm:mb-12 md:mb-14 lg:mb-16">
-            <h2 className="text-balance text-[1.95rem] font-semibold leading-[1.08] tracking-[-0.035em] text-foreground sm:text-[2.1rem] md:text-[2.4rem] lg:text-[2.95rem]">
-              Selected Work
+          <div className="mx-auto w-full max-w-[72rem]">
+            <h2
+              id="work-title"
+              className="mb-8 text-[1.95rem] font-semibold leading-tight tracking-[-0.035em] text-foreground sm:text-[2.4rem] lg:text-[2.95rem]"
+            >
+              Selected work
             </h2>
-          </div>
-
-          <div className="mx-auto w-full max-w-[72rem] border-t border-[#2b3434]">
-            {selectedWork.map((project) => (
+            <article
+              aria-labelledby="quiz-tajm-title"
+              className="grid gap-6 border-t border-[#2b3434] py-8 md:grid-cols-[0.85fr_1.4fr] md:gap-8 lg:gap-12"
+            >
               <Link
-                key={project.title}
-                href={project.href}
-                className="group block border-b border-[#2b3434] py-8 transition-[border-color,background-color] duration-300 ease-in-out hover:border-[rgba(111,175,143,0.28)] focus-visible:border-[rgba(111,175,143,0.45)] focus-visible:outline-none sm:py-9 md:py-10 lg:py-11"
+                href="/quiz-tajm"
+                aria-label="Read about Quiz Tajm"
+                className="relative block aspect-[16/10] self-start overflow-hidden rounded-md"
               >
-                <div className="flex items-center justify-between gap-6 transition-transform duration-300 ease-in-out group-hover:translate-x-[2px] group-focus-visible:translate-x-[2px]">
-                  <div className="min-w-0 flex-1">
-                    <p className="mb-3 text-[14px] font-medium tracking-[0.01em] text-muted sm:mb-4">
-                      {project.category} / {project.year}
-                    </p>
-                    <h3 className="max-w-[18rem] text-balance text-[1.55rem] font-semibold leading-[1.08] tracking-[-0.035em] text-foreground transition-colors duration-300 ease-in-out group-hover:text-[#6FAF8F] group-focus-visible:text-[#6FAF8F] sm:max-w-[24rem] sm:text-[1.7rem] md:max-w-none md:text-[1.9rem] lg:text-[2.1rem]">
-                      {project.title}
-                    </h3>
+                <Image
+                  src="/images/quiz-tajm-preview.jpg"
+                  unoptimized
+                  loading="eager"
+                  alt="Quiz Tajm start screen with theme selection"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 767px) calc(100vw - 2rem), 440px"
+                />
+              </Link>
+              <div>
+                <p className="text-sm font-medium text-[var(--accent-green)]">
+                  JavaScript · Published · 2026
+                </p>
+                <h3
+                  id="quiz-tajm-title"
+                  className="mt-3 text-2xl font-semibold tracking-[-0.03em] text-foreground sm:text-[1.8rem]"
+                >
+                  <Link
+                    href="/quiz-tajm"
+                    className="hover:text-[var(--accent-green)]"
+                  >
+                    Quiz Tajm
+                  </Link>
+                </h3>
+                <p className="mt-3 text-base leading-7 text-ink-soft">
+                  A published quiz built with vanilla JavaScript, Vite and Open
+                  Trivia DB. Originally developed as group coursework and
+                  individually extended with new features and improved
+                  reliability.
+                </p>
+                <p className="mt-3 text-sm leading-6 text-muted">
+                  Individual improvements: API caching, rate limiting, error
+                  handling, dynamic results and persistent game history.
+                </p>
+                <Link
+                  href="/quiz-tajm"
+                  className="mt-3 inline-flex min-h-11 items-center text-base font-medium text-[var(--accent-green)] underline underline-offset-4"
+                >
+                  View project<span className="sr-only">: Quiz Tajm</span>
+                </Link>
+              </div>
+            </article>
 
-                    <p className="mt-3 max-w-[42rem] pr-2 text-[0.96rem] leading-[1.8] text-ink-soft sm:mt-4 sm:text-[0.98rem] sm:leading-7 md:max-w-[44rem] md:pr-0">
-                      {project.description}
-                    </p>
-                  </div>
+            <h2 className="mt-8 mb-6 text-[1.95rem] font-semibold leading-tight tracking-[-0.035em] text-foreground sm:text-[2.4rem] lg:text-[2.95rem]">
+              UX &amp; product work
+            </h2>
+            <article
+              aria-labelledby="legalisering-title"
+              className="grid gap-6 border-t border-[#2b3434] py-8 md:grid-cols-[0.85fr_1.4fr] md:gap-8 lg:gap-12"
+            >
+              <div>
+                <p className="text-sm font-medium text-[var(--accent-green)]">
+                  Freelance client work · Prototype in progress
+                </p>
+                <h3
+                  id="legalisering-title"
+                  className="mt-3 text-2xl font-semibold tracking-[-0.03em] text-foreground sm:text-[1.8rem]"
+                >
+                  <Link
+                    href="/legalisering"
+                    className="hover:text-[var(--accent-green)]"
+                  >
+                    Legalisering.se
+                  </Link>
+                </h3>
+                <p className="mt-2 text-sm leading-6 text-muted">
+                  Alla Visum · Autumn 2026
+                </p>
+              </div>
+              <div>
+                <p className="text-base leading-7 text-ink-soft">
+                  Leading UX and product design for a document legalisation
+                  service, from research to an interactive frontend prototype
+                  covering five countries.
+                </p>
+                <p className="mt-3 text-sm leading-6 text-muted">
+                  Goal: help customers order the right service online and reduce
+                  unnecessary manual support.
+                </p>
+                <Link
+                  href="/legalisering"
+                  className="mt-3 inline-flex min-h-11 items-center text-base font-medium text-[var(--accent-green)] underline underline-offset-4"
+                >
+                  View ongoing project
+                  <span className="sr-only">: Legalisering.se</span>
+                </Link>
+              </div>
+            </article>
 
-                  <div className="relative hidden h-[154px] w-[264px] shrink-0 overflow-hidden rounded-[0.85rem] border border-[rgba(255,255,255,0.08)] bg-[rgba(255,255,255,0.02)] opacity-30 shadow-[0_18px_40px_rgba(0,0,0,0.16)] transition-all duration-500 ease-out group-hover:translate-x-[2px] group-hover:opacity-100 group-focus-visible:translate-x-[2px] group-focus-visible:opacity-100 lg:block">
+            <div className="border-t border-[#2b3434]">
+              {selectedWork.map((project) => (
+                <article
+                  key={project.href}
+                  className="grid gap-6 border-b border-[#2b3434] py-8 sm:py-10 md:grid-cols-[0.85fr_1.4fr] md:gap-8 lg:gap-12"
+                >
+                  <Link
+                    href={project.href}
+                    aria-label={`Read ${project.title} case study`}
+                    className="group block self-start overflow-hidden rounded-md"
+                  >
                     <Image
                       src={project.image}
                       alt={project.imageAlt}
-                      fill
-                      className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.02] group-focus-visible:scale-[1.02]"
-                      sizes="264px"
+                      width={720}
+                      height={450}
+                      className="aspect-[16/10] h-auto w-full object-cover transition-transform duration-300 motion-safe:group-hover:scale-[1.02]"
+                      sizes="(max-width: 767px) calc(100vw - 2rem), 440px"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[rgba(14,17,17,0.28)] via-[rgba(14,17,17,0.08)] to-transparent" />
+                  </Link>
+                  <div>
+                    <p className="text-sm text-muted">{project.context}</p>
+                    <h3 className="mt-3 text-balance text-2xl font-semibold leading-tight tracking-[-0.03em] text-foreground sm:text-[1.8rem]">
+                      <Link
+                        href={project.href}
+                        className="hover:text-[var(--accent-green)]"
+                      >
+                        {project.title}
+                      </Link>
+                    </h3>
+                    <p className="mt-3 text-base leading-7 text-ink-soft">
+                      {project.problem}
+                    </p>
+                    <p className="mt-3 text-sm leading-6 text-muted">
+                      {project.role}
+                    </p>
+                    <Link
+                      href={project.href}
+                      className="mt-4 inline-flex min-h-11 items-center text-base font-medium text-[var(--accent-green)] underline decoration-[rgba(111,175,143,0.5)] underline-offset-4 hover:decoration-current"
+                    >
+                      Read case study
+                      <span className="sr-only">: {project.title}</span>
+                    </Link>
                   </div>
-
-                  <ArrowRight
-                    aria-hidden="true"
-                    size={18}
-                    strokeWidth={1.75}
-                    className="hidden shrink-0 text-muted opacity-0 transition-all duration-300 ease-in-out group-hover:translate-x-[2px] group-hover:opacity-100 group-hover:text-[#6FAF8F] group-focus-visible:translate-x-[2px] group-focus-visible:opacity-100 group-focus-visible:text-[#6FAF8F] md:block"
-                  />
-                </div>
-              </Link>
-            ))}
-          </div>
-        </section>
-
-        <section id="about" className="py-20 sm:py-22 md:py-26 lg:py-34">
-          <div className="mx-auto grid w-full max-w-[80rem] gap-12 md:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] md:items-start md:gap-[clamp(64px,8vw,120px)]">
-            <div>
-              <h2 className="text-balance text-[2.45rem] font-semibold leading-[1.02] tracking-[-0.05em] text-foreground sm:text-[3rem] md:text-[3.55rem] lg:text-[4.4rem]">
-                A designer driven by curiosity, clarity, and solving people’s
-                problems.
-              </h2>
-
-              <div className="relative mt-8 sm:mt-9 md:mt-10">
-                <div className="h-[280px] w-full overflow-hidden rounded-[0.85rem] border border-[rgba(255,255,255,0.08)] bg-[rgba(255,255,255,0.02)] shadow-[0_18px_42px_rgba(0,0,0,0.16)] sm:h-[320px] md:h-auto md:aspect-[16/9] md:max-h-[400px]">
-                  <Image
-                    src="/images/about-me-outdoor.jpg"
-                    alt="Portrait of Marcus Wiman"
-                    width={4032}
-                    height={3024}
-                    className="h-full w-full object-cover object-[72%_28%]"
-                    sizes="(max-width: 768px) calc(100vw - 2rem), (max-width: 1024px) 50vw, 44rem"
-                  />
-                </div>
-
-                <div className="mt-4 h-[150px] w-[72%] overflow-hidden rounded-[0.75rem] border border-[rgba(255,255,255,0.1)] bg-[rgba(255,255,255,0.02)] shadow-[0_18px_42px_rgba(0,0,0,0.22)] sm:h-[170px] sm:w-[60%] md:absolute md:-bottom-12 md:-right-10 md:h-[130px] md:w-[14rem] lg:h-[140px] lg:w-[15rem]">
-                  <Image
-                    src="/images/about-music-performance.jpg"
-                    alt="Marcus performing guitar on stage"
-                    width={1200}
-                    height={800}
-                    className="h-full w-full object-cover object-center"
-                    sizes="(max-width: 768px) 72vw, 16rem"
-                  />
-                </div>
-              </div>
-            </div>
-
-            <div className="max-w-[40rem] space-y-8 text-[1.02rem] leading-[1.82] text-ink-soft sm:text-[1.07rem] md:text-[1.1rem] lg:text-[1.14rem]">
-              <p>
-                I&apos;m Marcus, a UX designer based in Stockholm. I focus on
-                clarity, structure, and how people actually use the products we
-                build.
-              </p>
-
-              <p>
-                I&apos;m drawn to challenging problems and curious about how
-                things work, especially in analytics platforms and
-                information-dense environments.
-              </p>
-
-              <p>
-                Before UX, I spent years in music and running my own creative
-                business. That still shapes how I think about rhythm, flow, and
-                composition.
-              </p>
-
-              <p>
-                Outside design, I&apos;m usually close to music, training, or
-                some new challenge. Recently, that included finishing Stockholm
-                Marathon.
-              </p>
-
-              <p>
-                I&apos;ve worked with real audiences, from live performances at
-                Gröna Lund to appearances on SVT1 and Sveriges Radio (P4), and
-                learned to deliver under pressure. A good interface guides
-                attention without friction.
-              </p>
+                </article>
+              ))}
             </div>
           </div>
         </section>
 
         <section
-          id="education"
-          aria-labelledby="education-heading"
-          className="py-10 sm:py-12 md:py-16 lg:py-20"
+          id="about"
+          aria-labelledby="about-title"
+          className="scroll-mt-28 py-10 sm:py-14"
         >
-          <div className="mx-auto w-full max-w-[72rem] border-y border-[#2b3434] py-8 sm:py-10 md:py-12">
-            <h2 id="education-heading" className="mb-6 text-[13px] font-medium uppercase tracking-[0.12em] text-muted sm:mb-8">
-              Education
-            </h2>
-
-            <div className="grid gap-6 md:grid-cols-2 md:gap-12 lg:gap-16">
-              <div>
-                <h3
-                  className="text-balance text-[1.7rem] font-semibold leading-[1.12] tracking-[-0.035em] text-foreground sm:text-[1.9rem] md:text-[2.1rem] lg:text-[2.4rem]"
-                >
-                  Fullstack JavaScript{" "}
-                  <span className="text-[var(--accent-green)]">·</span>{" "}
-                  Chas Academy
-                </h3>
-                <p className="mt-4 text-[14px] font-medium tracking-[0.01em] text-[var(--accent-green)]">
-                  2026–2028 · In progress
-                </p>
-              </div>
-
-              <p className="max-w-[36rem] text-[1rem] leading-[1.78] text-ink-soft sm:text-[1.04rem] md:text-[1.08rem]">
-                I&apos;m currently studying fullstack JavaScript development at
-                Chas Academy, learning to build both the interfaces people use
-                and the systems behind them. Building on my UX background, my
-                goal is to take ideas from understanding user needs and designing
-                interactions to developing working web applications.
+          <div className="mx-auto grid w-full max-w-[72rem] gap-8 md:grid-cols-[0.65fr_1.4fr] md:gap-12">
+            <Image
+              src="/images/about-me-outdoor.jpg"
+              alt="Portrait of Marcus Wiman"
+              width={4032}
+              height={3024}
+              className="aspect-[4/3] w-full max-w-[20rem] self-start rounded-md object-cover object-[72%_28%]"
+              sizes="(max-width: 767px) 320px, 360px"
+            />
+            <div>
+              <h2
+                id="about-title"
+                className="text-[1.95rem] font-semibold leading-tight tracking-[-0.035em] text-foreground sm:text-[2.4rem]"
+              >
+                About me
+              </h2>
+              <p className="mt-4 text-base leading-7 text-ink-soft">
+                I&apos;m based in Stockholm, studying fullstack JavaScript after
+                a UX education. Freelance work with Legalisering.se and my
+                internship at Flowscape have given me experience of real client
+                needs and working with developers.
               </p>
-            </div>
-
-            <div className="mt-8 grid gap-6 border-t border-[#2b3434] pt-8 sm:mt-10 sm:pt-10 md:grid-cols-2 md:gap-12 lg:gap-16">
-              <div>
-                <h3 className="text-balance text-[1.7rem] font-semibold leading-[1.12] tracking-[-0.035em] text-foreground sm:text-[1.9rem] md:text-[2.1rem] lg:text-[2.4rem]">
-                  UX Design <span className="text-[var(--accent-green)]">·</span>{" "}
-                  Nackademin
-                </h3>
-                <p className="mt-4 text-[14px] font-medium tracking-[0.01em] text-[var(--accent-green)]">
-                  2024–2026
-                </p>
-                <a
-                  href="/documents/ux-designer-diploma.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="View UX Design diploma (PDF, opens in a new tab)"
-                  className="group mt-5 inline-flex items-center gap-2 text-[1rem] font-medium text-foreground transition-colors duration-300 ease-in-out hover:text-[var(--accent-green)] focus-visible:text-[var(--accent-green)]"
-                >
-                  View diploma
-                  <span className="text-[13px] text-muted">PDF</span>
-                  <ArrowUpRight
-                    aria-hidden="true"
-                    size={18}
-                    strokeWidth={1.75}
-                    className="transition-transform duration-300 ease-in-out group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-focus-visible:-translate-y-0.5 group-focus-visible:translate-x-0.5"
-                  />
-                </a>
-              </div>
-
-              <p className="max-w-[36rem] text-[1rem] leading-[1.78] text-ink-soft sm:text-[1.04rem] md:text-[1.08rem]">
-                A two-year education in UX design, connecting my design practice
-                with a foundation in understanding users and creating thoughtful
-                digital experiences.
+              <p className="mt-4 text-base leading-7 text-ink-soft">
+                I use AI for exercises and feedback, then practise writing code
+                myself until I can explain and apply it. Outside work and
+                studies, I&apos;m usually close to music, training, or a new
+                challenge.
               </p>
-            </div>
-          </div>
-        </section>
-
-        <WhatIDo />
-
-        <section id="contact" className="py-20 sm:py-22 md:py-26 lg:py-34">
-          <div className="mx-auto w-full max-w-[72rem]">
-            <div className="rounded-[1.1rem] border border-[rgba(43,52,52,0.92)] bg-[linear-gradient(135deg,rgba(18,22,22,0.96)_0%,rgba(14,17,17,0.94)_100%)] px-6 py-8 shadow-[0_24px_60px_rgba(0,0,0,0.18)] sm:px-8 sm:py-10 md:px-10 md:py-12">
-              <div className="grid gap-10 md:grid-cols-[minmax(0,1.2fr)_minmax(280px,0.8fr)] md:gap-12 lg:gap-16">
+              <dl className="mt-6 grid gap-5 border-t border-[#2b3434] pt-5 sm:grid-cols-2">
                 <div>
-                  <p className="text-[14px] font-medium tracking-[0.01em] text-muted">
-                    Contact
-                  </p>
-                  <h2 className="mt-4 text-balance text-[2rem] font-semibold leading-[1.08] tracking-[-0.035em] text-foreground sm:text-[2.25rem] md:text-[2.7rem] lg:text-[3rem]">
-                    Get in touch.
-                  </h2>
-
-                  <p className="mt-6 max-w-[40rem] text-[1rem] leading-[1.78] text-ink-soft sm:text-[1.04rem] md:text-[1.08rem]">
-                    Available for freelance, in-house, and product design
-                    opportunities. Reach out by email or LinkedIn.
-                  </p>
+                  <dt className="text-base font-medium text-foreground">
+                    Chas Academy
+                  </dt>
+                  <dd className="mt-1 text-sm leading-6 text-muted">
+                    Fullstack JavaScript · 2026–2028
+                    <br />
+                    Now: Vanilla JavaScript · Next: TypeScript
+                  </dd>
                 </div>
-
-                <div className="flex flex-col justify-end">
-                  <div className="overflow-hidden rounded-[0.95rem] border border-[rgba(255,255,255,0.07)] bg-[rgba(255,255,255,0.02)]">
-                    <Link
-                      href="mailto:marcus.wiman97@gmail.com"
-                      className="group flex items-center justify-between gap-4 px-5 py-5 transition-colors duration-200 hover:bg-[rgba(255,255,255,0.03)] sm:px-6"
-                    >
-                      <div>
-                        <p className="text-[14px] font-medium tracking-[0.01em] text-muted">
-                          Email
-                        </p>
-                        <p className="mt-2 break-all text-[1rem] font-medium text-foreground sm:text-[1.02rem]">
-                          marcus.wiman97@gmail.com
-                        </p>
-                      </div>
-                      <ArrowRight
-                        aria-hidden="true"
-                        size={20}
-                        strokeWidth={1.75}
-                        className="shrink-0 text-muted transition duration-200 group-hover:translate-x-[2px] group-hover:text-[var(--accent-green)]"
-                      />
-                    </Link>
-
-                    <div className="h-px bg-[rgba(255,255,255,0.06)]" />
-
-                    <Link
-                      href="https://www.linkedin.com/in/marcus-wiman/"
-                      className="group flex items-center justify-between gap-4 px-5 py-5 transition-colors duration-200 hover:bg-[rgba(255,255,255,0.03)] sm:px-6"
+                <div>
+                  <dt className="text-base font-medium text-foreground">
+                    Nackademin
+                  </dt>
+                  <dd className="mt-1 text-sm leading-6 text-muted">
+                    UX Design · 2024–2026
+                    <br />
+                    <a
+                      href="/documents/ux-designer-diploma.pdf"
                       target="_blank"
-                      rel="noreferrer"
+                      rel="noopener noreferrer"
+                      className="inline-flex min-h-11 items-center text-[var(--accent-green)] underline underline-offset-4"
                     >
-                      <div>
-                        <p className="text-[14px] font-medium tracking-[0.01em] text-muted">
-                          LinkedIn
-                        </p>
-                        <p className="mt-2 text-[1rem] font-medium text-foreground sm:text-[1.02rem]">
-                          linkedin.com/in/marcus-wiman/
-                        </p>
-                      </div>
-                      <ArrowRight
-                        aria-hidden="true"
-                        size={20}
-                        strokeWidth={1.75}
-                        className="shrink-0 text-muted transition duration-200 group-hover:translate-x-[2px] group-hover:text-[var(--accent-green)]"
-                      />
-                    </Link>
-                  </div>
+                      View diploma
+                      <span className="sr-only">
+                        {" "}
+                        (PDF, opens in a new tab)
+                      </span>
+                    </a>
+                  </dd>
                 </div>
-              </div>
+              </dl>
+            </div>
+          </div>
+          <details className="group mx-auto mt-8 w-full max-w-[72rem] border-y border-[#2b3434]">
+            <summary className="cursor-pointer py-5 text-lg font-medium text-foreground marker:text-[var(--accent-green)]">
+              My approach to UX
+            </summary>
+            <WhatIDo showHeading={false} />
+          </details>
+        </section>
+
+        <section
+          id="contact"
+          aria-labelledby="contact-title"
+          className="scroll-mt-28 py-12 sm:py-16 lg:py-20"
+        >
+          <div className="mx-auto grid w-full max-w-[72rem] gap-8 border-t border-[#2b3434] pt-9 md:grid-cols-[1fr_1.2fr] md:gap-12">
+            <div>
+              <h2
+                id="contact-title"
+                className="text-[1.95rem] font-semibold leading-tight tracking-[-0.035em] text-foreground sm:text-[2.4rem]"
+              >
+                Let&apos;s talk
+              </h2>
+              <p className="mt-4 max-w-[30rem] text-base leading-7 text-ink-soft">
+                Have a junior developer opening? I&apos;d like to hear about the
+                team and the work. I&apos;m also open to UX roles.
+              </p>
+            </div>
+            <div>
+              <a
+                href="mailto:marcus.wiman97@gmail.com"
+                className="inline-flex min-h-11 max-w-full items-center break-all py-2 text-lg font-medium text-[var(--accent-green)] underline underline-offset-4 sm:text-xl"
+              >
+                marcus.wiman97@gmail.com
+              </a>
+              <ul className="mt-4 flex flex-wrap gap-x-6 gap-y-2 text-base text-foreground">
+                <li>
+                  <a
+                    href="mailto:marcus.wiman97@gmail.com?subject=CV%20request"
+                    className="inline-flex min-h-11 items-center underline decoration-[#596666] underline-offset-4 hover:decoration-[var(--accent-green)]"
+                  >
+                    Request my CV
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://github.com/marcuswiman97"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex min-h-11 items-center underline decoration-[#596666] underline-offset-4 hover:decoration-[var(--accent-green)]"
+                  >
+                    GitHub
+                    <span className="sr-only">
+                      {" "}
+                      profile (opens in a new tab)
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.linkedin.com/in/marcus-wiman/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex min-h-11 items-center underline decoration-[#596666] underline-offset-4 hover:decoration-[var(--accent-green)]"
+                  >
+                    LinkedIn
+                    <span className="sr-only"> (opens in a new tab)</span>
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
         </section>
-
-        <footer className="py-12 text-sm text-muted md:py-14 lg:py-16">
-          <div className="mx-auto w-full max-w-[72rem]">
-            <div className="mb-8 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
-
-            <div className="flex flex-col gap-2 sm:gap-3 md:flex-row md:items-center md:justify-between">
-              <p>© 2026 Marcus Wiman</p>
-              <p>Stockholm, Sweden</p>
-              <p>UX Designer</p>
-            </div>
-          </div>
+        <footer className="mx-auto flex w-full max-w-[72rem] flex-col gap-2 border-t border-[#2b3434] py-6 text-sm text-muted sm:flex-row sm:justify-between">
+          <p>© 2026 Marcus Wiman</p>
+          <p>Stockholm, Sweden</p>
         </footer>
       </div>
     </main>

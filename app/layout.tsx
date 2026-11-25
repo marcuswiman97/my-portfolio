@@ -13,25 +13,25 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "UX Designer Marcus Wiman | UX Portfolio Stockholm",
+  title: "Marcus Wiman | Fullstack JavaScript & UX",
   description:
-    "UX designer based in Stockholm focused on user research, usability testing, and interaction design. Explore selected UX projects and case studies.",
+    "Fullstack JavaScript student and UX designer based in Stockholm. Follow my JavaScript studies and explore UX case studies.",
   metadataBase: new URL("https://www.marcus-wiman.com"),
   icons: {
     icon: "/favicon.ico?v=2",
   },
   openGraph: {
-    title: "UX Designer Marcus Wiman | UX Portfolio Stockholm",
+    title: "Marcus Wiman | Fullstack JavaScript & UX",
     description:
-      "UX designer based in Stockholm focused on user research, usability testing, and interaction design. Explore selected UX projects and case studies.",
+      "Fullstack JavaScript student and UX designer based in Stockholm. Follow my JavaScript studies and explore UX case studies.",
     type: "website",
     url: "https://www.marcus-wiman.com",
   },
   twitter: {
     card: "summary_large_image",
-    title: "UX Designer Marcus Wiman | UX Portfolio Stockholm",
+    title: "Marcus Wiman | Fullstack JavaScript & UX",
     description:
-      "UX designer based in Stockholm focused on user research, usability testing, and interaction design. Explore selected UX projects and case studies.",
+      "Fullstack JavaScript student and UX designer based in Stockholm. Follow my JavaScript studies and explore UX case studies.",
   },
 };
 
@@ -42,7 +42,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="sv"
+      lang="en"
       data-scroll-behavior="smooth"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >

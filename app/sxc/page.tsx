@@ -8,52 +8,42 @@ import { ReadingProgress } from "@/components/reading-progress";
 export const metadata: Metadata = {
   title: "SXC | Marcus Wiman",
   description:
-    "A UX case study about improving navigation and flow in a conference experience.",
+    "A four-week UX coursework project exploring conference sessions and networking through two mobile concepts.",
   openGraph: {
     title: "Stockholm Xperience Conference | Marcus Wiman",
     description:
-      "A UX case study about improving navigation and flow in a conference experience.",
+      "A four-week UX coursework project exploring conference sessions and networking through two mobile concepts.",
   },
   twitter: {
     card: "summary_large_image",
     title: "Stockholm Xperience Conference | Marcus Wiman",
     description:
-      "A UX case study about improving navigation and flow in a conference experience.",
+      "A four-week UX coursework project exploring conference sessions and networking through two mobile concepts.",
   },
 };
 
 const metadataItems = [
-  { label: "Role", value: "UX/UI Design + Research" },
+  { label: "Discipline", value: "UX/UI Design + Research" },
   { label: "Timeline", value: "4 Weeks" },
-  { label: "Team", value: "4 Designers" },
+  { label: "Team", value: "5 Designers" },
   { label: "Outcome", value: "Stakeholder Presentation" },
 ];
 
-const problemPoints = [
-  "Relevant people were hard to find in the flow of the event",
-  "Sessions and networking felt disconnected from each other",
-  "Users lacked clear ways to start a conversation or make contact",
+const designQuestions = [
+  "How could attendees find people relevant to their interests?",
+  "How could sessions and networking support each other?",
+  "What would help someone take the first step towards making contact?",
 ];
 
-const keyDesignDecisions = [
+const conceptDirections = [
   {
-    title: "Two concept directions were explored in parallel",
-    text: "We split into two groups to test two different directions before deciding what felt strongest.",
+    title: "A gamified direction",
+    text: "A playful approach to discovery and networking.",
   },
   {
-    title: "One concept used a more gamified approach",
-    text: "This direction explored whether discovery and networking could feel more playful through game-like interaction patterns.",
+    title: "A direct approach",
+    text: "An approach focused on sessions and networking without the added game mechanics.",
   },
-  {
-    title: "The other focused on a simpler flow",
-    text: "This direction tested a more direct structure where sessions, people, and actions were easier to understand without added mechanics.",
-  },
-];
-
-const learningPoints = [
-  "Our design concept made it easier to move between conference content and networking.",
-  "Stakeholder feedback showed interest in taking the idea further.",
-  "The project showed how much clarity matters in a fast-moving event setting.",
 ];
 
 export default function SxcPage() {
@@ -89,9 +79,8 @@ export default function SxcPage() {
                       Stockholm Xperience Conference
                     </h1>
                     <p className="max-w-[37.5rem] text-[16px] leading-[1.75] text-[#d9e0e0] sm:text-[17px] md:text-[18px]">
-                      A mobile-first concept for a hybrid UX conference, helping
-                      people find talks, workshops, and relevant attendees more
-                      easily.
+                      Two mobile concepts exploring sessions and networking at a
+                      hybrid UX conference.
                     </p>
                   </div>
                 </div>
@@ -138,17 +127,16 @@ export default function SxcPage() {
 
             <div className="mt-8 max-w-[46rem] space-y-5 text-[0.97rem] leading-[1.8] text-ink-soft sm:text-[1rem] sm:leading-8 md:text-[1.0625rem]">
               <p>
-                I reworked a mobile-first conference concept to make talks,
-                workshops, people, and key actions easier to navigate in one
-                place. The focus was on how attendees moved through the event,
-                compared options, and decided where to spend their time.
+                We were five UX students working together on a four-week project
+                at Nackademin. The brief concerned a hybrid UX conference with
+                talks, workshops, and networking.
               </p>
 
               <p>
-                The goal was to make it easier to move between content and
-                networking without the experience feeling split up. The concept
-                brought them into one simpler flow. The project was done at
-                Nackademin during Year 2.
+                The work was collaborative throughout. I took part in research,
+                concept discussions, and design alongside the rest of the team;
+                we did not divide the project into separate individual
+                deliverables. We presented our concepts to the organisers.
               </p>
             </div>
 
@@ -159,28 +147,11 @@ export default function SxcPage() {
         <section className="pt-16 pb-12 sm:pt-18 sm:pb-14 md:pt-20 md:pb-16 lg:pt-24 lg:pb-18">
           <div className="max-w-[50rem]">
             <h2 className="mb-4 text-balance text-[1.45rem] font-semibold leading-[1.16] text-foreground sm:text-[1.6rem] md:text-[1.75rem]">
-              Context
-            </h2>
-
-            <p className="max-w-[650px] text-[16px] leading-[1.8] text-ink-soft sm:text-[17px] md:text-[18px]">
-              SXC was a hybrid conference for UX designers, combining talks,
-              workshops, and networking across physical and digital touchpoints.
-              Attendees needed to compare sessions, decide where to spend their
-              time, and find relevant people to connect with, often in the
-              middle of a fast-moving event. The product needed to support those
-              decisions quickly.
-            </p>
-          </div>
-        </section>
-
-        <section className="pt-16 pb-12 sm:pt-18 sm:pb-14 md:pt-20 md:pb-16 lg:pt-24 lg:pb-18">
-          <div className="max-w-[50rem]">
-            <h2 className="mb-4 text-balance text-[1.45rem] font-semibold leading-[1.16] text-foreground sm:text-[1.6rem] md:text-[1.75rem]">
-              Problem
+              Design questions
             </h2>
 
             <ul className="max-w-[50rem] list-disc space-y-2.5 pl-5 text-[15px] leading-[1.75] text-ink-soft md:text-[16px]">
-              {problemPoints.map((point) => (
+              {designQuestions.map((point) => (
                 <li key={point}>{point}</li>
               ))}
             </ul>
@@ -194,10 +165,11 @@ export default function SxcPage() {
             </h2>
 
             <p className="mt-4 max-w-[640px] text-[15px] leading-[1.7] text-ink-soft md:text-[16px]">
-              I used early sketches to test different ways of connecting
-              sessions, networking, and key actions in one flow. The aim was to
-              see what felt easiest to follow before moving into more detailed
-              design work.
+              We worked with survey responses from previous years as a starting
+              point. Over the four weeks, we used observations, sketches, and
+              concept exploration to consider the conference experience. The
+              historical survey material gave us context; it did not validate
+              our proposed solution.
             </p>
 
             <figure className="mt-9 md:mt-10">
@@ -212,8 +184,7 @@ export default function SxcPage() {
                 />
               </div>
               <figcaption className="mt-3 text-[0.9rem] leading-6 text-muted">
-                Early sketches exploring how content, people, and actions could
-                sit in one flow.
+                Early sketches and workshop material from the concept work.
               </figcaption>
             </figure>
           </div>
@@ -222,11 +193,16 @@ export default function SxcPage() {
         <section className="pt-16 pb-12 sm:pt-18 sm:pb-14 md:pt-20 md:pb-16 lg:pt-24 lg:pb-18">
           <div className="max-w-[50rem] rounded-[0.9rem] border border-[rgba(43,52,52,0.92)] bg-[rgba(18,22,22,0.9)] px-6 py-8 sm:px-8 sm:py-10 md:px-10 md:py-12">
             <h2 className="text-[14px] font-medium uppercase tracking-[0.12em] text-muted">
-              Concept Exploration
+              Two concept directions
             </h2>
 
+            <p className="mt-4 max-w-[42rem] text-base leading-7 text-ink-soft">
+              We explored two directions for networking, with different levels
+              of playfulness.
+            </p>
+
             <div className="mt-6 space-y-6">
-              {keyDesignDecisions.map((decision) => (
+              {conceptDirections.map((decision) => (
                 <div key={decision.title}>
                   <h3 className="max-w-[36rem] text-balance text-[1.2rem] font-semibold leading-[1.2] text-foreground sm:text-[1.35rem] md:text-[1.5rem]">
                     {decision.title}
@@ -268,16 +244,17 @@ export default function SxcPage() {
             </h3>
 
             <p className="mt-5 max-w-[44rem] text-[0.97rem] leading-[1.8] text-ink-soft sm:text-[1rem] sm:leading-8 md:text-[1.0625rem]">
-              Quick Connect explored how networking could feel less separate
-              from the rest of the conference journey. It made relevant people
-              easier to discover around sessions and shared interests.
+              Quick Connect explored a short interaction for meeting someone at
+              the event: reveal a QR code from a profile and let the other
+              person scan it. The concept screen includes a “Show QR code”
+              action.
             </p>
 
             <figure className="mt-9 max-w-[36rem] md:mt-10">
               <div className="relative overflow-hidden rounded-[0.6rem] border border-[rgba(43,52,52,0.82)] bg-[#111616] shadow-[0_18px_40px_rgba(0,0,0,0.18)]">
                 <Image
                   src="/images/sxc-outcome.jpg"
-                  alt="Quick Connect concept showing content, people, and next steps in one flow"
+                  alt="SXC profile concept with a Show QR code action for connecting at the event"
                   width={1200}
                   height={1600}
                   className="h-auto w-full"
@@ -285,8 +262,8 @@ export default function SxcPage() {
                 />
               </div>
               <figcaption className="mt-3 text-[0.9rem] leading-6 text-muted">
-                Quick Connect concept linking content, people, and next steps
-                more directly.
+                Quick Connect concept screen. This was a proposed design, not a
+                deployed feature.
               </figcaption>
             </figure>
           </div>
@@ -295,31 +272,28 @@ export default function SxcPage() {
         <section className="pt-16 pb-12 sm:pt-18 sm:pb-14 md:pt-20 md:pb-16 lg:pt-24 lg:pb-18">
           <div className="max-w-[50rem]">
             <h2 className="mb-6 text-balance text-[1.35rem] font-semibold leading-[1.2] text-foreground sm:text-[1.5rem] md:text-[1.65rem]">
-              Outcome & Learnings
+              Project delivery
             </h2>
 
             <p className="mt-6 max-w-[44rem] text-[0.97rem] leading-[1.8] text-ink-soft sm:text-[1rem] sm:leading-8 md:mt-8 md:text-[1.0625rem]">
-              The project gave stakeholders a clearer picture of how the
-              conference experience could be structured in a more connected way.
-              While the concept was not tested with users at scale, it was
-              presented to the organization, received positive feedback, and
-              felt worth developing further.
+              We presented the concepts to the organisers and received feedback
+              at the end of the four weeks. The work shown here remained a
+              concept.
             </p>
-
-            <div className="mt-6">
-              <h3 className="text-[1rem] font-semibold leading-[1.2] text-foreground">
-                Key Learnings
-              </h3>
-
-              <ul className="mt-4 max-w-[44rem] space-y-4 text-[0.97rem] leading-[1.8] text-ink-soft sm:text-[1rem] sm:leading-8">
-                {learningPoints.map((point) => (
-                  <li key={point} className="flex gap-3">
-                    <span className="mt-[0.65rem] h-1 w-1 rounded-full bg-[#6FAF8F]" />
-                    <span>{point}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
+            <h3 className="mt-8 text-lg font-medium text-foreground">
+              What I took from the project
+            </h3>
+            <p className="mt-3 max-w-[44rem] text-base leading-7 text-ink-soft">
+              I was learning how to work in the UX role: discussing ideas with
+              capable peers, developing a proposal together, and presenting it
+              to stakeholders. This was one of my first stakeholder
+              presentations.
+            </p>
+            <p className="mt-4 max-w-[44rem] text-base leading-7 text-ink-soft">
+              The project also made me want more direct testing with attendees.
+              Ideas and feedback gave us a direction, but we still needed to see
+              how people would use the concepts in the conference setting.
+            </p>
           </div>
         </section>
 

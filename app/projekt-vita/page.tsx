@@ -23,42 +23,27 @@ export const metadata: Metadata = {
 };
 
 const metadataItems = [
-  { label: "Role", value: "UX Research" },
+  { label: "Discipline", value: "UX Research" },
   { label: "Timeline", value: "12 Weeks" },
-  { label: "Research", value: "Surveys + Interviews" },
+  { label: "Research", value: "Interviews + synthesis" },
   { label: "Team", value: "4 UX Designers" },
 ];
 
-const challengePoints = [
-  "Companies struggled to understand what nonprofit organizations actually needed from a partnership.",
-  "Nonprofits found it hard to communicate their value in a way that felt clear and credible.",
-  "Different expectations made early conversations uncertain and difficult to align.",
-  "Missing trust early in the process made collaboration feel harder to commit to.",
+const researchQuestions = [
+  "What did companies need to know before considering a partnership?",
+  "What kinds of support were they willing to contribute?",
+  "How could Projekt Vita explain its work and partnership needs?",
 ];
 
-const sections = [
+const researchThemes = [
   {
-    title: "Clear intent was often missing",
-    text: "Companies wanted to help, but often struggled to understand what the nonprofit actually needed from the partnership.",
+    title: "Support through goods and money",
+    text: "The research considered support through goods as well as money. IKEA was one of the interview contacts. A question for the partnership was how a company’s potential contribution could meet the organisation’s needs.",
   },
   {
-    title: "Trust depended on how value was explained",
-    text: "Nonprofits had to make their work feel credible and concrete before companies felt confident moving forward.",
+    title: "Explaining the partnership",
+    text: "The material also concerned what companies understood about the organisation’s work and what each side expected to contribute.",
   },
-  {
-    title: "Early conversations were hard to align",
-    text: "Both sides entered the relationship with different expectations, which made it harder to build momentum from the start.",
-  },
-  {
-    title: "Support often started with products, not money",
-    text: "For many companies, the first step felt easier when they could contribute something tangible, often their own products, before committing financially.",
-  },
-];
-
-const outcomePoints = [
-  "Trust was shaped as much by communication as by intention.",
-  "Early clarity around needs and expectations made conversations easier to align.",
-  "Making value easier to explain gave both sides a stronger starting point.",
 ];
 
 export default function ProjektVitaPage() {
@@ -93,8 +78,8 @@ export default function ProjektVitaPage() {
                     Projekt Vita
                   </h1>
                   <p className="max-w-[34rem] text-[16px] leading-[1.75] text-[#d9e0e0] sm:text-[17px] md:max-w-[36rem] md:text-[18px]">
-                    A UX research project about trust, communication, and early
-                    collaboration around nonprofit partnerships.
+                    Exploratory UX research into partnerships between companies
+                    and a nonprofit organisation.
                   </p>
                 </div>
               </div>
@@ -140,20 +125,16 @@ export default function ProjektVitaPage() {
 
             <div className="mt-8 max-w-[46rem] space-y-5 text-[0.97rem] leading-[1.8] text-ink-soft sm:text-[1rem] sm:leading-8 md:mt-10 md:text-[1.0625rem]">
               <p>
-                Projekt Vita is a nonprofit organization working with long-term,
-                locally rooted development projects through knowledge sharing
-                and collaboration. This project explored how companies
-                understood that work, and what made a partnership feel credible
-                enough to take further.
+                Projekt Vita asked us to investigate what would help companies
+                feel confident about supporting a nonprofit organisation,
+                financially or through other contributions. This was a group
+                project during my first year at Nackademin.
               </p>
 
               <p>
-                My role was to investigate that relationship and translate the
-                research into a clearer direction. The work looked at where
-                trust broke down, what both sides needed to understand earlier,
-                and why that mattered for companies deciding whether a
-                partnership felt credible enough to explore further. The project
-                was done in school as part of Year 1 at Nackademin.
+                Our interview contacts included an IKEA representative, the
+                CEO of APiC (Africa Power &amp; infra Consultant), and project
+                stakeholders. APiC works in the energy sector in Southern Africa.
               </p>
             </div>
 
@@ -161,29 +142,28 @@ export default function ProjektVitaPage() {
           </div>
         </section>
 
+        <section className="py-10 sm:py-12">
+          <div className="max-w-[50rem]">
+            <h2 className="text-2xl font-semibold tracking-[-0.025em] text-foreground">
+              My contribution
+            </h2>
+            <p className="mt-4 max-w-[46rem] text-base leading-7 text-ink-soft">
+              I recruited an interview participant, conducted the interview, and
+              transcribed it. We then worked together as a group to organise
+              observations with post-it notes and discuss what the material
+              meant.
+            </p>
+          </div>
+        </section>
+
         <section className="pt-8 pb-12 sm:pt-10 sm:pb-14 md:pt-12 md:pb-16 lg:pt-10 lg:pb-18">
           <div className="max-w-[50rem]">
             <h2 className="mb-4 text-balance text-[1.45rem] font-semibold leading-[1.16] text-foreground sm:text-[1.6rem] md:text-[1.75rem]">
-              Problem / Context
+              Research questions
             </h2>
 
-            <p className="mb-3 inline-flex rounded-full border border-[rgba(255,255,255,0.08)] px-3 py-1 text-[14px] font-medium uppercase tracking-[0.12em] text-[rgba(167,176,176,0.82)]">
-              Context
-            </p>
-            <p className="mb-5 max-w-[50rem] text-[16px] leading-[1.8] text-ink-soft sm:text-[17px] md:text-[18px]">
-              Companies and nonprofit organizations both rely on trust when
-              starting a partnership, but they often come in with different
-              expectations, needs, and ways of communicating. For companies, the
-              question is often whether the collaboration feels credible and
-              relevant. For nonprofits, it is about being understood, supported,
-              and taken seriously.
-            </p>
-
-            <p className="mb-4 mt-8 inline-flex rounded-full border border-[rgba(255,255,255,0.08)] px-3 py-1 text-[14px] font-medium uppercase tracking-[0.12em] text-[rgba(167,176,176,0.82)]">
-              Problem
-            </p>
             <ul className="max-w-[50rem] list-disc space-y-2.5 pl-5 text-[15px] leading-[1.75] text-ink-soft md:text-[16px]">
-              {challengePoints.map((point) => (
+              {researchQuestions.map((point) => (
                 <li key={point}>{point}</li>
               ))}
             </ul>
@@ -192,18 +172,11 @@ export default function ProjektVitaPage() {
 
         <section className="pt-16 pb-12 sm:pt-18 sm:pb-14 md:pt-20 md:pb-16 lg:pt-22 lg:pb-18">
           <div className="max-w-[50rem] rounded-[0.9rem] border border-[rgba(43,52,52,0.88)] bg-[rgba(18,22,22,0.88)] px-6 py-8 sm:px-8 sm:py-10 md:px-10 md:py-12">
-            <p className="max-w-[42rem] text-[0.97rem] leading-7 text-ink-soft sm:text-[1rem] sm:leading-8 md:text-[1.0625rem]">
-              Field research showed that trust often broke down early when
-              expectations, needs, and value were not clearly understood. The
-              concept responded by making the first steps of a partnership
-              easier to follow and easier to explain from both sides.
-            </p>
-
             <figure className="mt-5 md:mt-7">
               <div className="relative overflow-hidden rounded-[0.55rem] border border-[rgba(43,52,52,0.82)] bg-[#111616] shadow-[0_18px_40px_rgba(0,0,0,0.18)]">
                 <Image
                   src="/images/projekt-vita-field.jpg"
-                  alt="Field research visit showing the local context around Projekt Vita"
+                  alt="Contextual image accompanying the Projekt Vita case study"
                   width={1600}
                   height={1066}
                   className="h-auto w-full"
@@ -211,7 +184,7 @@ export default function ProjektVitaPage() {
                 />
               </div>
               <figcaption className="mt-3 text-[0.9rem] leading-6 text-muted">
-                Field research made early trust gaps easier to see in context.
+                Projekt Vita · Project context
               </figcaption>
             </figure>
           </div>
@@ -220,11 +193,11 @@ export default function ProjektVitaPage() {
         <section className="pt-16 pb-12 sm:pt-18 sm:pb-14 md:pt-20 md:pb-16 lg:pt-24 lg:pb-18">
           <div className="max-w-[50rem]">
             <h2 className="text-[14px] font-medium uppercase tracking-[0.12em] text-muted">
-              Approach
+              Themes in the research
             </h2>
 
             <div className="mt-8 space-y-8 md:mt-10 md:space-y-10">
-              {sections.map((section) => (
+              {researchThemes.map((section) => (
                 <div key={section.title}>
                   <h3 className="max-w-[34rem] text-balance text-[1.2rem] font-semibold leading-[1.2] text-foreground sm:text-[1.35rem] md:text-[1.5rem]">
                     {section.title}
@@ -244,7 +217,7 @@ export default function ProjektVitaPage() {
               <div className="relative overflow-hidden rounded-[0.55rem] border border-[rgba(43,52,52,0.82)] bg-[#111616] shadow-[0_18px_40px_rgba(0,0,0,0.18)]">
                 <Image
                   src="/images/projekt-vita-portrait.jpg"
-                  alt="Research portrait used in the Projekt Vita case study"
+                  alt="Portrait accompanying the Projekt Vita case study"
                   width={1400}
                   height={1750}
                   className="h-auto w-full"
@@ -252,35 +225,9 @@ export default function ProjektVitaPage() {
                 />
               </div>
               <figcaption className="mt-3 text-[0.9rem] leading-6 text-muted">
-                Research insights translated into clearer ways to frame the
-                partnership.
+                Projekt Vita · Project image
               </figcaption>
             </figure>
-          </div>
-        </section>
-
-        <section className="pt-16 pb-12 sm:pt-18 sm:pb-14 md:pt-20 md:pb-16 lg:pt-24 lg:pb-18">
-          <div className="max-w-[50rem]">
-            <h2 className="mb-6 text-balance text-[1.35rem] font-semibold leading-[1.2] text-foreground sm:text-[1.5rem] md:text-[1.65rem]">
-              Outcome
-            </h2>
-
-            <p className="mt-6 max-w-[44rem] text-[0.97rem] leading-[1.8] text-ink-soft sm:text-[1rem] sm:leading-8 md:mt-8 md:text-[1.0625rem]">
-              The project showed what helped trust form early in partnerships
-              between companies and nonprofit organizations. It made it easier
-              to see where uncertainty started, what both sides needed to
-              understand sooner, and how credibility affected the willingness to
-              move forward.
-            </p>
-
-            <ul className="mt-8 max-w-[44rem] space-y-4 text-[0.97rem] leading-[1.8] text-ink-soft sm:mt-9 sm:text-[1rem] sm:leading-8">
-              {outcomePoints.map((point) => (
-                <li key={point} className="flex gap-3">
-                  <span className="mt-[0.65rem] h-1 w-1 rounded-full bg-[#6FAF8F]" />
-                  <span>{point}</span>
-                </li>
-              ))}
-            </ul>
           </div>
         </section>
 
@@ -294,7 +241,7 @@ export default function ProjektVitaPage() {
             </p>
             <div className="mt-4 flex items-center justify-between gap-6">
               <h2 className="text-balance text-[1.55rem] font-semibold leading-[1.1] tracking-[-0.035em] text-foreground transition-colors duration-300 group-hover:text-[#6FAF8F] group-focus-visible:text-[#6FAF8F] sm:text-[1.8rem] md:text-[2.1rem]">
-                FlowScape
+                Flowscape
               </h2>
               <ArrowRight
                 aria-hidden="true"
