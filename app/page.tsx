@@ -61,9 +61,9 @@ export default function Home() {
 
         <section
           aria-labelledby="intro-title"
-          className="py-10 sm:py-14 lg:py-20"
+          className="flex items-center py-16 sm:py-20 lg:min-h-[68svh] lg:py-24"
         >
-          <div className="grid gap-8 lg:grid-cols-[1.1fr_1fr] lg:items-center lg:gap-16">
+          <div className="grid w-full gap-10 lg:grid-cols-[1.1fr_1fr] lg:items-center lg:gap-20">
             <div>
               <p className="mb-6 text-sm font-medium tracking-[0.04em] text-muted">
                 Seeking junior developer roles · Stockholm
@@ -79,14 +79,14 @@ export default function Home() {
             </div>
             <div className="max-w-[38rem]">
               <p className="text-lg leading-8 text-ink-soft sm:text-xl">
-                I&apos;m Marcus. I&apos;m moving into development with a
-                background in UX design, including freelance work and a
-                workplace internship.
+                I&apos;m Marcus, a UX designer currently studying fullstack
+                JavaScript at Chas Academy, with experience from freelance
+                client work and product design.
               </p>
               <p className="mt-4 text-base leading-7 text-muted">
-                I work with vanilla JavaScript and study at Chas Academy.
-                I&apos;m looking for my first developer role, with UX experience
-                I can bring into the team from day one.
+                I&apos;m building my skills in web development while bringing a
+                background in user research, interaction design and
+                accessibility.
               </p>
               <div className="mt-7 flex flex-wrap items-center gap-x-6 gap-y-3">
                 <Link
