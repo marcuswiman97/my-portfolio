@@ -3,7 +3,7 @@
 import { Minus, Plus } from "lucide-react";
 import { useState } from "react";
 
-const uxActivities = [
+const activities = [
   {
     step: "01",
     label: "Research",
@@ -21,14 +21,14 @@ const uxActivities = [
   {
     step: "03",
     label: "Ideate",
-    title: "Design clear flows",
+    title: "Explore possible solutions",
     description:
       "Explore different directions, map flows, and turn rough ideas into possible solutions.",
   },
   {
     step: "04",
     label: "Prototype",
-    title: "Structure information",
+    title: "Make ideas tangible",
     description:
       "Create wireframes and interactive prototypes that make the structure, content, and key interactions easier to evaluate.",
   },
@@ -41,30 +41,33 @@ const uxActivities = [
   },
 ];
 
-export function WhatIDo() {
+export function WhatIDo({ showHeading = true }: { showHeading?: boolean }) {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <section className="py-18 sm:py-20 md:py-24 lg:py-28">
+    <section className={showHeading ? "py-10 sm:py-14 lg:py-16" : "pb-6"}>
       <div className="mx-auto w-full max-w-[72rem]">
-        <h2 className="text-balance text-[1.95rem] font-semibold leading-[1.08] tracking-[-0.035em] text-foreground sm:text-[2.1rem] md:text-[2.4rem] lg:text-[2.95rem]">
-          My design process
-        </h2>
+        {showHeading ? (
+          <h2 className="text-balance text-[1.95rem] font-semibold leading-[1.08] tracking-[-0.035em] text-foreground sm:text-[2.1rem] lg:text-[2.4rem] lg:text-[2.95rem]">
+            My approach to UX
+          </h2>
+        ) : null}
 
-        <p className="mt-5 max-w-[40rem] text-[0.98rem] leading-[1.75] text-ink-soft sm:text-[1.02rem] md:text-[1.06rem]">
-          A simple UX process from research to testing. Hover or tap each step
-          to see how I work.
+        <p className="mt-5 max-w-[40rem] text-[0.98rem] leading-[1.75] text-ink-soft sm:text-[1.02rem] lg:text-[1.06rem]">
+          UX is about understanding what people need and making a product easier
+          to use. These are the activities I use to get there, adapted to the
+          problem, the team, and the time available.
         </p>
 
-        <div className="mt-9 space-y-1 md:mt-12">
-          {uxActivities.map((activity, index) => {
+        <div className="mt-9 space-y-1 lg:mt-12">
+          {activities.map((activity, index) => {
             const isActive = index === activeIndex;
             const descriptionId = `what-i-do-${index}`;
 
             return (
               <div
                 key={activity.label}
-                className="grid gap-x-5 border-b border-[rgba(255,255,255,0.06)] md:grid-cols-[minmax(17rem,0.78fr)_minmax(4rem,1fr)_minmax(20rem,0.95fr)] md:items-center md:gap-x-7"
+                className="grid gap-x-5 border-b border-[rgba(255,255,255,0.06)] lg:grid-cols-[minmax(17rem,0.78fr)_minmax(4rem,1fr)_minmax(20rem,0.95fr)] lg:items-center lg:gap-x-7"
               >
                 <button
                   type="button"
@@ -73,7 +76,7 @@ export function WhatIDo() {
                   onClick={() => setActiveIndex(index)}
                   onFocus={() => setActiveIndex(index)}
                   onMouseEnter={() => setActiveIndex(index)}
-                  className="group grid w-full grid-cols-[minmax(0,1fr)_auto] items-center gap-5 rounded-[0.35rem] py-4 text-left transition-colors duration-200 ease-in-out focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--accent-green)] sm:py-4.5 md:col-span-2 md:grid-cols-[minmax(17rem,0.78fr)_minmax(4rem,1fr)] md:py-5"
+                  className="group grid w-full grid-cols-[minmax(0,1fr)_auto] items-center gap-5 rounded-[0.35rem] py-4 text-left transition-colors duration-200 ease-in-out focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--accent-green)] sm:py-4.5 lg:col-span-2 lg:grid-cols-[minmax(17rem,0.78fr)_minmax(4rem,1fr)] lg:py-5"
                 >
                   <span className="flex min-w-0 items-baseline gap-4">
                     <span
@@ -87,7 +90,7 @@ export function WhatIDo() {
                     </span>
                     <span className="min-w-0">
                       <span
-                        className={`block text-[1.18rem] font-medium leading-tight tracking-[-0.02em] transition-colors duration-200 ease-in-out sm:text-[1.28rem] md:text-[1.38rem] ${
+                        className={`block text-[1.18rem] font-medium leading-tight tracking-[-0.02em] transition-colors duration-200 ease-in-out sm:text-[1.28rem] lg:text-[1.38rem] ${
                           isActive
                             ? "text-[color-mix(in_srgb,var(--foreground)_82%,var(--accent-green)_18%)]"
                             : "text-foreground group-hover:text-[color-mix(in_srgb,var(--foreground)_86%,var(--accent-green)_14%)] group-focus-visible:text-[color-mix(in_srgb,var(--foreground)_86%,var(--accent-green)_14%)]"
@@ -102,10 +105,10 @@ export function WhatIDo() {
                   </span>
                   <span
                     aria-hidden="true"
-                    className="flex items-center gap-4 md:gap-5"
+                    className="flex items-center gap-4 lg:gap-5"
                   >
                     <span
-                      className={`hidden h-px min-w-10 flex-1 transition-colors duration-200 ease-in-out md:block ${
+                      className={`hidden h-px min-w-10 flex-1 transition-colors duration-200 ease-in-out lg:block ${
                         isActive
                           ? "bg-[rgba(111,175,143,0.48)]"
                           : "bg-[rgba(255,255,255,0.08)] group-hover:bg-[rgba(111,175,143,0.3)] group-focus-visible:bg-[rgba(111,175,143,0.3)]"
@@ -119,7 +122,11 @@ export function WhatIDo() {
                       }`}
                     >
                       {isActive ? (
-                        <Minus aria-hidden="true" size={18} strokeWidth={1.75} />
+                        <Minus
+                          aria-hidden="true"
+                          size={18}
+                          strokeWidth={1.75}
+                        />
                       ) : (
                         <Plus aria-hidden="true" size={18} strokeWidth={1.75} />
                       )}
@@ -129,10 +136,10 @@ export function WhatIDo() {
 
                 <p
                   id={descriptionId}
-                  className={`overflow-hidden text-[0.98rem] leading-[1.75] text-ink-soft transition-[max-height,opacity,transform,padding] duration-200 ease-out motion-reduce:transition-none md:max-h-none md:overflow-visible md:pb-0 md:text-[1.02rem] md:leading-[1.72] ${
+                  className={`overflow-hidden text-[0.98rem] leading-[1.75] text-ink-soft transition-[max-height,opacity,transform,padding] duration-200 ease-out motion-reduce:transition-none lg:max-h-none lg:overflow-visible lg:pb-0 lg:text-[1.02rem] lg:leading-[1.72] ${
                     isActive
-                      ? "max-h-28 translate-y-0 pb-4 opacity-100 md:translate-x-0"
-                      : "max-h-0 -translate-y-1 pb-0 opacity-0 md:translate-x-2 md:translate-y-0"
+                      ? "max-h-28 translate-y-0 pb-4 opacity-100 lg:translate-x-0"
+                      : "max-h-0 -translate-y-1 pb-0 opacity-0 lg:translate-x-2 lg:translate-y-0"
                   }`}
                 >
                   {activity.description}

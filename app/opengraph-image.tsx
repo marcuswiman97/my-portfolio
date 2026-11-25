@@ -2,7 +2,7 @@ import { readFileSync } from "node:fs";
 import path from "node:path";
 import { ImageResponse } from "next/og";
 
-export const alt = "Marcus Wiman UX Portfolio";
+export const alt = "Marcus Wiman — Fullstack JavaScript & UX";
 export const size = {
   width: 1200,
   height: 630,
@@ -75,8 +75,7 @@ export default function OpenGraphImage() {
               letterSpacing: -3,
             }}
           >
-            Designing digital products that feel clear, intuitive, and
-            memorable
+            Fullstack JavaScript student
           </div>
 
           <div
@@ -87,8 +86,8 @@ export default function OpenGraphImage() {
               maxWidth: 700,
             }}
           >
-            UX research, interface design, prototyping, design systems, and
-            accessibility-aware decisions.
+            Marcus Wiman. Studying at Chas Academy, with a UX education
+            and experience from a UX internship.
           </div>
         </div>
 
@@ -98,7 +97,7 @@ export default function OpenGraphImage() {
             color: "#6faf8f",
           }}
         >
-          UX Portfolio
+          Stockholm, Sweden
         </div>
       </div>
     ),

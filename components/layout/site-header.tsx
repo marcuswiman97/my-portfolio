@@ -68,7 +68,7 @@ export function SiteHeader({ compact = false }: SiteHeaderProps) {
     <header
       className={[
         compact
-          ? "sticky top-0 z-20 mb-0 ml-[calc(50%-50vw)] mr-[calc(50%-50vw)] w-auto transition-all duration-300 ease-in-out"
+          ? "sticky top-0 z-20 mb-0 -mx-4 w-auto transition-all duration-300 ease-in-out sm:-mx-6 md:-mx-8 lg:-mx-10 xl:-mx-12"
           : "sticky top-0 z-20 mb-10 ml-[calc(50%-50vw)] mr-[calc(50%-50vw)] w-auto transition-all duration-300 ease-in-out sm:mb-12 md:mb-16 lg:mb-20",
         scrolled
           ? "border-b border-[#2b3434] bg-[rgba(14,17,17,0.78)] backdrop-blur-xl"
@@ -81,7 +81,7 @@ export function SiteHeader({ compact = false }: SiteHeaderProps) {
           compact ? "py-4 md:py-5" : "py-5 md:py-6",
         ].join(" ")}
       >
-        <div className="flex min-h-12 items-center justify-between gap-8">
+        <div className="flex min-h-12 items-center justify-between gap-4 sm:gap-8">
           <div className="flex h-12 items-center gap-3">
             <Link
               href="/"
@@ -134,7 +134,7 @@ export function SiteHeader({ compact = false }: SiteHeaderProps) {
 
           <nav
             aria-label="Primary"
-            className="flex min-h-12 flex-wrap items-center justify-end gap-x-6 gap-y-2 text-sm text-muted sm:gap-x-7 md:gap-x-8"
+            className="flex min-h-12 flex-wrap items-center justify-end gap-x-4 gap-y-2 text-sm text-muted sm:gap-x-7 md:gap-x-8"
           >
             {navItems.map((item) => {
               const isActive = activeSection === item.id;
@@ -143,8 +143,9 @@ export function SiteHeader({ compact = false }: SiteHeaderProps) {
                 <Link
                   key={item.id}
                   href={item.href}
+                  aria-current={isActive ? "location" : undefined}
                   className={[
-                    "group relative inline-flex h-6 items-center pr-[1px] transition-colors duration-300 ease-in-out hover:text-[var(--accent-green)]",
+                    "group relative inline-flex min-h-11 items-center pr-[1px] transition-colors duration-300 ease-in-out hover:text-[var(--accent-green)]",
                     isActive ? "text-foreground" : "text-muted",
                   ].join(" ")}
                 >

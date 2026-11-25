@@ -55,71 +55,41 @@ const overviewItems: OverviewItem[] = [
 ];
 
 const roleParagraphs = [
-  "I worked as a UX / Product Designer on FlowAnalytics over a 6-month period, from research and early exploration to MVP design, implementation support, and handoff.",
-  "I was responsible for the UX work across research, dashboard structure, information architecture, wireframes, UI design, KPI cards, filter patterns, navigation, microcopy, design system work, and developer handoff.",
-  "The project was highly collaborative. I had regular UX feedback sessions with my supervisor several times a week, where we discussed design decisions, tested ideas, and refined the direction together.",
-  "I also worked closely with the product owner and backend analytics stakeholder through weekly product meetings, where we aligned on scope, data logic, user needs, and what was realistic for the MVP. As the design moved closer to implementation, I collaborated with the frontend developer to check feasibility, clarify handoff details, and make sure the design patterns could work in the product.",
-  "A key decision point came after the first research phase. I explored broader ways to rethink the analytics experience, including more simplified alternatives. But because the MVP needed to move quickly and still support advanced analysis, we chose to keep the dashboard model and improve it from within.",
-  "That meant focusing on clearer structure, better hierarchy, more useful KPI context, predictable filters, clearer navigation, and a more consistent visual system.",
+  "During my six-month UX internship, I worked on the dashboard layouts, filters, KPI cards, and design handoff for FlowAnalytics.",
+  "My supervisor was Kristin Palmberg, UX/UI Designer at Flowscape. We reviewed iterations several times a week. Weekly product meetings covered scope and data logic with the product owner and analytics stakeholder. I also worked with the frontend developer on feasibility and handoff.",
 ];
 
 const problemParagraphs = [
-  "FlowAnalytics contained a lot of useful workplace data, but the experience had become difficult to scan, understand, and use in daily decision-making.",
-  "Users could get value from parts of the analytics experience, especially when preparing insights for meetings, but many dashboards and graphs were rarely used. The problem was not only the amount of data, but how it was presented. The interface felt dense, the visual style was inconsistent, and many KPI cards relied on short labels without enough explanation.",
-  "In the previous setup, dashboards could take a long time to load, and it was not always clear when the data was still loading, filters were being applied, or the dashboard was ready to use. Exporting was also slow and inflexible. Users often had to export a whole dashboard instead of one specific graph or view, which was frustrating when they needed material before a meeting.",
-  "Navigation also created friction. Some views and tabs were placed in ways that did not match common dashboard patterns, which made it harder for users to understand what was clickable or where to go next.",
-  "Because dashboard purposes were not always clear, users often stayed in one or two familiar views instead of exploring the full analytics experience. Filters could also be hard to keep track of, which made it difficult to understand exactly what data was being shown.",
-  "The challenge was not simply to show more data. It was to make the data easier to scan, understand, filter, navigate, and act on.",
+  "The previous Power BI-based experience had dense dashboards and short KPI labels. Loading could be slow, and users had little feedback about whether a filter was still being applied.",
+  "Users preparing material for meetings also had to export whole dashboards when they only needed a particular chart. The redesign happened alongside a technical rebuild, so the work involved both interface changes and coordination with developers.",
 ];
 
 const usersParagraphs = [
-  "The product supported workplace teams, facility managers, HR, administrators, and people responsible for understanding how office spaces were used.",
-  "They needed to understand occupancy, utilization, space performance, and workplace patterns over time. Some users needed quick answers before meetings, while others needed deeper analysis to understand trends and make decisions.",
-  "A key user behavior was that many users stayed in one or two familiar dashboards instead of exploring the full analytics experience. That showed that the product needed clearer dashboard purposes, stronger orientation, and better support for interpretation.",
+  "FlowAnalytics supports facility managers and workplace teams making decisions about office space. Their tasks range from preparing a report for a meeting to exploring occupancy and utilization over time.",
 ];
 
 const researchMethods = [
-  "User interviews",
-  "Internal stakeholder conversations",
-  "Analytics pattern review",
-  "Product walkthroughs",
-  "Reviewing the existing analytics setup",
-  "Mapping problems and patterns",
-  "Exploring common dashboard and analytics conventions",
-  "Discussing design directions with my UX supervisor",
+  "Interviews and product walkthroughs",
+  "Conversations with internal stakeholders",
+  "Review of the existing dashboards and other analytics tools",
+  "Design reviews with my UX supervisor",
 ];
 
-const keyInsights = [
+const userObservations = [
   {
-    title: "Users needed clearer dashboard purposes",
-    text: "The existing experience included many views, but it was not always clear what each dashboard was meant to help users understand. This made the product feel bigger and more complex than it needed to be.",
+    title: "Keep the depth for experienced users",
+    observation:
+      "In an interview and walkthrough, a superuser showed how extensively he used the existing analytics features. I had been exploring ways to simplify the product; seeing his workflow made removing functionality a much less straightforward choice.",
+    decision:
+      "I kept the dashboard model and focused on the structure around the analysis, preserving the depth experienced users needed.",
   },
   {
-    title: "KPI cards needed more context",
-    text: "Many KPI cards showed a number, but not enough explanation. Users needed help understanding what the number meant, why it mattered, and whether it needed attention.",
+    title: "Get from analysis to a meeting",
+    observation:
+      "Another user relied on the reports as evidence in meetings. She wanted a faster path from opening the product to analysing, exporting, and bringing the findings with her. She often returned to the same filter combinations.",
+    decision:
+      "That made filter visibility and export part of the reporting workflow. Saved filter combinations and a customisable dashboard were directions to explore further, rather than features I could present as delivered.",
   },
-  {
-    title: "Filter states had to be visible",
-    text: "Filters were important for analysis, but users could lose track of what was active. This made it harder to trust what data was being shown.",
-  },
-  {
-    title: "Navigation needed stronger cues",
-    text: "Some navigation elements were easy to miss or hard to understand. Users needed clearer visual cues around where they were, what was clickable, and how different views related to each other.",
-  },
-  {
-    title: "The product needed a more consistent visual system",
-    text: "The new analytics experience needed to feel like part of Flowscape's own product, not like a separate reporting tool. Consistency, accessibility, and chart readability became important parts of the solution.",
-  },
-];
-
-const designDirectionPoints = [
-  "Clearer dashboard purposes",
-  "Stronger information hierarchy",
-  "More helpful KPI cards",
-  "Visible filter states",
-  "Clearer navigation",
-  "Reusable component patterns",
-  "A calmer and more consistent visual system",
 ];
 
 const researchArtifacts = [
@@ -139,120 +109,71 @@ const researchArtifacts = [
 
 const designedSections = [
   {
-    title: "Dashboard structure and hierarchy",
+    title: "Dashboard layout",
     paragraphs: [
-      "I kept the dashboard model because it matched how users and stakeholders expected advanced analytics to work, but improved the structure around it.",
-      "Each dashboard needed a clearer purpose, with a stronger hierarchy between overview, filters, KPI cards, charts, and deeper analysis.",
-      "This helped make each view easier to scan and reduced the feeling that every chart had the same importance.",
+      "I iterated towards a shared structure across the dashboards: filters, key metrics, a summary, and charts. Users could switch between perspectives and dashboards without starting from a different layout each time.",
     ],
-    bullets: ["Overview", "Filters", "KPI cards", "Charts", "Deeper analysis"],
   },
   {
-    title: "Making filters easier to understand",
+    title: "Quick and advanced filters",
     paragraphs: [
-      "The old experience made it hard for users to keep track of what data they were looking at. I redesigned the filter experience around a clearer hierarchy.",
-      "I designed the filter experience with quick filters and an Advanced filters option. The most common filters were shown directly in the dashboard, while Advanced filters opened the full filter set, including both the quick filters and the more detailed options.",
-      "This kept the default dashboard easier to scan without hiding the full filtering logic.",
-      "I added an active filter summary that showed what was currently affecting the data. It stayed visible while scrolling, so users did not have to return to the top of the page to check their filter state.",
-      "Because data loading could take time, loading states became important. The new experience needed to show users when data was being fetched, when filters were being applied, and when a chart or dashboard was ready to use. This helped reduce uncertainty and made the analytics experience feel more predictable.",
+      "I kept five to six common filters visible and put the full set behind Advanced filters. An active-filter summary stays visible while scrolling.",
+      "I also designed loading states for fetching data and applying filters. These show when the interface is still working on a request.",
+    ],
+  },
+  {
+    title: "KPI cards and targets",
+    paragraphs: [
+      "I added short explanations, targets, and trends to the KPI cards, usually limiting the overview to four metrics.",
+      "I first explored progress bars for the targets. After stakeholder and customer input, I moved to gauges. We also chose Flowscape’s brand colour over a red–yellow–green status system. A checkmark indicates when a value meets its target.",
+      "I included disabled states for metrics whose required data was missing.",
+    ],
+  },
+  {
+    title: "Tabs and navigation",
+    paragraphs: [
+      "I organised navigation around perspectives such as offices, rooms, and company-level analysis, with tabs for the dashboards within each perspective. I moved tabs below the heading and added icons to distinguish sections.",
+    ],
+  },
+  {
+    title: "Simulator inputs",
+    paragraphs: [
+      "The simulator previously used grouped input fields and technical labels. I designed separate cards with explanatory copy and sliders so users could adjust a value and explore the scenario.",
+    ],
+  },
+  {
+    title: "Shared components",
+    paragraphs: [
+      "I adapted Flowscape’s existing product language for the analytics MVP and documented reusable components for handoff.",
     ],
     bullets: [
-      "5 to 6 quick filters visible directly in the dashboard",
-      "One Advanced filters option",
-      "A full filter set that included quick filters and more detailed filters",
-      "Active filters",
-    ],
-  },
-  {
-    title: "Turning KPI cards into interpretation support",
-    paragraphs: [
-      "A major problem was that KPI cards often showed a number without enough context. I redesigned them to help users understand what the number meant, why it mattered, and whether it needed attention.",
-      "Instead of showing too many metrics at once, the dashboards focused on a smaller set of key KPIs, usually up to four. The goal was to help users scan the most important signals first.",
-      "One of the biggest iterations was how to show a KPI in relation to a target. I first explored progress bars, then moved into a gauge-style indicator after stakeholder and customer input.",
-      "I explored red, yellow, and green status logic, but after feedback and stakeholder discussions we chose a calmer direction using Flowscape's brand color instead of a traffic-light system. To keep the status scannable, I added a checkmark when a value met its target.",
-      "This became a design trade-off: the KPI needed to be clear enough to interpret quickly, but still feel consistent with the brand and avoid making the dashboard feel too noisy.",
-      "The KPI cards also included disabled states for cases where required data was missing, helping users understand why a metric was unavailable instead of leaving the card empty or confusing.",
-    ],
-    bullets: [
-      "Clearer titles",
-      "Short explanatory subtitles or questions",
-      "Tooltips",
-      "Targets",
-      "Trend indicators",
-      "Visual indicators in some variants",
-      "Disabled states for missing data",
-    ],
-  },
-  {
-    title: "Improving navigation and orientation",
-    paragraphs: [
-      "The previous setup made some navigation elements harder to understand than they needed to be. In some areas, tabs were placed in uncommon positions, which made them easy to miss.",
-      "I moved tabs to a more familiar position below the dashboard heading, making them easier to recognize as tabs and easier to use when switching between related views.",
-      "I also added icons where the difference between sections needed to be clearer, especially in the sidebar and tab navigation. The icons were not added for decoration, but to support quicker scanning and help users understand what each section represented before clicking.",
-      "This helped the product feel easier to move through and reduced the need to read every label in detail.",
-    ],
-  },
-  {
-    title: "Making the simulator easier to interact with",
-    paragraphs: [
-      "One dashboard had a simulation use case where users could explore how changes in an office setup might affect the results.",
-      "In the previous version, the simulator relied on grouped input fields and technical labels. This made the interaction feel more like filling in a form than exploring a scenario.",
-      "I redesigned the simulator into separate interactive cards. Each card had enough space for clearer copy, so users could understand what they were adjusting and why it mattered.",
-      "Instead of only relying on text input fields, I introduced sliders to make the simulation more visual and easier to explore. The goal was to help users understand the direction and size of a change while adjusting values, rather than forcing them to type a number without much context.",
-      "This made the simulator feel more interactive and helped users understand that they were exploring possible changes, not just entering static data.",
-    ],
-  },
-  {
-    title: "Creating a lightweight design system",
-    paragraphs: [
-      "Since the new analytics experience was being built as part of Flowscape's own product, I created a lightweight design system for the MVP.",
-      "It built on the company's existing product language, but adapted it for a more data-heavy analytics environment.",
-      "A large part of the work was making the analytics experience feel clearer, calmer, and more connected to Flowscape's brand. I also focused on accessible color choices and chart readability, especially because analytics can quickly become visually overwhelming.",
-    ],
-    bullets: [
-      "Colors",
-      "Typography",
-      "Spacing",
-      "Rounded cards",
-      "Buttons",
-      "Loading states",
-      "Disabled states",
-      "KPI card patterns",
-      "Filter patterns",
-      "Chart styling",
-      "Reusable components",
+      "KPI cards and filter patterns",
+      "Buttons, loading states, and disabled states",
+      "Colour, typography, spacing, and chart styling",
     ],
   },
   {
     title: "Export touchpoints",
     paragraphs: [
-      "Exporting was a known pain point in the previous experience. Users often needed to bring specific charts or dashboard views into meetings, but the old export flow could be slow and too broad. Instead of exporting only what they needed, users often had to export a whole dashboard.",
-      "Part of this was solved through the technical rebuild, but I also helped shape cleaner export touchpoints in the interface, including dashboard-level export and chart-level export options. This gave users more control over what they exported and made the experience feel less like one large all-or-nothing action.",
+      "I designed export controls at both dashboard and chart level. Developers handled the export functionality and performance as part of the rebuild; my contribution was the interface and where those actions appeared.",
     ],
   },
 ];
 
 const resultsParagraphs = [
-  "The project resulted in a new FlowAnalytics MVP with 5 redesigned dashboards, a lightweight design system, reusable component patterns, design files, prototypes, and developer handoff material. The designs I delivered were implemented into the new analytics portal.",
-  "For users, the new experience made workplace data easier to scan, navigate, and interpret. KPI cards gave more context around key numbers, filters became more transparent, navigation became easier to understand, and the visual system made the product feel more consistent.",
-  "Testing and feedback indicated that the new direction was easier to understand and navigate, but because user testing happened late, some findings became recommendations for future iterations.",
-  "This was one of the reasons Flowscape wanted to move away from the previous Power BI-based setup and build FlowAnalytics as part of their own product. The new setup gave the team more control over performance, export logic, frontend patterns, and the overall user experience. My UX work built on that opportunity by improving clarity, feedback, structure, loading states, export touchpoints, and the overall experience.",
-  "Internal feedback was positive. My supervisor highlighted my role in making complex data easier to understand and use for decision-making, adapting to a fast-paced MVP environment, aligning with stakeholders, creating clear developer handoffs, and exploring AI as a way to iterate more efficiently.",
+  "I delivered designs for five dashboards, prototypes, a lightweight design system, and developer handoff material. The designs were implemented in the new analytics portal.",
+  "I reviewed the design through repeated iterations. Users responded positively to the direction, including AI summaries and the idea of customisable dashboards, but much of what they saw used test data while backend routes for the graphs were still being built.",
+  "That feedback supported the design direction. It did not establish that the finished reporting workflow was faster in practice; users had not yet tested the complete flow with live data.",
 ];
 
 const learningParagraphs = [
-  "This project taught me how to design in a real product environment, where user needs, business goals, technical constraints, and time all have to be balanced.",
-  "As the main designer on the project, I got to work through the full design process: research, analysis, structure, prototyping, UI design, stakeholder alignment, handoff, and iteration. It made me more confident in making design decisions, asking better questions, and explaining why UX decisions matter.",
-  "I also learned how complex analytics UX can be. A dashboard can contain valuable data and still be hard to use if the structure, labels, filters, navigation, and visual hierarchy are unclear.",
-  "In this project, copy became especially important. When a metric or chart could not be changed completely, better wording, tooltips, targets, trends, and clearer interaction patterns helped make the information easier to understand.",
-  "Working with stakeholders also taught me how important it is to listen carefully, document decisions, and separate ideas from actual user needs. Users and stakeholders often suggest features, but the real design work is understanding the problem behind the request.",
+  "The superuser changed my view of simplification. A feature I might have removed could be essential to someone doing detailed analysis. I had to improve the structure without discarding that depth.",
+  "The reporting interview gave me a different reference point: how quickly someone could turn analysis into material for a meeting. Together, these users helped me judge the dashboard iterations against two different ways of working.",
 ];
 
 const nextSteps = [
-  "Run usability tests earlier and more often, especially after the first dashboard was ready.",
-  "Explore saved filters so users could return to important views faster.",
-  "Explore custom dashboards for teams with recurring reporting workflows.",
-  "Test export flows more deeply around meeting preparation.",
+  "Test the complete analysis-to-export workflow with live data once the backend integration is ready.",
+  "Explore saved filter combinations and customisable dashboards with users who repeatedly prepare the same reports.",
 ];
 
 const caseStudySectionClass = "scroll-mt-24 py-14 sm:py-16 md:py-18 lg:py-20";
@@ -362,13 +283,13 @@ export default function FlowscapePage() {
         >
           <SectionHeading
             eyebrow="01 Overview"
-            title="What the project was about"
+            title="FlowAnalytics redesign"
           />
 
           <Paragraphs
             items={[
-              "FlowAnalytics is an analytics experience that helps workplace teams understand how office spaces are used.",
-              "The previous experience gave users access to a large amount of data, but much of it was hard to scan, understand, and act on. My work focused on making the product clearer through dashboard structure, KPI cards, filter logic, navigation, microcopy, visual design, and a lightweight design system.",
+              "FlowAnalytics helps workplace teams understand how office space is used. During my UX internship at Flowscape, I redesigned parts of its analytics experience as the team rebuilt the product.",
+              "My design work covered five dashboards and shared patterns for filters, KPI cards, and navigation. The designs were handed over to developers and implemented in the new portal.",
             ]}
           />
 
@@ -403,31 +324,16 @@ export default function FlowscapePage() {
         </section>
 
         <section id="role" className={caseStudySectionClass}>
-          <SectionHeading
-            eyebrow="02 Role"
-            title="My responsibility and collaboration"
-          />
+          <SectionHeading eyebrow="02 Role" title="My role in the team" />
           <Paragraphs items={roleParagraphs} />
         </section>
 
         <section id="problem" className={caseStudySectionClass}>
           <SectionHeading
             eyebrow="03 Problem"
-            title="Useful data was hard to understand"
+            title="The previous experience"
           />
           <Paragraphs items={problemParagraphs} />
-
-          <div className="mt-8 max-w-[46rem] rounded-[0.85rem] border border-[rgba(43,52,52,0.92)] bg-[rgba(18,22,22,0.82)] px-5 py-6 sm:px-6 md:mt-9 md:px-7">
-            <p className="text-[14px] font-medium uppercase tracking-[0.12em] text-muted">
-              Hypothesis
-            </p>
-            <p className="mt-4 text-[1rem] leading-[1.8] text-foreground md:text-[1.06rem]">
-              If FlowAnalytics became more structured, easier to scan, and
-              clearer about what each metric meant, users would be able to
-              understand workplace data faster, use more of the product, and
-              make more confident decisions.
-            </p>
-          </div>
 
           <figure className="mt-9 max-w-[56rem] md:mt-10">
             <div className="relative overflow-hidden rounded-[0.55rem] border border-[rgba(43,52,52,0.85)] bg-[#111616] shadow-[0_18px_40px_rgba(0,0,0,0.18)]">
@@ -448,22 +354,16 @@ export default function FlowscapePage() {
         </section>
 
         <section id="users" className={caseStudySectionClass}>
-          <SectionHeading
-            eyebrow="04 Users"
-            title="Who the analytics experience needed to support"
-          />
+          <SectionHeading eyebrow="04 Users" title="Who uses FlowAnalytics" />
           <Paragraphs items={usersParagraphs} />
         </section>
 
         <section id="process" className={caseStudySectionClass}>
-          <SectionHeading
-            eyebrow="05 Process"
-            title="Research, insight, and design direction"
-          />
+          <SectionHeading eyebrow="05 Process" title="Research and scope" />
 
           <Paragraphs
             items={[
-              "I started the project with a research phase to understand the product, the users, and the business context behind workplace analytics. Since the domain was new to me, I spent time learning the language of facility management, how workplace data is used, and what decisions the analytics experience needed to support.",
+              "Workplace analytics was new to me. I began by learning how the product was used, reviewing the existing dashboards, and discussing the domain with users and the product team.",
             ]}
           />
 
@@ -472,6 +372,28 @@ export default function FlowscapePage() {
               Research included
             </h3>
             <BulletList items={researchMethods} />
+          </div>
+
+          <div className="mt-9 max-w-[50rem] space-y-8">
+            <h3 className="text-xl font-medium text-foreground">
+              Two users who shaped the direction
+            </h3>
+            {userObservations.map((item) => (
+              <section
+                key={item.title}
+                className="border-l-2 border-[var(--accent-green)] pl-5 sm:pl-6"
+              >
+                <h4 className="text-lg font-medium text-foreground">
+                  {item.title}
+                </h4>
+                <p className="mt-3 text-base leading-7 text-ink-soft">
+                  {item.observation}
+                </p>
+                <p className="mt-3 text-base leading-7 text-ink-soft">
+                  {item.decision}
+                </p>
+              </section>
+            ))}
           </div>
 
           <figure className="mt-8 max-w-[50rem] md:mt-10">
@@ -491,28 +413,14 @@ export default function FlowscapePage() {
             </figcaption>
           </figure>
 
-          <div className="mt-9 max-w-[46rem] space-y-5 text-[0.97rem] leading-[1.8] text-ink-soft sm:text-[1rem] sm:leading-8 md:mt-10 md:text-[1.0625rem]">
-            <p>
-              One important insight was that users did not need more data. They
-              needed a clearer way to understand the data already available.
-            </p>
-            <p>
-              Many users stayed in familiar dashboards, while other views were
-              rarely used or harder to interpret. This shaped the direction of
-              the redesign: instead of adding more features, the experience
-              needed better structure, clearer language, and more support for
-              interpretation.
-            </p>
-          </div>
-
           <div className="mt-10 max-w-[60rem] md:mt-11">
             <div className="max-w-[46rem]">
               <h3 className="text-[1.15rem] font-semibold leading-[1.2] text-foreground md:text-[1.3rem]">
                 Research artifacts
               </h3>
               <p className="mt-4 text-[0.97rem] leading-[1.8] text-ink-soft sm:text-[1rem] sm:leading-8">
-                I translated the research into lightweight artifacts that made
-                user needs easier to discuss with stakeholders.
+                I used the following artifacts to discuss workflows and needs
+                with the team.
               </p>
             </div>
 
@@ -549,56 +457,25 @@ export default function FlowscapePage() {
                 options created friction.
               </figcaption>
             </figure>
-
-            <p className="mt-5 max-w-[46rem] text-[0.97rem] leading-[1.8] text-ink-soft sm:text-[1rem] sm:leading-8">
-              These artifacts connected technical pain points to real user
-              situations, especially around trust, speed, and confidence in the
-              data.
-            </p>
-          </div>
-
-          <div className="mt-11 space-y-7 md:mt-12 md:space-y-8">
-            {keyInsights.map((insight, index) => (
-              <div key={insight.title} className="max-w-[46rem]">
-                <p className="text-[14px] font-medium uppercase tracking-[0.12em] text-[rgba(167,176,176,0.78)]">
-                  Insight {String(index + 1).padStart(2, "0")}
-                </p>
-                <h3 className="mt-3 text-balance text-[1.2rem] font-semibold leading-[1.2] text-foreground sm:text-[1.35rem] md:text-[1.5rem]">
-                  {insight.title}
-                </h3>
-                <p className="mt-4 text-[15px] leading-[1.75] text-ink-soft md:text-[16px]">
-                  {insight.text}
-                </p>
-              </div>
-            ))}
           </div>
 
           <div className="mt-11 max-w-[50rem] rounded-[0.9rem] border border-[rgba(43,52,52,0.92)] bg-[rgba(18,22,22,0.86)] px-6 py-8 sm:px-8 sm:py-10 md:mt-12">
             <h3 className="text-[1.2rem] font-semibold leading-[1.2] text-foreground md:text-[1.45rem]">
               Design direction
             </h3>
-            <div className="mt-5 max-w-[44rem] space-y-5 text-[0.97rem] leading-[1.8] text-ink-soft sm:text-[1rem] sm:leading-8">
-              <p>
-                Early on, I explored more radical ways to simplify the
-                experience, including reducing the number of views or moving
-                further away from a traditional dashboard format.
-              </p>
-              <p>
-                But through user feedback, stakeholder discussions, technical
-                alignment, and feedback sessions with my supervisor, it became
-                clear that dashboards still made sense for this type of advanced
-                analysis. The better direction was to improve the model users
-                already understood, rather than replace it completely.
-              </p>
-            </div>
-            <BulletList items={designDirectionPoints} />
+            <p className="mt-5 max-w-[44rem] text-base leading-7 text-ink-soft">
+              We kept the dashboard model. The work then centred on a shared
+              layout, KPI cards, filters, and navigation within the MVP scope.
+              KPI cards went through many iterations as I worked towards a
+              structure that could be used across dashboards.
+            </p>
           </div>
         </section>
 
         <section id="designed" className={caseStudySectionClass}>
           <SectionHeading
             eyebrow="06 What I designed"
-            title="The main design work"
+            title="Design decisions"
           />
 
           <div className="space-y-12 md:space-y-14">
@@ -615,15 +492,12 @@ export default function FlowscapePage() {
                 </h3>
 
                 <div className="mt-4 max-w-[46rem] space-y-5 text-[0.97rem] leading-[1.8] text-ink-soft sm:text-[1rem] sm:leading-8 md:mt-5 md:text-[1.0625rem]">
-                  {section.paragraphs.map((paragraph) => (
+                  {section.paragraphs.map((paragraph, paragraphIndex) => (
                     <div key={paragraph}>
                       <p>{paragraph}</p>
 
-                      {section.title ===
-                        "Turning KPI cards into interpretation support" &&
-                      paragraph.endsWith(
-                        "To keep the status scannable, I added a checkmark when a value met its target."
-                      ) ? (
+                      {section.title === "KPI cards and targets" &&
+                      paragraphIndex === 1 ? (
                         <figure className="mt-7 max-w-[46rem] md:mt-8">
                           <div className="relative overflow-hidden rounded-[0.55rem] border border-[rgba(43,52,52,0.92)] bg-[#111616] shadow-[0_20px_48px_rgba(0,0,0,0.22)]">
                             <Image
@@ -636,9 +510,8 @@ export default function FlowscapePage() {
                             />
                           </div>
                           <figcaption className="mt-3 max-w-[38rem] text-[0.9rem] leading-6 text-muted">
-                            Early KPI explorations led to a more scannable card
-                            system with targets, trends, tooltips, and visual
-                            status cues.
+                            KPI explorations: progress bars, gauges, targets,
+                            and status indicators.
                           </figcaption>
                         </figure>
                       ) : null}
@@ -650,7 +523,7 @@ export default function FlowscapePage() {
                   <BulletList items={section.bullets} />
                 ) : null}
 
-                {section.title === "Dashboard structure and hierarchy" ? (
+                {section.title === "Dashboard layout" ? (
                   <figure className="mt-7 max-w-[47rem] md:mt-8">
                     <div className="relative overflow-hidden rounded-[0.55rem] border border-[rgba(43,52,52,0.92)] shadow-[0_24px_54px_rgba(0,0,0,0.24)]">
                       <Image
@@ -663,13 +536,13 @@ export default function FlowscapePage() {
                       />
                     </div>
                     <figcaption className="mt-4 max-w-[38rem] text-[0.9rem] leading-6 text-muted">
-                      Wireframe of the final MVP dashboard structure, designed
-                      to make complex data easier to scan and understand.
+                      Wireframe illustrating the dashboard layout proposed for
+                      the MVP.
                     </figcaption>
                   </figure>
                 ) : null}
 
-                {section.title === "Creating a lightweight design system" ? (
+                {section.title === "Shared components" ? (
                   <figure className="mt-7 max-w-[47rem] md:mt-8">
                     <div className="relative overflow-hidden rounded-[0.85rem] border border-white/20 shadow-[0_20px_48px_rgba(0,0,0,0.18)]">
                       <Image
@@ -691,15 +564,44 @@ export default function FlowscapePage() {
         <section id="results" className={caseStudySectionClass}>
           <SectionHeading
             eyebrow="07 Results and learnings"
-            title="What changed and what I took with me"
+            title="Delivery and user feedback"
           />
           <Paragraphs items={resultsParagraphs} />
 
-          <blockquote className="mt-9 max-w-[48rem] border-l border-[#6FAF8F] pl-5 text-[1.15rem] font-medium leading-[1.65] text-foreground sm:text-[1.25rem] md:mt-10 md:pl-6">
-            “Marcus played a key role in improving an analytics platform,
-            focusing on making complex data easier to understand and use for
-            decision-making.”
-          </blockquote>
+          <aside
+            aria-labelledby="public-demo-heading"
+            className="mt-8 max-w-[50rem] border-l-2 border-[var(--accent-green)] pl-5 sm:pl-6"
+          >
+            <h3
+              id="public-demo-heading"
+              className="text-xl font-medium text-foreground"
+            >
+              The implemented product
+            </h3>
+            <p className="mt-3 text-base leading-7 text-ink-soft">
+              Flowscape presents FlowAnalytics on its official product page,
+              including an instructional video. These public materials offer a
+              view of the product alongside the design work in this case study.
+            </p>
+            <a
+              href="https://flowscapesolutions.com/solutions/workplace-analytics"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-3 flex min-h-11 w-fit items-center text-base font-medium text-[var(--accent-green)] underline underline-offset-4"
+            >
+              Explore FlowAnalytics on Flowscape&apos;s website
+              <span className="sr-only"> (opens in a new tab)</span>
+            </a>
+            <a
+              href="https://www.linkedin.com/posts/flowscape-ab_f%C3%A5-koll-p%C3%A5-vad-som-h%C3%A4nder-i-era-lokaler-med-ugcPost-7510661864947781635-h0Xw"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-3 inline-flex min-h-11 items-center text-base font-medium text-[var(--accent-green)] underline underline-offset-4"
+            >
+              Watch Flowscape&apos;s product demonstration
+              <span className="sr-only"> on LinkedIn (opens in a new tab)</span>
+            </a>
+          </aside>
 
           <div className="mt-11 max-w-[50rem] md:mt-12">
             <h3 className="mb-6 text-balance text-[1.35rem] font-semibold leading-[1.2] text-foreground sm:text-[1.5rem] md:text-[1.65rem]">
